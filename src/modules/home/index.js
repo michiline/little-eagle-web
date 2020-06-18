@@ -2,18 +2,17 @@ import React, {memo } from 'react'
 import styled from 'styled-components'
 import { HamburgerIcon, ArrowDownIcon } from '../../components'
 import { useWindow } from '../../hooks'
-import { coverMobile, eagle1Mobile, photoMobile } from '../../images'
+import { coverMobile, eagle1Mobile, eagle2Mobile, photoMobile, hiMobile } from '../../images'
 
 const Home = () => {
   const [windowWidth, windowHeight] = useWindow()
-  console.log(coverMobile)
   return (
     <HomeContainer>
       <HamburgerButton width={'35'} height={'22'} windowWidth={windowWidth} windowHeight={windowHeight}/>
       <CoverScreen url={coverMobile}>
         <Container>
           <ImageContainer>
-            <EagleImage windowHeight={windowHeight} windowWidth={windowWidth} url={eagle1Mobile}/>
+            <Eagle1Image windowHeight={windowHeight} windowWidth={windowWidth} url={eagle1Mobile}/>
             <PhotoImage windowHeight={windowHeight} windowWidth={windowWidth} url={photoMobile}/>
           </ImageContainer>
           <HeaderRow>
@@ -32,6 +31,11 @@ const Home = () => {
           <ArrowDownIcon width={'32'} height={'14'}/>
         </ReadMoreContainer>
       </CoverScreen>
+      <HiScreen>
+        <HiImg url={hiMobile} />
+        <HiFrame />
+        <Eagle2Image src={eagle2Mobile}/>
+      </HiScreen>
     </HomeContainer>
   )
 }
@@ -40,19 +44,50 @@ const Home = () => {
 
 const HomeContainer = styled.div`
   width: 100%;
-  height: 100%;
+  height: min-content;
   display: flex;
-  position: relative;
+  flex-direction: column;
+  overflow-x: hidden;
 `
 
 const CoverScreen = styled.div`
-  width: 100%;
-  height: 100%;
+  width: 100;
+  height: 100vh;
   background: linear-gradient(0deg, rgba(64, 54, 54, 0.3), rgba(64, 54, 54, 0.3)), url(${props => props.url});
   background-size: cover;
   background-position: right;
   display: flex;
   flex-direction: column;
+  position: relative;
+`
+
+const HiScreen = styled.div`
+  width: 100%;
+  height: 80vh;
+  background-color: #FFEFEF;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 600px;
+`
+
+const HiImg = styled.div`
+  background: url(${props => props.url});
+  background-size: cover;
+  background-position: center;
+  margin-top: 12.5%;
+  width: 90%;
+  height: 80%;
+  z-index: 2;
+`
+
+const HiFrame = styled.div`
+  width: 85%;
+  height: 78%;
+  border: 5px solid #D3B1AF;
+  position: absolute;
+  top: 12.5%;
+  right: 5%;
 `
 
 const HamburgerButton = memo(({ width, height, ...rest }) => {
@@ -94,13 +129,23 @@ const ImageContainer = styled.div`
   position: relative;
 `
 
-const EagleImage = styled.div`
+const Eagle1Image = styled.div`
   width: 70px;
   height: 62px;
   background: url(${props => props.url});
   position: absolute;
   left: 73px;
   top: 8px;
+`
+
+const Eagle2Image = styled.img`
+  width: 141px;
+  height: 100px;
+  position: absolute;
+  right: 1%;
+  top: 5%;
+  z-index: 5;
+  transform: rotate(20deg);
 `
 
 const PhotoImage = styled.div`
