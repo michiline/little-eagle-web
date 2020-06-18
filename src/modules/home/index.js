@@ -80,7 +80,10 @@ const SHamburgerButton = styled.button`
 const Container = styled.div`
   width: 85%;
   height: min-content;
-  margin: 15% 5% 0 10%;
+  margin: 5% 5% 0 10%;
+  @media only screen and (min-height: 500px) {
+    margin: 15% 5% 0 10%;
+  }
   display: flex;
   flex-direction: column;
 `

@@ -11,7 +11,7 @@ www.leagle.mislav.host
 
 Create .env file with following variables:
 
-PORT (optional, default is 3000)
+PORT (optional, default is 3000)<br>
 REACT_APP_IMG_URL (mandatory, base url to http server with images)
 
 ### `npm start`
@@ -19,6 +19,6 @@ REACT_APP_IMG_URL (mandatory, base url to http server with images)
 Runs app in development mode.<br>
 Default is [http://localhost:3000](http://localhost:3000).<br>
 
-### `npm build`
+### `npm run build`
 
-Builds production version of the app.
+Creates an optimized production build.
