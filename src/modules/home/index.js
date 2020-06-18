@@ -32,9 +32,13 @@ const Home = () => {
         </ReadMoreContainer>
       </CoverScreen>
       <HiScreen>
-        <HiImg url={hiMobile} />
+        <HiImg url={hiMobile}>
+          <Eagle2Image src={eagle2Mobile}/>
+          <HiText>
+            Hi, I'm Ana!
+          </HiText>
+        </HiImg>
         <HiFrame />
-        <Eagle2Image src={eagle2Mobile}/>
       </HiScreen>
     </HomeContainer>
   )
@@ -63,31 +67,43 @@ const CoverScreen = styled.div`
 
 const HiScreen = styled.div`
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   background-color: #FFEFEF;
   display: flex;
   flex-direction: column;
   position: relative;
-  min-height: 600px;
 `
 
 const HiImg = styled.div`
   background: url(${props => props.url});
   background-size: cover;
   background-position: center;
-  margin-top: 12.5%;
+  margin-top: 50px;
   width: 90%;
   height: 80%;
   z-index: 2;
+  position: relative;
 `
 
 const HiFrame = styled.div`
-  width: 85%;
-  height: 78%;
+  width: 90%;
+  height: 80%;
   border: 5px solid #D3B1AF;
   position: absolute;
-  top: 12.5%;
-  right: 5%;
+  top: 75px;
+  left: 25px;
+`
+
+const HiText = styled.div`
+  font-family: Abril Fatface;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 35px;
+  line-height: 65px;
+  color: #FFEFEF;
+  position: absolute;
+  bottom: 0;
+  left: 30px;
 `
 
 const HamburgerButton = memo(({ width, height, ...rest }) => {
@@ -110,6 +126,7 @@ const SHamburgerButton = styled.button`
   position: fixed;
   top: 5%;
   right: 5%;
+  z-index: 3;
 `
 
 const Container = styled.div`
@@ -142,8 +159,8 @@ const Eagle2Image = styled.img`
   width: 141px;
   height: 100px;
   position: absolute;
-  right: 1%;
-  top: 5%;
+  right: -40px;
+  top: -20px;
   z-index: 5;
   transform: rotate(20deg);
 `
