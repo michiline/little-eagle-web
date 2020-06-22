@@ -59,12 +59,14 @@ const About = () => {
 			</GetToKnowMeText>
 		</GetToKnowMeContainer>
 		<ICanHelpYouContainer>
-			<ICanHelpYouTextWrapper url={reflectorMobile}>
-			<ICanHelpYouTextContainer>
-				<ICanHelpYouHeader>I can help you capture:</ICanHelpYouHeader>
-				<ICanHelpYouText>Portraits, studio and non-studio photography, stunning landscape shots, crisp small details, and more.</ICanHelpYouText>
-			</ICanHelpYouTextContainer>	
+			<ICanHelpYouTextWrapper>
+				<ReflectorImg src={reflectorMobile}/>
+				<ICanHelpYouTextContainer>
+					<ICanHelpYouHeader>I can help you capture</ICanHelpYouHeader>
+					<ICanHelpYouText>Portraits, studio and non-studio photography, stunning landscape shots, crisp small details, and more.</ICanHelpYouText>
+				</ICanHelpYouTextContainer>	
 			</ICanHelpYouTextWrapper>
+
 		</ICanHelpYouContainer>
 	</AboutScreen>
   )
@@ -210,29 +212,23 @@ const ICanHelpYouContainer = styled.div`
 `
 
 const ICanHelpYouTextWrapper = styled.div`
-	margin-top: 5%;
-	margin-left: 5%;
-	margin-right: 5%;
-	width: 90%;
-	height: min-content;
-	background-image: url(${props => props.url});
-	background-position: right;
-	background-size: 100% 100%;
+	position: relative;
 `
 
 const ReflectorImg = styled.img`
-	width: 90%;
-	object-fit: cover;
-	z-index: -1;
+width: 90%;
+object-fit: cover;
+z-index: -1;
 `
 
 const ICanHelpYouTextContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-	width: 70%;
-	padding-top: 5%;
-	padding-left: 5%;
-	padding-bottom: 5%;
+	width: 60%;
+	margin-top: 10%;
+	padding-left: 10%;
+	position: absolute;
+	top: 0;
 `
 
 const ICanHelpYouHeader = styled.div`
