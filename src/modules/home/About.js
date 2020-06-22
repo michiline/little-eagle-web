@@ -229,10 +229,12 @@ const ReflectorImg = styled.img`
 const ICanHelpYouTextContainer = styled.div`
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	width: 70%;
 	padding-top: 5%;
 	padding-left: 5%;
 	padding-bottom: 5%;
+	min-height: 400px;
 `
 
 const ICanHelpYouHeader = styled.div`
