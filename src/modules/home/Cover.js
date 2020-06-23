@@ -143,7 +143,7 @@ const ReadMoreContainer = styled.div`
   justify-content: space-between;
   height: 35px;
   width: 190px;
-  margin-top: 5vh;
+  margin-top: 30%;
 `
 
 const Header3 = styled.div`
