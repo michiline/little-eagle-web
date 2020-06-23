@@ -23,11 +23,11 @@ const Cover = () => {
 			<Header2 style={{'marginTop': '8px'}}>The world</Header2>
 			<Header2>through my lens</Header2>
 			<OutlinedButton>View my work</OutlinedButton>
-		</ContentContainer>
-		<ReadMoreContainer>
+      <ReadMoreContainer>
 			<Header3>Read more about me</Header3>
 			<ArrowDownIcon width={'32'} height={'14'}/>
 		</ReadMoreContainer>
+		</ContentContainer>
 	</CoverScreen>
   )
 }
@@ -45,12 +45,10 @@ const CoverScreen = styled.div`
 `
 
 const ContentContainer = styled.div`
-  width: 85%;
+  width: min-content;
   height: min-content;
-  margin: 5% 5% 0 10%;
-  @media only screen and (min-height: 500px) {
-    margin: 15% 5% 0 10%;
-  }
+  margin-top: 10%;
+  margin-left: 10%;
   display: flex;
   flex-direction: column;
 `
@@ -134,12 +132,11 @@ const OutlinedButton = styled.button`
 const ReadMoreContainer = styled.div`
   display: flex;
   flex-direction: column;
-  position: absolute;
-  bottom: 6%;
-  left: 18%;
   align-items: center;
   justify-content: space-between;
   height: 35px;
+  width: 190px;
+  margin-top: 5vh;
 `
 
 const Header3 = styled.div`
