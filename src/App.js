@@ -2,7 +2,7 @@ import React, { lazy, Suspense } from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
 import { GlobalStyle, theme } from './style'
-import { Navigation } from './modules'
+import { Footer } from './modules'
 
 const Home = lazy(() => import ('./modules/home'))
 
@@ -18,6 +18,7 @@ const App = () => {
             </Route>
           </Switch>
         </Suspense>
+        <Footer />
       </ThemeProvider>
     </BrowserRouter>
   )

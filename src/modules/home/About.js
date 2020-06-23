@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { eagle2Mobile, hiMobile, reflectorMobile } from '../../images'
+import { eagle2Mobile, hiMobile, reflectorMobile, about1Mobile, about2Mobile, about3Mobile } from '../../images'
 
 const About = () => {
   return (
@@ -57,6 +57,11 @@ const About = () => {
 			<GetToKnowMeText>
 				Little Eagle is my nickname because my surname in Croatian means just that!
 			</GetToKnowMeText>
+			<GetToKnowMeImgContainer>
+				<GetToKnowMeImg src={about1Mobile}/>
+				<GetToKnowMeImg src={about2Mobile}/>
+				<GetToKnowMeImg src={about3Mobile}/>
+			</GetToKnowMeImgContainer>
 		</GetToKnowMeContainer>
 		<ICanHelpYouContainer>
 			<ICanHelpYouTextWrapper url={reflectorMobile}>
@@ -65,6 +70,7 @@ const About = () => {
 				<ICanHelpYouText>Portraits, studio and non-studio photography, stunning landscape shots, crisp small details, and more.</ICanHelpYouText>
 			</ICanHelpYouTextContainer>	
 			</ICanHelpYouTextWrapper>
+			<VisitGalleryButton>Visit my full gallery</VisitGalleryButton>
 		</ICanHelpYouContainer>
 	</AboutScreen>
   )
@@ -166,7 +172,6 @@ const GetToKnowMeContainer = styled.div`
 	background-color: #FFEFEF;
 	padding-left: 10%;
 	padding-right: 10%;
-	padding-bottom: 5%;
 	position: relative;
 `
 
@@ -204,9 +209,50 @@ const GetToKnowMeText = styled.div`
 	text-align: left;
 `
 
+const GetToKnowMeImgContainer = styled.div`
+	margin-top: 15%;
+	margin-bottom: 15%;
+	margin-left: -15%;
+	width: 140%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+`
+
+const GetToKnowMeImg = styled.img`
+	width: 31%;
+`
+
+const VisitGalleryButton = styled.button`
+	font-family: Raleway;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 14px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #C59D9A;
+	margin-top: 5%;
+	margin-left: 7.5%;
+	border: 2.58708px solid #C59D9A;
+	box-sizing: border-box;
+	backdrop-filter: blur(1.26966px);
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 20px;
+	padding-right: 20px;
+	cursor: pointer;
+	background-color: transparent;
+	&:active {
+	  transform: translateY(2px);
+	}
+`
+
 const ICanHelpYouContainer = styled.div`
 	width: 100%;
 	height: min-content;
+	padding-bottom: 15%;
 `
 
 const ICanHelpYouTextWrapper = styled.div`

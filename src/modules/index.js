@@ -1,4 +1,5 @@
+import Footer from './footer'
 import Home from './home'
 import Navigation from './navigation'
 
-export { Home, Navigation }
+export { Footer, Home, Navigation }
