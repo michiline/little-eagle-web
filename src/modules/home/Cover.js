@@ -47,7 +47,10 @@ const CoverScreen = styled.div`
 const ContentContainer = styled.div`
   width: min-content;
   height: min-content;
-  margin-top: 10%;
+  margin-top: 5%;
+  @media only screen and (min-height: 550px) {
+    margin-top: 10%;
+  }
   margin-left: 10%;
   display: flex;
   flex-direction: column;
@@ -68,7 +71,6 @@ const Eagle1Image = styled.div`
   top: 8px;
 `
 
-
 const PhotoImage = styled.div`
   width: 127px;
   height: 87px;
@@ -88,11 +90,15 @@ const Header1 = styled.div`
   font-family: 'Abril Fatface';
   font-style: normal;
   font-weight: normal;
-  font-size: 40px;
-  line-height: 42px;
+  font-size: 30px;
+  line-height: 32px;
   color: #FFFBF7;
   text-shadow: 1.14737px 2.86842px 2.86842px rgba(0, 0, 0, 0.2);
   z-index: 2;
+  @media only screen and (min-height: 550px) {
+    font-size: 40px;
+    line-height: 42px;
+  }
 `
 
 
@@ -104,11 +110,15 @@ const Header2 = styled.div`
   font-family: 'Abril Fatface';
   font-style: normal;
   font-weight: normal;
-  font-size: 35px;
-  line-height: 38px;
+  font-size: 25px;
+  line-height: 28px;
   color: #FFFBF7;
   text-shadow: 1.14737px 2.86842px 2.86842px rgba(0, 0, 0, 0.2);
   color: #FFD8C1;
+  @media only screen and (min-height: 550px) {
+    font-size: 35px;
+    line-height: 38px;
+  }
 `
 
 const OutlinedButton = styled.button`
