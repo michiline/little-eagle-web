@@ -47,10 +47,7 @@ const CoverScreen = styled.div`
 const ContentContainer = styled.div`
   width: min-content;
   height: min-content;
-  margin-top: 5%;
-  @media only screen and (min-height: 550px) {
-    margin-top: 10%;
-  }
+  margin-top: 10%;
   margin-left: 10%;
   display: flex;
   flex-direction: column;
