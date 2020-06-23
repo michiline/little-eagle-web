@@ -168,7 +168,7 @@ const ReadMoreContainer = styled.div`
   width: 190px;
   margin-top: 30%;
   @media only screen and (min-height: 700px) {
-    margin-top: 100%;
+    margin-top: 150%;
   }
 `
 
