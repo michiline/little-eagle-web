@@ -6,32 +6,56 @@ import { coverMobile, eagle1Mobile, photoMobile } from '../../images'
 
 const Cover = () => {
   const [windowWidth, windowHeight] = useWindow()
-  return (
-	<CoverScreen url={coverMobile}>
-		<ContentContainer>
-			<ImageContainer>
-				<Eagle1Image windowHeight={windowHeight} windowWidth={windowWidth} url={eagle1Mobile}/>
-				<PhotoImage windowHeight={windowHeight} windowWidth={windowWidth} url={photoMobile}/>
-			</ImageContainer>
-			<HeaderRow>
-				<Header1>little</Header1>
-				<Header1Red>eagle</Header1Red>
-			</HeaderRow>
-			<Header1>
-				photography
-			</Header1>
-			<Header2 style={{'marginTop': '8px'}}>The world</Header2>
-			<Header2>through my lens</Header2>
-			<OutlinedButton>View my work</OutlinedButton>
-      <ReadMoreContainer>
-			<Header3>Read more about me</Header3>
-			<ArrowDownIcon width={'32'} height={'14'}/>
-		</ReadMoreContainer>
-		</ContentContainer>
-	</CoverScreen>
-  )
+  if (windowHeight > windowWidth) {
+    return (
+      <CoverScreen url={coverMobile}>
+        <ContentContainer>
+          <ImageContainer>
+            <Eagle1Image url={eagle1Mobile}/>
+            <PhotoImage url={photoMobile}/>
+          </ImageContainer>
+          <HeaderRow>
+            <Header1>little</Header1>
+            <Header1Red>eagle</Header1Red>
+          </HeaderRow>
+          <Header1>
+            photography
+          </Header1>
+          <Header2 style={{'marginTop': '8px'}}>The world</Header2>
+          <Header2>through my lens</Header2>
+          <OutlinedButton>View my work</OutlinedButton>
+          <ReadMoreContainer>
+            <Header3>Read more about me</Header3>
+            <ArrowDownIcon width={'32'} height={'14'}/>
+          </ReadMoreContainer>
+        </ContentContainer>
+      </CoverScreen>
+      )
+  }
+  else {
+    return (
+      <CoverScreen url={coverMobile}>
+        <ContentContainer>
+          <ImageContainer>
+            <Eagle1Image url={eagle1Mobile}/>
+            <PhotoImage url={photoMobile}/>
+          </ImageContainer>
+          <HeaderRow>
+            <Header1>little</Header1>
+            <Header1Red>eagle</Header1Red>
+            <Header1>photography</Header1>
+          </HeaderRow>
+          <Header2 style={{'marginTop': '8px'}}>The world through my lens</Header2>
+          <OutlinedButton>View my work</OutlinedButton>
+          <ReadMoreContainer>
+            <Header3>Read more about me</Header3>
+            <ArrowDownIcon width={'32'} height={'14'}/>
+          </ReadMoreContainer>
+        </ContentContainer>
+      </CoverScreen>
+      )
+  }
 }
-
 
 const CoverScreen = styled.div`
   width: 100;
@@ -98,7 +122,6 @@ const Header1 = styled.div`
   }
 `
 
-
 const Header1Red = styled(Header1)`
   color: #FF4747;
 `
@@ -144,6 +167,9 @@ const ReadMoreContainer = styled.div`
   height: 35px;
   width: 190px;
   margin-top: 30%;
+  @media only screen and (min-height: 750px) {
+    margin-top: 100%;
+  }
 `
 
 const Header3 = styled.div`
