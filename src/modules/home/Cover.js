@@ -1,186 +1,174 @@
 import React from 'react'
 import styled from 'styled-components'
-import { ArrowDownIcon } from '../../components'
-import { useWindow } from '../../hooks'
-import { coverMobile, eagle1Mobile, photoMobile } from '../../images'
+import { cover, eagle2, photo } from '../../images'
+import { HamburgerButton } from '../../components'
 
 const Cover = () => {
-  const [windowWidth, windowHeight] = useWindow()
-  if (windowHeight > windowWidth) {
-    return (
-      <CoverScreen url={coverMobile}>
-        <ContentContainer>
-          <ImageContainer>
-            <Eagle1Image url={eagle1Mobile}/>
-            <PhotoImage url={photoMobile}/>
-          </ImageContainer>
-          <HeaderRow>
-            <Header1>little</Header1>
-            <Header1Red>eagle</Header1Red>
-          </HeaderRow>
-          <Header1>
-            photography
-          </Header1>
-          <Header2 style={{'marginTop': '8px'}}>The world</Header2>
-          <Header2>through my lens</Header2>
-          <OutlinedButton>View my work</OutlinedButton>
-          <ReadMoreContainer>
-            <Header3>Read more about me</Header3>
-            <ArrowDownIcon width={'32'} height={'14'}/>
-          </ReadMoreContainer>
-        </ContentContainer>
-      </CoverScreen>
-      )
-  }
-  else {
-    return (
-      <CoverScreen url={coverMobile}>
-        <ContentContainer>
-          <ImageContainer>
-            <Eagle1Image url={eagle1Mobile}/>
-            <PhotoImage url={photoMobile}/>
-          </ImageContainer>
-          <HeaderRow>
-            <Header1>little</Header1>
-            <Header1Red>eagle</Header1Red>
-            <Header1>photography</Header1>
-          </HeaderRow>
-          <Header2 style={{'marginTop': '8px'}}>The world through my lens</Header2>
-          <OutlinedButton>View my work</OutlinedButton>
-          <ReadMoreContainer>
-            <Header3>Read more about me</Header3>
-            <ArrowDownIcon width={'32'} height={'14'}/>
-          </ReadMoreContainer>
-        </ContentContainer>
-      </CoverScreen>
-      )
-  }
+  return (
+    <RootContainer url={cover.web}>
+      <TopContainer>
+        <HamburgerButton/>
+      </TopContainer>
+      <MiddleContainer>
+        <EaglePhotoContainer>
+          <Eagle2Img src={eagle2.web.white} />
+          <PhotoImg src={photo.web.white} />
+        </EaglePhotoContainer>
+        <TextRow>
+          <H1>little</H1>
+          <H1Red>eagle</H1Red>
+          <H1>photography</H1>
+        </TextRow>
+        <TextRow>
+          <H2 style={{ 'margin-right': '10px' }}>The world</H2>
+          <H2>through my lens</H2>
+        </TextRow>
+      </MiddleContainer>
+    </RootContainer>
+  )
 }
 
-const CoverScreen = styled.div`
-  width: 100;
+const RootContainer = styled.div`
+  width: 100%;
   height: 100vh;
   background: linear-gradient(0deg, rgba(64, 54, 54, 0.3), rgba(64, 54, 54, 0.3)), url(${props => props.url});
   background-size: cover;
-  background-position: right;
+  background-position: center;
   display: flex;
   flex-direction: column;
   position: relative;
 `
 
-const ContentContainer = styled.div`
-  width: min-content;
-  height: min-content;
-  margin-top: 10%;
-  margin-left: 10%;
-  display: flex;
-  flex-direction: column;
-`
-
-const ImageContainer = styled.div`
-  width: 160px;
-  height: 115px;
-  position: relative;
-`
-
-const Eagle1Image = styled.div`
-  width: 70px;
-  height: 62px;
-  background: url(${props => props.url});
-  position: absolute;
-  left: 73px;
-  top: 8px;
-`
-
-const PhotoImage = styled.div`
-  width: 127px;
-  height: 87px;
-  background: url(${props => props.url});
-  position: absolute;
-  top: 50px;
-  left: -15px;
-`
-
-const HeaderRow = styled.div`
+const TopContainer = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: row;
-  width: max-content;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 40px;
+  padding-top: 40px;
+  @media only screen and (max-width: 1024px) {
+    padding-right: calc(40px / 1.6);
+    padding-top: calc(40px / 1.6);
+  }
 `
 
-const Header1 = styled.div`
-  font-family: 'Abril Fatface';
+const MiddleContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  top: 20%;
+  padding-left: 100px;
+  padding-right: 100px;
+  @media only screen and (max-width: 1024px) {
+    padding-left: calc(100px / 1.6);
+    padding-right: calc(100px / 1.6);
+  }
+  @media only screen and (max-width: 400px), only screen and (max-height: 500px) {
+    padding-left: calc(100px / 2.2);
+    padding-right: calc(100px / 2.2);
+  }
+`
+
+const EaglePhotoContainer = styled.div`
+  position: relative;
+  height: 125px;
+  @media only screen and (max-width: 1024px) {
+    height: calc(125px / 1.6);
+  }
+  @media only screen and (max-width: 400px), only screen and (max-height: 500px) {
+    height: calc(125px / 2.2);
+  }
+`
+
+const Eagle2Img = styled.img`
+  width: 165px;
+  height: 145px;
+  position: absolute;
+  top: -100px;
+  left: 175px;
+  @media only screen and (max-width: 1024px) {
+    width: calc(165px / 1.6);
+    height: calc(145px / 1.6);
+    top: calc(-100px / 1.6);
+    left: calc(175px / 1.6);
+  }
+  @media only screen and (max-width: 400px), only screen and (max-height: 500px) {
+    width: calc(165px / 2.4);
+    height: calc(145px / 2.4);
+    top: calc(-100px / 2.4);
+    left: calc(175px / 2.4);
+  }
+`
+
+const PhotoImg = styled.img`
+  width: 300px;
+  height: 200px;
+  left: -25px;
+  @media only screen and (max-width: 1024px) {
+    width: calc(300px / 1.6);
+    height: calc(200px / 1.6);
+    left: calc(-25px / 1.6);
+  }
+  @media only screen and (max-width: 400px), only screen and (max-height: 500px) {
+    width: calc(300px / 2.2);
+    height: calc(200px / 2.2);
+    left: calc(-25px / 2.2);
+
+  }
+  position: absolute;
+`
+
+const TextRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+`
+
+const H1 = styled.div`
+  font-family: Abril Fatface;
   font-style: normal;
   font-weight: normal;
-  font-size: 30px;
-  line-height: 32px;
+  font-size: 72px;
+  line-height: 97px;
   color: #FFFBF7;
   text-shadow: 1.14737px 2.86842px 2.86842px rgba(0, 0, 0, 0.2);
   z-index: 2;
-  @media only screen and (min-height: 550px) {
-    font-size: 40px;
-    line-height: 42px;
+  @media only screen and (max-width: 1024px) {
+    font-size: calc(72px / 1.6);
+    line-height: calc(97px / 1.6);
+  }
+  @media only screen and (max-width: 400px), only screen and (max-height: 500px) {
+    font-size: calc(72px / 2.2);
+    line-height: calc(97px / 2.2);
   }
 `
 
-const Header1Red = styled(Header1)`
+const H1Red = styled(H1)`
   color: #FF4747;
 `
 
-const Header2 = styled.div`
-  font-family: 'Abril Fatface';
+const H2 = styled.div`
+  font-family: Abril Fatface;
   font-style: normal;
   font-weight: normal;
-  font-size: 25px;
-  line-height: 28px;
-  color: #FFFBF7;
-  text-shadow: 1.14737px 2.86842px 2.86842px rgba(0, 0, 0, 0.2);
+  font-size: 61px;
+  line-height: 82px;
   color: #FFD8C1;
-  @media only screen and (min-height: 550px) {
-    font-size: 35px;
-    line-height: 38px;
+  text-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2);
+  @media only screen and (max-width: 1024px) {
+    font-size: calc(61px / 1.6);
+    line-height: calc(82px / 1.6);
   }
-`
-
-const OutlinedButton = styled.button`
-  background: rgba(255, 225, 148, 0.1);
-  border: 2.96701px solid #FFFBF7;
-  box-sizing: border-box;
-  backdrop-filter: blur(1.5736px);
-  width: 190px;
-  height: 50px;
-  font-family: Raleway;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 14px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #FFFBF7;
-  margin-top: 20px;
-`
-
-const ReadMoreContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  height: 35px;
-  width: 190px;
-  margin-top: 30%;
-  @media only screen and (min-height: 650px) {
-    margin-top: 80%;
+  @media only screen and (max-width: 400px), only screen and (max-height: 500px) {
+    font-size: calc(61px / 2.2);
+    line-height: calc(82px / 2.2);
   }
-`
-
-const Header3 = styled.div`
-  font-family: Raleway;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 10px;
-  line-height: 12px;
-  letter-spacing: 0.2px;
-  text-transform: uppercase;
-  color: #FFFBF7;
 `
 
 export default Cover

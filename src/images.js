@@ -9,3 +9,20 @@ export const reflectorMobile = `${baseUrl}/mobile/reflector.png`
 export const about1Mobile = `${baseUrl}/mobile/about1.jpg`
 export const about2Mobile = `${baseUrl}/mobile/about2.jpg`
 export const about3Mobile = `${baseUrl}/mobile/about3.jpg`
+
+export const cover = {
+	mobile: `${baseUrl}/mobile/cover-32.jpg`,
+	web: `${baseUrl}/web/cover.jpg`
+}
+
+export const eagle2 = {
+	web: {
+		white: `${baseUrl}/web/eagle-2-white.png`
+	}
+}
+
+export const photo = {
+	web: {
+		white: `${baseUrl}/web/photo-white.png`
+	}
+}
