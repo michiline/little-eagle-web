@@ -64,8 +64,8 @@ const MiddleContainer = styled.div`
   padding-left: 100px;
   padding-right: 100px;
   @media only screen and (max-width: 1024px) {
-    padding-left: calc(100px / 1.6);
-    padding-right: calc(100px / 1.6);
+    padding-left: calc(100px / 1.8);
+    padding-right: calc(100px / 1.8);
   }
   @media only screen and (max-width: 400px), only screen and (max-height: 500px) {
     padding-left: calc(100px / 2.2);
