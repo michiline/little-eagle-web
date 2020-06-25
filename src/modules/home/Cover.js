@@ -81,7 +81,7 @@ const MiddleContainer = styled.div`
     padding-left: calc(100px / 1.4);
     padding-right: calc(100px / 1.4);
   }
-  @media only screen and (max-width: 720px) {
+  @media only screen and (max-width: 720px), only screen and (max-height: 750px) {
     top: 15%;
     padding-left: calc(100px / 1.8);
     padding-right: calc(100px / 1.8);
@@ -99,7 +99,7 @@ const EaglePhotoContainer = styled.div`
   @media only screen and (max-width: 1280px) {
     height: calc(125px / 1.4);
   }
-  @media only screen and (max-width: 720px) {
+  @media only screen and (max-width: 720px), only screen and (max-height: 750px) {
     height: calc(125px / 1.8);
   }
   @media only screen and (max-width: 400px), only screen and (max-height: 500px) {
@@ -119,7 +119,7 @@ const Eagle2Img = styled.img`
     top: calc(-100px / 1.4);
     left: calc(175px / 1.4);
   }
-  @media only screen and (max-width: 720px) {
+  @media only screen and (max-width: 720px), only screen and (max-height: 750px) {
     width: calc(165px / 1.8);
     height: calc(145px / 1.8);
     top: calc(-100px / 1.8);
@@ -142,7 +142,7 @@ const PhotoImg = styled.img`
     height: calc(200px / 1.4);
     left: calc(-25px / 1.4);
   }
-  @media only screen and (max-width: 720px) {
+  @media only screen and (max-width: 720px), only screen and (max-height: 750px) {
     width: calc(300px / 1.8);
     height: calc(200px / 1.8);
     left: calc(-25px / 1.8);
@@ -176,7 +176,7 @@ const H1 = styled.div`
     font-size: calc(72px / 1.4);
     line-height: calc(97px / 1.4);
   }
-  @media only screen and (max-width: 720px) {
+  @media only screen and (max-width: 720px), only screen and (max-height: 750px) {
     font-size: calc(72px / 1.8);
     line-height: calc(97px / 1.8);
   }
@@ -202,7 +202,7 @@ const H2 = styled.div`
     font-size: calc(61px / 1.4);
     line-height: calc(82px / 1.4);
   }
-  @media only screen and (max-width: 720px) {
+  @media only screen and (max-width: 720px), only screen and (max-height: 750px) {
     font-size: calc(61px / 1.8);
     line-height: calc(82px / 1.8);
   }
@@ -239,7 +239,7 @@ const OutlinedButton = styled.button`
     line-height: calc(28px / 1.4);
     margin-top: calc(20px / 1.4);
   }
-  @media only screen and (max-width: 720px) {
+  @media only screen and (max-width: 720px), only screen and (max-height: 750px) {
     border: 4px solid #FFFBF7;
     width: calc(394px / 1.8);
     height: calc(98px / 1.8);
@@ -272,15 +272,17 @@ const ReadMoreContainer = styled.div`
     height: calc(100px / 1.4);
     margin-left: calc(100px / 1.4);
   }
-  @media only screen and (max-width: 720px) {
+  @media only screen and (max-width: 720px), only screen and (max-height: 750px) {
     width: calc(394px / 1.8);
     height: calc(100px / 1.8);
     margin-left: calc(100px / 1.8);
+    top: 70%;
   }
   @media only screen and (max-width: 400px), only screen and (max-height: 500px) {
     width: calc(394px / 2.2);
     height: calc(100px / 2.2);
     margin-left: calc(100px / 2.2);
+    top: 70%;
   }
 `
 
@@ -298,7 +300,7 @@ const H3 = styled.div`
     font-size: calc(24px / 1.4);
     line-height: calc(28px / 1.4);
   }
-  @media only screen and (max-width: 720px) {
+  @media only screen and (max-width: 720px), only screen and (max-height: 750px) {
     font-size: calc(24px / 1.8);
     line-height: calc(28px / 1.8);
   }
