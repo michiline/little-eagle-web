@@ -9,30 +9,28 @@ const Cover = () => {
       <TopContainer>
         <HamburgerButton/>
       </TopContainer>
-      <VerticalContainer>
-        <MiddleContainer>
-          <EaglePhotoContainer>
-            <Eagle2Img src={eagle2.web.white} />
-            <PhotoImg src={photo.web.white} />
-          </EaglePhotoContainer>
-          <TextRow>
-            <H1>little</H1>
-            <H1Red>eagle</H1Red>
-            <H1>photography</H1>
-          </TextRow>
-          <TextRow>
-            <H2 style={{ 'marginRight': '10px' }}>The world</H2>
-            <H2>through my lens</H2>
-          </TextRow>
-          <OutlinedButton>
-            View my work
-          </OutlinedButton>
-        </MiddleContainer>
-        <ReadMoreContainer>
-          <H3>Read more about me</H3>
-          <ArrowDownIcon />
-        </ReadMoreContainer>
-      </VerticalContainer>
+      <MiddleContainer>
+        <EaglePhotoContainer>
+          <Eagle2Img src={eagle2.web.white} />
+          <PhotoImg src={photo.web.white} />
+        </EaglePhotoContainer>
+        <TextRow>
+          <H1>little</H1>
+          <H1Red>eagle</H1Red>
+          <H1>photography</H1>
+        </TextRow>
+        <TextRow>
+          <H2 style={{ 'marginRight': '10px' }}>The world</H2>
+          <H2>through my lens</H2>
+        </TextRow>
+        <OutlinedButton>
+          View my work
+        </OutlinedButton>
+      </MiddleContainer>
+      <ReadMoreContainer>
+        <H3>Read more about me</H3>
+        <ArrowDownIcon />
+      </ReadMoreContainer>
       <BottomContainer>
         <SocialIcons>
           <FacebookLightIcon />
@@ -56,48 +54,16 @@ const RootContainer = styled.div`
 `
 
 const TopContainer = styled.div`
-  position: fixed;
-  width: min-content;
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-  top: 40px;
-  right: 40px;
+  padding-right: 40px;
+  padding-top: 40px;
   @media only screen and (max-width: 1024px) {
-    top: calc(40px / 1.4);
-    right: calc(40px / 1.4);
-  }
-`
-
-const VerticalContainer = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding-left: 100px;
-  padding-right: 100px;
-  padding-top: 150px;
-  padding-bottom: 150px;
-  @media only screen and (max-width: 1280px) {
-    padding-left: calc(100px / 1.4);
-    padding-right: calc(100px / 1.4);
-    padding-top: 150px;
-    padding-bottom: calc(150px / 1.4);
-  }
-  @media only screen and (max-width: 720px), only screen and (max-height: 750px) {
-    padding-left: calc(100px / 1.8);
-    padding-right: calc(100px / 1.8);
-    padding-top: calc(150px / 1.4);
-    padding-bottom: calc(150px / 1.8);
-  }
-  @media only screen and (max-width: 400px), only screen and (max-height: 500px) {
-    padding-left: calc(100px / 2.2);
-    padding-right: calc(100px / 2.2);
-    padding-top: calc(150px / 1.8);
-    padding-bottom: calc(150px / 2.2);
+    padding-right: calc(40px / 1.4);
+    padding-top: calc(40px / 1.4);
   }
 `
 
@@ -107,6 +73,24 @@ const MiddleContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  position: absolute;
+  top: 20%;
+  padding-left: 100px;
+  padding-right: 100px;
+  @media only screen and (max-width: 1280px) {
+    padding-left: calc(100px / 1.4);
+    padding-right: calc(100px / 1.4);
+  }
+  @media only screen and (max-width: 720px), only screen and (max-height: 750px) {
+    top: 15%;
+    padding-left: calc(100px / 1.8);
+    padding-right: calc(100px / 1.8);
+  }
+  @media only screen and (max-width: 400px), only screen and (max-height: 500px) {
+    top: 15%;
+    padding-left: calc(100px / 2.4);
+    padding-right: calc(100px / 2.2);
+  }
 `
 
 const EaglePhotoContainer = styled.div`
@@ -142,10 +126,10 @@ const Eagle2Img = styled.img`
     left: calc(175px / 1.8);
   }
   @media only screen and (max-width: 400px), only screen and (max-height: 500px) {
-    width: calc(165px / 2.2);
-    height: calc(145px / 2.2);
-    top: calc(-100px / 2.2);
-    left: calc(175px / 2.2);
+    width: calc(165px / 2.4);
+    height: calc(145px / 2.4);
+    top: calc(-100px / 2.4);
+    left: calc(175px / 2.4);
   }
 `
 
@@ -276,22 +260,30 @@ const OutlinedButton = styled.button`
 const ReadMoreContainer = styled.div`
   width: 394px;
   height: 100px;
+  margin-left: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  margin-top: 8px;
+  position: absolute;
+  bottom: 100px;
   @media only screen and (max-width: 1280px) {
     width: calc(394px / 1.4);
     height: calc(100px / 1.4);
+    margin-left: calc(100px / 1.4);
+    bottom: calc(100px / 1.4);
   }
   @media only screen and (max-width: 720px), only screen and (max-height: 750px) {
     width: calc(394px / 1.8);
     height: calc(100px / 1.8);
+    margin-left: calc(100px / 1.8);
+    bottom: calc(100px / 1.8);
   }
   @media only screen and (max-width: 400px), only screen and (max-height: 500px) {
     width: calc(394px / 2.2);
-    height: calc(100px / 2.5);
+    height: calc(100px / 2.2);
+    margin-left: calc(100px / 2.2);
+    bottom: calc(100px / 2.2);
   }
 `
 
