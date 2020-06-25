@@ -266,23 +266,24 @@ const ReadMoreContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   position: absolute;
-  top: 80%;
+  bottom: 100px;
   @media only screen and (max-width: 1280px) {
     width: calc(394px / 1.4);
     height: calc(100px / 1.4);
     margin-left: calc(100px / 1.4);
+    bottom: calc(100px / 1.4);
   }
   @media only screen and (max-width: 720px), only screen and (max-height: 750px) {
     width: calc(394px / 1.8);
     height: calc(100px / 1.8);
     margin-left: calc(100px / 1.8);
-    top: 70%;
+    bottom: calc(100px / 1.8);
   }
   @media only screen and (max-width: 400px), only screen and (max-height: 500px) {
     width: calc(394px / 2.2);
     height: calc(100px / 2.2);
     margin-left: calc(100px / 2.2);
-    top: 70%;
+    bottom: calc(100px / 2.2);
   }
 `
 
