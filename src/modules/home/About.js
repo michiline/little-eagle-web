@@ -79,6 +79,7 @@ const RootContainer = styled.div`
 	@media only screen and (max-width: 1050px) {
 		height: 50vh;
 		min-height: 600px;
+		padding-bottom: 25px;
 	}
 	@media only screen and (max-width: 750px) {
 		flex-wrap: wrap;

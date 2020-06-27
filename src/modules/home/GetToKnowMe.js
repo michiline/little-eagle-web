@@ -72,8 +72,11 @@ const RootContainer = styled.div`
 	display: flex;
 	flex-direction: row;
 	padding-top: 75px;
+	@media only screen and (max-width: 1050px) {
+		padding-top: calc(75px / 1.3);
+	}
 	@media only screen and (max-width: 750px) {
-		flex-direction: column;
+		padding-top: calc(75px / 1.6);
 	}
 `
 
