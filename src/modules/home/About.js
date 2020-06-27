@@ -1,305 +1,168 @@
 import React from 'react'
 import styled from 'styled-components'
-import { eagle2Mobile, hiMobile, reflectorMobile, about1Mobile, about2Mobile, about3Mobile } from '../../images'
+import { hi, eagle1 } from '../../images'
 
 const About = () => {
   return (
-	<AboutScreen>
-		<HiImgWrapper>
-			<HiImgContainer>
-				<HiImg src={hiMobile}/>
-				<Eagle2Image src={eagle2Mobile}/>
-				<HiText>Hi, I'm Ana!</HiText>
-				<HiFrame/>
-			</HiImgContainer>
-		</HiImgWrapper>
-		<AboutTextContainer>
-			<AboutText>
-			By degree a psychologist, by heart a photographer. Based in Zagreb (Croatia), available worldwide. 
-			</AboutText>
-			<AboutText>
-			I don’t like to be in front of the camera, but I love being the person behind it. Capturing special moments and creating unforgettable memories gives me the feeling of excitement and fills me with joy. 
-			</AboutText>
-			<AboutText>
-			I am constantly learning and improving my skills through various workshops and photography courses. With my style evolving, I am open to different ideas and projects. 
-			</AboutText>
-			<BoldAboutText>
-				If you have an idea, wish or a vision, feel free to get in touch.
-			</BoldAboutText>
-		</AboutTextContainer>
-		<GetToKnowMeContainer>
-			<GetToKnowMeFrame/>
-			<GetToKnowMeHeader>Get to know me better</GetToKnowMeHeader>
-			<GetToKnowMeText>
-				I’m a true fan of traveling. If a weekend is free, I’m on the road. 
-			</GetToKnowMeText>
-			<GetToKnowMeText>
-				Camping is my new found passion. The goal is to increase my days spent in nature every year.
-			</GetToKnowMeText>
-			<GetToKnowMeText>
-				I can eat a lot of ice-cream. 
-			</GetToKnowMeText>
-			<GetToKnowMeText>
-				And watermelon. 
-			</GetToKnowMeText>
-			<GetToKnowMeText>
-				I'm an introvert. Talking about myself is hard so imagine how much time it takes me to write this.
-			</GetToKnowMeText>
-			<GetToKnowMeText>
-				I don’t think anyone likes summer and sea more than me. 
-			</GetToKnowMeText>
-			<GetToKnowMeText>
-				My boyfriend and I have our travel blog. Check it out: Leagle & Mich
-			</GetToKnowMeText>
-			<GetToKnowMeText>
-				I do yoga and have recently started including meditation in my everyday life.
-			</GetToKnowMeText>
-			<GetToKnowMeText>
-				Little Eagle is my nickname because my surname in Croatian means just that!
-			</GetToKnowMeText>
-			<GetToKnowMeImgContainer>
-				<GetToKnowMeImg src={about1Mobile}/>
-				<GetToKnowMeImg src={about2Mobile}/>
-				<GetToKnowMeImg src={about3Mobile}/>
-			</GetToKnowMeImgContainer>
-		</GetToKnowMeContainer>
-		<ICanHelpYouContainer>
-			<ICanHelpYouTextWrapper url={reflectorMobile}>
-			<ICanHelpYouTextContainer>
-				<ICanHelpYouHeader>I can help you capture:</ICanHelpYouHeader>
-				<ICanHelpYouText>Portraits, studio and non-studio photography, stunning landscape shots, crisp small details, and more.</ICanHelpYouText>
-			</ICanHelpYouTextContainer>	
-			</ICanHelpYouTextWrapper>
-			<VisitGalleryButton>Visit my full gallery</VisitGalleryButton>
-		</ICanHelpYouContainer>
-	</AboutScreen>
+	  <RootContainer>
+		  <ImageColumn>
+			  <ImageContainer>
+			  	<Image src={hi}/>
+				<ImageFrame />
+				<Eagle1Image src={eagle1} />
+			  </ImageContainer>
+		  </ImageColumn>
+		  <TextColumn>
+			<HeaderContainer>
+				<H1>Hi, I'm Ana!</H1>
+			</HeaderContainer>
+			<TextContainer>
+				<Text>
+					By degree a psychologist, by heart a photographer. 
+					Based in Zagreb (Croatia), available worldwide.
+				</Text>
+				<Text>
+					I don’t like to be in front of the camera, but I love being the person behind it. 
+					Capturing special moments and creating unforgettable memories gives me the feeling of excitement and fills me with joy.
+				</Text>
+				<Text>
+				I am constantly learning and improving my skills through various workshops and photography courses. 
+				With my style evolving, I am open to different ideas and projects. 
+				</Text>
+				<H2>If you have an idea, wish or a vision, feel free to get in touch.</H2>
+			</TextContainer>
+		  </TextColumn>
+	  </RootContainer>
   )
 }
 
-
-const AboutScreen = styled.div`
-  width: 100%;
-  height: min-content;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-`
-
-const HiImgWrapper = styled.div`
-	background-color: #FFEFEF;
-`
-
-const HiImgContainer = styled.div`
-  margin-top: 15%;
-  width: 90%;
-  height: min-content;
-  position: relative;
-  margin-bottom: 15%;
-`
-
-const HiImg = styled.img`
-  display: block;
-  object-fit: cover;
-  width: 100%;
-  z-index: 2;
-  position: relative;
-`
-
-const HiFrame = styled.div`
-  width: 100%;
-  height: 100%;
-  border: 5px solid #D3B1AF;
-  position: absolute;
-  top: 25px;
-  left: calc(5% + 2.5px);
-`
-
-const HiText = styled.div`
-  font-family: Abril Fatface;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 35px;
-  line-height: 65px;
-  color: #FFEFEF;
-  position: absolute;
-  bottom: 0;
-  left: 10%;
-  z-index: 2;
-`
-
-
-const Eagle2Image = styled.img`
-  width: 141px;
-  height: 100px;
-  position: absolute;
-  right: -40px;
-  top: -20px;
-  z-index: 5;
-  transform: rotate(20deg);
-`
-
-const AboutTextContainer = styled.div`
+const RootContainer = styled.div`
 	width: 100%;
-	height: min-content;
-	background-color: white;
-	padding-left: 10%;
-	padding-right: 10%;
-	padding-bottom: 10%;
-	z-index: -2;
-`
-
-const AboutText = styled.div`
-	color: #C59D9A;
-	font-family: Raleway;
-	font-style: normal;
-	font-weight: 500;
-	font-size: 18px;
-	line-height: 21px;
-	margin-top: 5%;
-	&:first-of-type {
-		margin-top: 10% !important;
-	}
-`
-
-const BoldAboutText = styled(AboutText)`
-	font-weight: 700;
-	margin-bottom: 10%;
-`
-
-const GetToKnowMeContainer = styled.div`
-	width: 90%;
-	height: min-content;
-	background-color: #FFEFEF;
-	padding-left: 10%;
-	padding-right: 10%;
+	height: 100vh;
+	min-height: 675px;
 	position: relative;
-`
-
-const GetToKnowMeFrame = styled.div`
-  width: 100%;
-  height: calc(100%);
-  border: 5px solid #D3B1AF;
-  position: absolute;
-  top: -25px;
-  left: calc(5% + 2.5px);
-  z-index: -1;
-`
-
-const GetToKnowMeHeader = styled.div`
-	font-family: Abril Fatface;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 35px;
-	line-height: 40px;
-	color: #C59D9A;
-	margin-top: 10%;
-`
-
-const GetToKnowMeText = styled.div`
-	color: #C59D9A;
-	font-family: Raleway;
-	font-style: normal;
-	font-weight: 500;
-	font-size: 16px;
-	line-height: 19px;
-	margin-top: 5%;
-	&:last-of-type {
-		margin-bottom: 10%;
-	}
-	text-align: left;
-`
-
-const GetToKnowMeImgContainer = styled.div`
-	margin-top: 15%;
-	margin-bottom: 15%;
-	margin-left: -15%;
-	width: 140%;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: center;
+	background: linear-gradient(0deg, #FFFFFF 70%, #FFEFEF 70%);
 `
 
-const GetToKnowMeImg = styled.img`
-	width: 31%;
+const ImageColumn = styled.div`
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
 `
 
-const VisitGalleryButton = styled.button`
-	font-family: Raleway;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 12px;
-	line-height: 14px;
-	text-align: center;
-	text-transform: uppercase;
-	color: #C59D9A;
-	margin-top: 5%;
-	margin-left: 7.5%;
-	border: 2.58708px solid #C59D9A;
-	box-sizing: border-box;
-	backdrop-filter: blur(1.26966px);
-	padding-top: 15px;
-	padding-bottom: 15px;
-	padding-left: 20px;
-	padding-right: 20px;
-	cursor: pointer;
-	background-color: transparent;
-	&:active {
-	  transform: translateY(2px);
+const ImageContainer = styled.div`
+	width: min-content;
+	height: 85%;
+	position: relative;
+`
+
+const Image = styled.img`
+	display: block;
+	object-fit: cover;
+	height: 100%;
+	z-index: 2;
+	position: relative;
+`
+
+const ImageFrame = styled.div`
+	width: 100%;
+	height: 100%;
+	border: 5px solid #D3B1AF;
+	position: absolute;
+	top: 25px;
+	left: 25px;
+`
+
+const Eagle1Image = styled.img`
+	width: 340px;
+	height: 240px;
+	position: absolute;
+	top: 0;
+	right: -175px;
+	z-index: 3;
+	@media only screen and (max-width: 1280px), screen and (max-height: 800px) {
+		width: calc(340px / 1.4);
+		height: calc(240px / 1.4);
+		right: calc(-175px / 1.4);
 	}
 `
 
-const ICanHelpYouContainer = styled.div`
+const TextColumn = styled.div`
+	padding-left: 100px;
 	width: 100%;
-	height: min-content;
-	padding-bottom: 15%;
+	height: 100%;
 `
 
-const ICanHelpYouTextWrapper = styled.div`
-	margin-top: 5%;
-	margin-left: 5%;
-	margin-right: 5%;
-	width: 90%;
-	height: min-content;
-	background-image: url(${props => props.url});
-	background-position: right;
-	background-size: 100% 100%;
+const HeaderContainer = styled.div`
+	width: 100%;
+	height: 30%;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	justify-content: flex-start;
 `
 
-const ReflectorImg = styled.img`
-	width: 90%;
-	object-fit: cover;
-	z-index: -1;
+const H1 = styled.div`
+	font-family: Abril Fatface;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 61px;
+	line-height: 65px;
+	color: #C59D9A;
+	padding-bottom: 20px;
+	@media only screen and (max-width: 1280px), screen and (max-height: 800px) {
+		font-size: calc(61px / 1.4);
+		line-height: calc(65px / 1.4);
+	}
 `
 
-const ICanHelpYouTextContainer = styled.div`
+const TextContainer = styled.div`
+	width: 100%;
+	height: 70%;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	width: 70%;
-	padding-top: 5%;
-	padding-left: 5%;
-	padding-bottom: 5%;
-	min-height: 400px;
+	justify-content: flex-start;
+	align-items: flex-start;
 `
 
-const ICanHelpYouHeader = styled.div`
-	font-family: Abril Fatface;
+const Text = styled.div`
+	font-family: Raleway;
 	font-style: normal;
-	font-weight: normal;
+	font-weight: 500;
 	font-size: 25px;
-	line-height: 34px;
+	line-height: 29px;
 	color: #C59D9A;
+	margin-top: 20px;
+	width: 500px;
+	@media only screen and (max-width: 1280px), screen and (max-height: 800px) {
+		width: calc(500px / 1.4);
+		font-size: calc(25px / 1.4);
+		line-height: calc(29px / 1.4);
+	}
 `
 
-const ICanHelpYouText = styled.div`
-	font-family: Abril Fatface;
+const H2 = styled.div`
+	margin-top: 30px;
+	font-family: Raleway;
 	font-style: normal;
-	font-weight: normal;
-	font-size: 25px;
-	line-height: 34px;
-	width: 100%;
-	color: #FFD8C1;
+	font-weight: bold;
+	font-size: 27px;
+	line-height: 32px;
+	color: #C59D9A;
+	width: 500px;
+	@media only screen and (max-width: 1280px), screen and (max-height: 800px) {
+		width: calc(500px / 1.4);
+		font-size: calc(27px / 1.4);
+		line-height: calc(32px / 1.4);
+	}
 `
+
 
 export default About

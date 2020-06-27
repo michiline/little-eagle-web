@@ -17,5 +17,4 @@ export const IconButton = styled.button`
   &:active {
     transform: translateY(2px);
   }
-  padding: 10px;
 `

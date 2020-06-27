@@ -1,6 +1,7 @@
-import React, { memo } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import Cover from './Cover'
+import About from './About'
 
 const Home = () => {
   return (

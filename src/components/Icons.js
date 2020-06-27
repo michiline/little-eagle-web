@@ -26,7 +26,7 @@ import styled from 'styled-components'
 const HamburgerSvg = styled.svg`
   width: 60px;
   height: 37px;
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 1000px) {
     width: 35px;
     height: 22px;
   }
@@ -45,19 +45,9 @@ export const HamburgerIcon = () => {
 const ArrowDownSvg = styled.svg`
   width: 79px;
   height: 34px;
-  width: 60px;
-  height: 37px;
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 1000px) {
     width: calc(79px / 1.4);
     height: calc(34px / 1.4);
-  }
-  @media only screen and (max-width: 720px) {
-    width: calc(79px / 1.8);
-    height: calc(34px / 1.8);
-  }
-  @media only screen and (max-width: 400px), only screen and (max-height: 500px) {
-    width: calc(79px / 2.2);
-    height: calc(34px / 2.2);
   }
 `
 

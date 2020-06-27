@@ -11,18 +11,18 @@ export const about2Mobile = `${baseUrl}/mobile/about2.jpg`
 export const about3Mobile = `${baseUrl}/mobile/about3.jpg`
 
 export const cover = {
-	mobile: `${baseUrl}/mobile/cover-32.jpg`,
-	web: `${baseUrl}/web/cover.jpg`
+	mobile: `${baseUrl}/cover-mobile-3-2.jpg`,
+	web: `${baseUrl}/cover-web-3-2.jpg`
 }
 
+export const eagle1 = `${baseUrl}/eagle-1.png`
+
 export const eagle2 = {
-	web: {
-		white: `${baseUrl}/web/eagle-2-white.png`
-	}
+	white: `${baseUrl}/eagle-2-white.png`
 }
 
 export const photo = {
-	web: {
-		white: `${baseUrl}/web/photo-white.png`
-	}
+	white: `${baseUrl}/photo-white.png`
 }
+
+export const hi = `${baseUrl}/hi-3-3-2.jpg`

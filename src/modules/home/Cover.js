@@ -1,45 +1,75 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useWindow } from '../../hooks'
 import { cover, eagle2, photo } from '../../images'
 import { HamburgerButton, ArrowDownIcon, FacebookLightIcon, InstagramLightIcon } from '../../components'
 
 const Cover = () => {
+  const [windowWidth, windowHeight] = useWindow()
+  let HeadersElem = (
+    <>
+      <Headers>
+        <H1>little</H1>
+        <H1Red>eagle</H1Red>
+        <H1>photography</H1>
+      </Headers>
+      <Headers>
+        <H2>The world through my lens</H2>
+      </Headers>
+    </>
+
+  )
+  if (windowWidth < 1000) {
+    HeadersElem = (
+      <>
+      <Headers>
+        <H1>little</H1>
+        <H1Red>eagle</H1Red>
+      </Headers>
+      <Headers>
+        <H1>photography</H1>
+      </Headers>
+      <Headers>
+        <H2>The world</H2>
+      </Headers>
+      <Headers>
+        <H2>through my lens</H2>
+      </Headers>
+    </>
+    )
+  } 
   return (
-    <RootContainer url={cover.web}>
-      <TopContainer>
+    <RootContainer urlWeb={cover.web} urlMobile={cover.mobile}>
+      <Navbar>
         <HamburgerButton/>
-      </TopContainer>
-      <VerticalContainer>
-        <MiddleContainer>
-          <EaglePhotoContainer>
-            <Eagle2Img src={eagle2.web.white} />
-            <PhotoImg src={photo.web.white} />
-          </EaglePhotoContainer>
-          <TextRow>
-            <H1>little</H1>
-            <H1Red>eagle</H1Red>
-            <H1>photography</H1>
-          </TextRow>
-          <TextRow>
-            <H2 style={{ 'marginRight': '10px' }}>The world</H2>
-            <H2>through my lens</H2>
-          </TextRow>
-          <OutlinedButton>
+      </Navbar>
+      <Content>
+        <Top>
+          <Illustrations>
+            <Eagle2Img src={eagle2.white} />
+            <PhotoImg src={photo.white} />
+          </Illustrations>
+          {HeadersElem}
+          <GalleryButton>
             View my work
-          </OutlinedButton>
-        </MiddleContainer>
-        <ReadMoreContainer>
-          <H3>Read more about me</H3>
-          <ArrowDownIcon />
-        </ReadMoreContainer>
-      </VerticalContainer>
-      <BottomContainer>
-        <SocialIcons>
-          <FacebookLightIcon />
-          <InstagramLightIcon />
-        </SocialIcons>
-        <ContactMail>little.eagle.photo@pm.me</ContactMail>
-      </BottomContainer>
+          </GalleryButton>
+        </Top>
+        <Bottom>
+          <ReadMore>
+            <H3>Read more about me</H3>
+            <ArrowDownIcon />
+          </ReadMore>
+        </Bottom>
+      </Content>
+      <ContactSocial>
+            <Social>
+              <FacebookLightIcon/>
+              <InstagramLightIcon/>
+            </Social>
+            <Contact>
+              little.eagle.photo@pm.me
+            </Contact>
+          </ContactSocial>
     </RootContainer>
   )
 }
@@ -47,79 +77,65 @@ const Cover = () => {
 const RootContainer = styled.div`
   width: 100%;
   height: 100vh;
-  background: linear-gradient(0deg, rgba(64, 54, 54, 0.3), rgba(64, 54, 54, 0.3)), url(${props => props.url});
+  min-height: 850px;
+  padding: 50px;
+  background: linear-gradient(0deg, rgba(64, 54, 54, 0.3), rgba(64, 54, 54, 0.3)), url(${props => props.urlWeb});
+  background-size: cover;
+  background-position: center;
   background-size: cover;
   background-position: center;
   display: flex;
   flex-direction: column;
-  position: relative;
+  @media only screen and (max-width: 1000px) {
+    min-height: 725px;
+  }
+  @media only screen and (max-width: 600px) {
+    padding-left: 25px;
+    padding-bottom: 25px;
+    padding-right: 25px;
+    min-height: 550px;
+  }
 `
 
-const TopContainer = styled.div`
-  position: fixed;
-  width: min-content;
+const Navbar = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-  top: 40px;
-  right: 40px;
-  @media only screen and (max-width: 1024px) {
-    top: calc(40px / 1.4);
-    right: calc(40px / 1.4);
-  }
+  z-index: 10;
 `
 
-const VerticalContainer = styled.div`
+const Content = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  padding-left: 100px;
-  padding-right: 100px;
-  padding-top: 150px;
-  padding-bottom: 150px;
-  @media only screen and (max-width: 1280px) {
-    padding-left: calc(100px / 1.4);
-    padding-right: calc(100px / 1.4);
-    padding-top: 150px;
-    padding-bottom: calc(150px / 1.4);
-  }
-  @media only screen and (max-width: 720px), only screen and (max-height: 750px) {
-    padding-left: calc(100px / 1.8);
-    padding-right: calc(100px / 1.8);
-    padding-top: calc(150px / 1.4);
-    padding-bottom: calc(150px / 1.8);
-  }
-  @media only screen and (max-width: 400px), only screen and (max-height: 500px) {
-    padding-left: calc(100px / 2.2);
-    padding-right: calc(100px / 2.2);
-    padding-top: calc(150px / 1.8);
-    padding-bottom: calc(150px / 2.2);
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 50px;
+  @media only screen and (max-width: 600px) {
+    padding: 25px;
   }
 `
 
-const MiddleContainer = styled.div`
-  width: 100%;
+const Top = styled.div`
+  width: min-content;
+  height: min-content;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
 `
 
-const EaglePhotoContainer = styled.div`
+const Illustrations = styled.div`
   position: relative;
   height: 125px;
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 1000px) {
     height: calc(125px / 1.4);
   }
-  @media only screen and (max-width: 720px), only screen and (max-height: 750px) {
-    height: calc(125px / 1.8);
-  }
-  @media only screen and (max-width: 400px), only screen and (max-height: 500px) {
-    height: calc(125px / 2.2);
+  @media only screen and (max-width: 600px) {
+    height: calc(125px / 2);
   }
 `
 
@@ -129,23 +145,17 @@ const Eagle2Img = styled.img`
   position: absolute;
   top: -100px;
   left: 175px;
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 1000px) {
     width: calc(165px / 1.4);
     height: calc(145px / 1.4);
     top: calc(-100px / 1.4);
     left: calc(175px / 1.4);
   }
-  @media only screen and (max-width: 720px), only screen and (max-height: 750px) {
-    width: calc(165px / 1.8);
-    height: calc(145px / 1.8);
-    top: calc(-100px / 1.8);
-    left: calc(175px / 1.8);
-  }
-  @media only screen and (max-width: 400px), only screen and (max-height: 500px) {
-    width: calc(165px / 2.2);
-    height: calc(145px / 2.2);
-    top: calc(-100px / 2.2);
-    left: calc(175px / 2.2);
+  @media only screen and (max-width: 600px) {
+    width: calc(165px / 2);
+    height: calc(145px / 2);
+    top: calc(-100px / 2);
+    left: calc(175px / 2);
   }
 `
 
@@ -153,30 +163,25 @@ const PhotoImg = styled.img`
   width: 300px;
   height: 200px;
   left: -25px;
-  @media only screen and (max-width: 1280px) {
+  position: absolute;
+  @media only screen and (max-width: 1000px) {
     width: calc(300px / 1.4);
     height: calc(200px / 1.4);
     left: calc(-25px / 1.4);
   }
-  @media only screen and (max-width: 720px), only screen and (max-height: 750px) {
-    width: calc(300px / 1.8);
-    height: calc(200px / 1.8);
-    left: calc(-25px / 1.8);
+  @media only screen and (max-width: 600px) {
+    width: calc(300px / 2);
+    height: calc(200px / 2);
+    left: calc(-25px / 2);
   }
-  @media only screen and (max-width: 400px), only screen and (max-height: 500px) {
-    width: calc(300px / 2.2);
-    height: calc(200px / 2.2);
-    left: calc(-25px / 2.2);
-  }
-  position: absolute;
 `
 
-const TextRow = styled.div`
+const Headers = styled.div`
+  width: max-content;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  flex-wrap: wrap;
 `
 
 const H1 = styled.div`
@@ -188,17 +193,13 @@ const H1 = styled.div`
   color: #FFFBF7;
   text-shadow: 1.14737px 2.86842px 2.86842px rgba(0, 0, 0, 0.2);
   z-index: 2;
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 1000px) {
     font-size: calc(72px / 1.4);
     line-height: calc(97px / 1.4);
   }
-  @media only screen and (max-width: 720px), only screen and (max-height: 750px) {
-    font-size: calc(72px / 1.8);
-    line-height: calc(97px / 1.8);
-  }
-  @media only screen and (max-width: 400px), only screen and (max-height: 500px) {
-    font-size: calc(72px / 2.2);
-    line-height: calc(97px / 2.2);
+  @media only screen and (max-width: 600px) {
+    font-size: calc(72px / 2);
+    line-height: calc(97px / 2);
   }
 `
 
@@ -214,21 +215,17 @@ const H2 = styled.div`
   line-height: 82px;
   color: #FFD8C1;
   text-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2);
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 1000px) {
     font-size: calc(61px / 1.4);
     line-height: calc(82px / 1.4);
   }
-  @media only screen and (max-width: 720px), only screen and (max-height: 750px) {
-    font-size: calc(61px / 1.8);
-    line-height: calc(82px / 1.8);
-  }
-  @media only screen and (max-width: 400px), only screen and (max-height: 500px) {
-    font-size: calc(61px / 2.2);
-    line-height: calc(82px / 2.2);
+  @media only screen and (max-width: 600px) {
+    font-size: calc(61px / 2);
+    line-height: calc(82px / 2);
   }
 `
 
-const OutlinedButton = styled.button`
+const GalleryButton = styled.button`
   width: 394px;
   height: 98px;
   border: 5px solid #FFFBF7;
@@ -247,7 +244,7 @@ const OutlinedButton = styled.button`
   &:active {
     transform: translateY(2px);
   }
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 1000px) {
     border: 4px solid #FFFBF7;
     width: calc(394px / 1.4);
     height: calc(98px / 1.4);
@@ -255,43 +252,39 @@ const OutlinedButton = styled.button`
     line-height: calc(28px / 1.4);
     margin-top: calc(20px / 1.4);
   }
-  @media only screen and (max-width: 720px), only screen and (max-height: 750px) {
+  @media only screen and (max-width: 600px) {
     border: 4px solid #FFFBF7;
-    width: calc(394px / 1.8);
-    height: calc(98px / 1.8);
-    font-size: calc(24px / 1.8);
-    line-height: calc(28px / 1.8);
-    margin-top: calc(20px / 1.8);
-  }
-  @media only screen and (max-width: 400px), only screen and (max-height: 500px) {
-    border: 3px solid #FFFBF7;
-    width: calc(394px / 2.2);
-    height: calc(98px / 2.2);
-    font-size: calc(24px / 2.2);
-    line-height: calc(28px / 2.2);
-    margin-top: calc(20px / 2.2);
+    width: calc(394px / 2);
+    height: calc(98px / 2);
+    font-size: calc(24px / 2);
+    line-height: calc(28px / 2);
+    margin-top: calc(20px / 2);
   }
 `
 
-const ReadMoreContainer = styled.div`
+const Bottom = styled.div`
+  width: 100%;
+  height: min-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+`
+
+const ReadMore = styled.div`
   width: 394px;
   height: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  margin-top: 8px;
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 1000px) {
     width: calc(394px / 1.4);
     height: calc(100px / 1.4);
   }
-  @media only screen and (max-width: 720px), only screen and (max-height: 750px) {
-    width: calc(394px / 1.8);
-    height: calc(100px / 1.8);
-  }
-  @media only screen and (max-width: 400px), only screen and (max-height: 500px) {
-    width: calc(394px / 2.2);
-    height: calc(100px / 2.5);
+  @media only screen and (max-width: 600px) {
+    width: calc(394px / 2);
+    height: calc(100px / 2);
   }
 `
 
@@ -305,50 +298,44 @@ const H3 = styled.div`
   text-transform: uppercase;
   color: #FFFBF7;
   text-align: center;
-  @media only screen and (max-width: 1280px) {
+  @media only screen and (max-width: 1000px) {
     font-size: calc(24px / 1.4);
     line-height: calc(28px / 1.4);
   }
-  @media only screen and (max-width: 720px), only screen and (max-height: 750px) {
-    font-size: calc(24px / 1.8);
-    line-height: calc(28px / 1.8);
-  }
-  @media only screen and (max-width: 400px), only screen and (max-height: 500px) {
-    font-size: calc(24px / 2.2);
-    line-height: calc(28px / 2.2);
+  @media only screen and (max-width: 600px) {
+    font-size: calc(24px / 2);
+    line-height: calc(28px / 2);
   }
 `
 
-const BottomContainer = styled.div`
-  position: absolute;
+const ContactSocial = styled.div`
   width: 100%;
+  height: min-content;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
   align-items: flex-end;
-  justify-content: center;;
-  bottom: 60px;
-  right: 40px;
-  @media only screen and (max-width: 1024px) {
+  justify-content: space-between;
+  @media only screen and (max-width: 1000px) {
     display: none;
   }
 `
 
-const SocialIcons = styled.div`
-  width: 100px;
+const Social = styled.div`
+  width: 110px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 `
 
-const ContactMail = styled.div`
+const Contact = styled.div`
+  margin-top: 20px;
   font-family: Raleway;
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
   line-height: 28px;
   color: #FFFBF7;
-  margin-top: 20px;
 `
 
 export default Cover

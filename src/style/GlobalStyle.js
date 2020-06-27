@@ -4,8 +4,12 @@ const GlobalStyle = createGlobalStyle`
   html {
     box-sizing: border-box;
     min-height: 100%;
-    height: 100%;
+    height: min-content;
     font-family: 'Roboto';
+    font-size: 24px;
+    @media only screen and (max-width: 1000px) {
+      font-size: 18px;
+    }
   }
   body {
     box-sizing: border-box;
