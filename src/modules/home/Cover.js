@@ -87,13 +87,12 @@ const RootContainer = styled.div`
   display: flex;
   flex-direction: column;
   @media only screen and (max-width: 1000px) {
-    min-height: 725px;
+    min-height: 750px;
   }
   @media only screen and (max-width: 600px) {
     padding-left: 25px;
-    padding-bottom: 25px;
     padding-right: 25px;
-    min-height: 550px;
+    min-height: 575px;
   }
 `
 

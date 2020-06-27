@@ -7,6 +7,7 @@ const Home = () => {
   return (
     <RootContainer>
       <Cover />
+      <About />
     </RootContainer>
   )
 }
