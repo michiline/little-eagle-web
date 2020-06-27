@@ -293,7 +293,7 @@ const H2 = styled.div`
 	line-height: 32px;
 	color: #C59D9A;
 	margin-top: 20px;
-	width: 100%;
+	width: 550px;
 	max-width: 550px;
 	@media only screen and (max-width: 1350px) {
 		margin-top: calc(30px / 1.3);
@@ -306,6 +306,9 @@ const H2 = styled.div`
 		font-size: calc(27px / 1.6);
 		line-height: calc(32px / 1.6);
 		max-width: calc(550px / 1.6);
+	}
+	@media only screen and (max-width: 750px) {
+		width: 100%;
 	}
 	
 `
