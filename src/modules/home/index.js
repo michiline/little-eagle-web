@@ -2,12 +2,14 @@ import React from 'react'
 import styled from 'styled-components'
 import Cover from './Cover'
 import About from './About'
+import GetToKnowMe from './GetToKnowMe'
 
 const Home = () => {
   return (
     <RootContainer>
       <Cover />
       <About />
+      <GetToKnowMe />
     </RootContainer>
   )
 }

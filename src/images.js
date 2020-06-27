@@ -25,4 +25,8 @@ export const photo = {
 	white: `${baseUrl}/photo-white.png`
 }
 
+export const facts1 = `${baseUrl}/facts-1.jpg`
+export const facts2 = `${baseUrl}/facts-2.jpg`
+export const facts3 = `${baseUrl}/facts-3.jpg`
+
 export const hi = `${baseUrl}/hi-3-3-2.jpg`

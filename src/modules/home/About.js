@@ -73,6 +73,7 @@ const RootContainer = styled.div`
 	justify-content: center;
 	background: linear-gradient(0deg, #FFFFFF 70%, #FFEFEF 70%);
 	@media only screen and (max-width: 1350px) {
+		height: 50vh;
 		min-height: 750px;
 	}
 	@media only screen and (max-width: 1050px) {
@@ -216,8 +217,8 @@ const HeaderContainer = styled.div`
 	@media only screen and (max-width: 750px) {
 		height: auto;
 		position: absolute;
-		bottom: 20px;
-		left: 25px;
+		bottom: 5%;
+		left: 10%;
 	}
 `
 
@@ -280,9 +281,6 @@ const Text = styled.div`
 		margin-top: calc(20px / 1.6);
 		max-width: calc(550px / 1.6);
 	}
-	&:first-of-type {
-		margin-top: 0;
-	}
 `
 
 const H2 = styled.div`
@@ -312,27 +310,5 @@ const H2 = styled.div`
 	}
 	
 `
-
-// margin-top: 30px;
-// font-family: Raleway;
-// font-style: normal;
-// font-weight: bold;
-// font-size: 27px;
-// line-height: 32px;
-// color: #C59D9A;
-// width: 550px;
-// max-width: 550px;
-// @media only screen and (max-width: 1350px) {
-// 	margin-top: calc(30px / 1.3);
-// 	font-size: calc(27px / 1.3);
-// 	line-height: calc(32px / 1.3);
-// 	max-width: calc(550px / 1.3);
-// }
-// @media only screen and (max-width: 1050px) {
-// 	margin-top: calc(30px / 1.6);
-// 	font-size: calc(27px / 1.6);
-// 	line-height: calc(32px / 1.6);
-// 	max-width: calc(550px / 1.6);
-// }
 
 export default About
