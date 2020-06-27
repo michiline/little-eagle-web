@@ -171,7 +171,7 @@ const TextWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
-	max-width: 550px;
+	max-width: 650px;
 	padding-left: 15%;
 	padding-top: 10%;
 	padding-right: 10%;
