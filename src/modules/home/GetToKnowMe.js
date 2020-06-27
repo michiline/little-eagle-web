@@ -202,7 +202,7 @@ const Image1 = styled.img`
 	display: block;
 	object-fit: cover;
 	width: 100%;
-	max-width: 275px;
+	max-width: 325px;
 	z-index: 2;
 	margin-top: -50px;
 	margin-right: 200px;
@@ -222,16 +222,15 @@ const Image2 = styled.img`
 	display: block;
 	object-fit: cover;
 	width: 100%;
-	max-width: 275px;
+	max-width: 325px;
 	z-index: 2;
-	margin-right: -150px;
+	margin-right: -100px;
 	margin-top: -100px;
 	transform: rotate(-8.19deg);
 	@media only screen and (max-width: 1050px) {
 		max-width: calc(275px / 1.3);
 		margin-top: calc(-100px / 1.3);
 		margin-right: calc(-150px / 1.3);
-		
 	}
 	@media only screen and (max-width: 750px) {
 		margin: 0;
@@ -243,9 +242,9 @@ const Image3 = styled.img`
 	display: block;
 	object-fit: cover;
 	width: 100%;
-	max-width: 275px;
+	max-width: 325px;
 	z-index: 2;
-	margin-right: 250px;
+	margin-right: 200px;
 	margin-top: -150px;
 	transform: rotate(-0.85deg);
 	@media only screen and (max-width: 1050px) {
