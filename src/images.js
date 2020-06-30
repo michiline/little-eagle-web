@@ -30,3 +30,5 @@ export const facts2 = `${baseUrl}/facts-2.jpg`
 export const facts3 = `${baseUrl}/facts-3.jpg`
 
 export const hi = `${baseUrl}/hi-3-3-2.jpg`
+
+export const reflector = `${baseUrl}/reflector.png`

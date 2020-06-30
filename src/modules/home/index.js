@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Cover from './Cover'
 import About from './About'
 import GetToKnowMe from './GetToKnowMe'
+import Reflector from './Reflector'
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <Cover />
       <About />
       <GetToKnowMe />
+      <Reflector />
     </RootContainer>
   )
 }
