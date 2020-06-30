@@ -119,7 +119,13 @@ const GalleryButton = styled.button`
 		border: 4px solid #C59D9A;
 	}
 	@media only screen and (max-width: 750px) {
+		font-size: 3vw;
+		line-height: 3.5vw;
 		border: 3px solid #C59D9A;
+		padding-top: 4vw;
+		padding-bottom: 4vw;
+		padding-left: 8vw;
+		padding-right: 8vw;
 	}
 `
 
