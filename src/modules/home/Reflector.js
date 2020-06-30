@@ -39,6 +39,9 @@ const RootContainer = styled.div`
 	align-items: center;
 	justify-content: center;
 	position: relative;
+	@media only screen and (max-width: 750px) {
+		padding-bottom: 5vw;
+	}
 `
 
 const ReflectorImage = styled.img`
