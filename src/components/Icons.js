@@ -62,6 +62,7 @@ export const ArrowDownIcon = memo(() => {
 const FacebookLightSvg = styled.svg`
   width: 40px;
   height: 40px;
+  display: block;
 `
 
 export const FacebookLightIcon = memo(() => {
@@ -75,6 +76,7 @@ export const FacebookLightIcon = memo(() => {
 const InstagramLightSvg = styled.svg`
   width: 40px;
   height: 40px;
+  display: block;
 `
 
 export const InstagramLightIcon = memo(() => {

@@ -72,11 +72,14 @@ const RootContainer = styled.div`
 	display: flex;
 	flex-direction: row;
 	padding-top: 75px;
+	padding-bottom: 50px;
 	@media only screen and (max-width: 1050px) {
 		padding-top: calc(75px / 1.3);
+		padding-bottom: 0;
 	}
 	@media only screen and (max-width: 750px) {
 		padding-top: calc(75px / 1.6);
+		padding-bottom: 0;
 	}
 `
 
