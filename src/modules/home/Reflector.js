@@ -97,7 +97,7 @@ const ColoredText = styled.div`
 	color: #C59D9A;
 `
 
-const GalleryButton = styled.button`
+const GalleryButton = styled.div`
 	width: max-content;
 	margin-top: 2vw;
 	padding-top: 2vw;
@@ -115,6 +115,7 @@ const GalleryButton = styled.button`
 	line-height: 1.75vw;
 	text-transform: uppercase;
 	color: #C59D9A;
+	text-align: center;
 	@media only screen and (max-width: 1050px) {
 		border: 4px solid #C59D9A;
 	}
