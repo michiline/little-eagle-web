@@ -40,7 +40,7 @@ const RootContainer = styled.div`
 	justify-content: center;
 	position: relative;
 	@media only screen and (max-width: 750px) {
-		padding-bottom: 5vw;
+		padding-bottom: 10vw;
 	}
 `
 
@@ -48,6 +48,10 @@ const ReflectorImage = styled.img`
 	height: calc(60vw / 1.4);
 	width: 60vw;
 	object-fit: cover;
+	@media only screen and (max-width: 750px) {
+		width: 80vw;
+		height: calc(80vw / 1.4);
+	}
 `
 
 const TextContainer = styled.div`
@@ -58,6 +62,12 @@ const TextContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
+	@media only screen and (max-width: 750px) {
+		left: 10vw;
+		top: 10vw;
+		width: 62vw;
+		height: calc(60vw / 1.4);
+	}
 `
 
 const Text = styled.div`
@@ -66,6 +76,10 @@ const Text = styled.div`
 	font-weight: normal;
 	font-size: 4vw;
 	line-height: calc(4vw * 1.35);
+	@media only screen and (max-width: 750px) {
+		font-size: 5vw;
+		line-height: calc(5vw * 1.35);
+	}
 	color: #FFD8C1;
 	white-space: initial;
 `
@@ -76,6 +90,10 @@ const ColoredText = styled.div`
 	font-weight: normal;
 	font-size: 4vw;
 	line-height: calc(4vw * 1.35);
+	@media only screen and (max-width: 750px) {
+		font-size: 5vw;
+		line-height: calc(5vw * 1.35);
+	}
 	color: #C59D9A;
 `
 
