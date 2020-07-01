@@ -3,9 +3,9 @@ import styled from 'styled-components'
 import { reflector } from '../../images'
 import { FacebookDarkIcon, InstagramDarkIcon } from '../../components'
 
-const Reflector = () => {
+const Services = ({ servicesRef }) => {
 	return (
-		<RootContainer>
+		<RootContainer ref={servicesRef}>
 			<TextContainer>
 				<ColoredText>I can help you capture </ColoredText>
 				<Text>special moments, portraits and events. 
@@ -182,4 +182,4 @@ const ContactMail = styled.div`
 	margin-top: 2vw;
 `
 
-export default Reflector
+export default Services

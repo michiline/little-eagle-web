@@ -1,11 +1,19 @@
 import React, { memo } from 'react'
 import styled, { css } from 'styled-components'
-import { HamburgerIcon } from './Icons'
+import { HamburgerIcon, CloseIcon } from './Icons'
 
 export const HamburgerButton = memo(({ onClick }) => {
   return (
     <IconButton onClick={onClick}>
       <HamburgerIcon />
+    </IconButton>
+  )
+})
+
+export const CloseButton = memo(({ onClick }) => {
+  return (
+    <IconButton onClick={onClick}>
+      <CloseIcon />
     </IconButton>
   )
 })

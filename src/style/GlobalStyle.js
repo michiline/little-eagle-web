@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { css, createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -15,6 +15,10 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     height: 100%;
     min-height: 100%;
+    ${props => props.showDrawer && css`
+      overflow-y: hidden;
+    `}
+    scroll-behaviour: smooth;
   }
   #root {
     box-sizing: border-box;

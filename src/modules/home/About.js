@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { hi, eagle1 } from '../../images'
 import { useWindow } from '../../hooks'
 
-const About = () => {
+const About = ({ aboutRef }) => {
 	const [windowWidth] = useWindow()
 	let HeaderElem = (
 		<HeaderContainer>
@@ -37,7 +37,7 @@ const About = () => {
 		)
 	}
   	return (
-	  <RootContainer>
+	  <RootContainer ref={aboutRef}>
 		  {ImageElem}
 		  <TextColumn>
 			{HeaderElem}

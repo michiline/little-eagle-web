@@ -3,15 +3,15 @@ import styled from 'styled-components'
 import Cover from './Cover'
 import About from './About'
 import GetToKnowMe from './GetToKnowMe'
-import Reflector from './Reflector'
+import Services from './Services'
 
-const Home = () => {
+const Home = ({ showDrawer, homeRef, aboutRef, servicesRef }) => {
   return (
     <RootContainer>
-      <Cover />
-      <About />
+      <Cover showDrawer={showDrawer} homeRef={homeRef} />
+      <About aboutRef={aboutRef}/>
       <GetToKnowMe />
-      <Reflector />
+      <Services servicesRef={servicesRef} />
     </RootContainer>
   )
 }

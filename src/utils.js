@@ -70,3 +70,7 @@ export const parseQuery = (query) => {
   }
   return params
 }
+
+export const externalLink = (url) => Object.assign(document.createElement('a'), { target: '_blank', href: url }).click()
+
+export const scrollIntoView = (ref) => ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' })

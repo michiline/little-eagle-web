@@ -1,11 +1,11 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { useWindow } from '../../hooks'
 import { cover, eagle2, photo } from '../../images'
-import { HamburgerButton, ArrowDownIcon, FacebookLightIcon, InstagramLightIcon } from '../../components'
+import { ArrowDownIcon, FacebookLightIcon, InstagramLightIcon } from '../../components'
 
-const Cover = () => {
-  const [windowWidth, windowHeight] = useWindow()
+const Cover = ({ homeRef, showDrawer }) => {
+  const [windowWidth] = useWindow()
   let HeadersElem = (
     <>
       <Headers>
@@ -39,10 +39,7 @@ const Cover = () => {
     )
   } 
   return (
-    <RootContainer urlWeb={cover.web} urlMobile={cover.mobile}>
-      <Navbar>
-        <HamburgerButton/>
-      </Navbar>
+    <RootContainer ref={homeRef} urlWeb={cover.web} urlMobile={cover.mobile} showDrawer={showDrawer}>
       <Content>
         <Top>
           <Illustrations>
@@ -62,14 +59,14 @@ const Cover = () => {
         </Bottom>
       </Content>
       <ContactSocial>
-            <Social>
-              <FacebookLightIcon/>
-              <InstagramLightIcon/>
-            </Social>
-            <Contact>
-              little.eagle.photo@pm.me
-            </Contact>
-          </ContactSocial>
+        <Social>
+          <FacebookLightIcon/>
+          <InstagramLightIcon/>
+        </Social>
+        <Contact>
+          little.eagle.photo@pm.me
+        </Contact>
+      </ContactSocial>
     </RootContainer>
   )
 }
@@ -78,12 +75,11 @@ const RootContainer = styled.div`
   width: 100%;
   height: 100vh;
   min-height: 850px;
-  padding: 50px;
+  padding: 100px 50px 50px 50px;
   background: linear-gradient(0deg, rgba(64, 54, 54, 0.3), rgba(64, 54, 54, 0.3)), url(${props => props.urlWeb});
   background-size: cover;
-  background-position: center;
-  background-size: cover;
-  background-position: center;
+  background-position: 0px bottom;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   @media only screen and (max-width: 1000px) {
@@ -94,15 +90,12 @@ const RootContainer = styled.div`
     padding-right: 25px;
     min-height: 575px;
   }
-`
-
-const Navbar = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-end;
-  z-index: 10;
+  transition-property: background-position;
+	transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  ${props => props.showDrawer && css`
+    background-position: -200px bottom;
+  `}
 `
 
 const Content = styled.div`
