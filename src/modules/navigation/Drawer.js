@@ -50,15 +50,25 @@ const RootContainer = styled.div`
 	z-index: -1;
 	display: flex;
 	flex-direction: column;
-	padding: 50px;
+	padding-left: 50px;
+	padding-right: 40px;
+	padding-top: 40px;
+	padding-bottom: 50px;
 	min-height: 600px;
-	${props => props.showDrawer && css`
-		opacity: 1;
-		z-index: 10;
-	`}
+	z-index: 10;
 	@media only screen and (max-width: 750px) {
 		width: 100%;
+		transform: translateY(-100vh);
+		transition-property: opacity, transform;
+		transition-duration: 500ms;
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	}
+	${props => props.showDrawer && css`
+		opacity: 1;
+		@media only screen and (max-width: 750px) {
+			transform: translateY(0);
+		}
+	`}
 `
 
 const FirstRow = styled.div`

@@ -18,8 +18,8 @@ const RootContainer = styled.div`
 	align-items: center;
 	justify-content: flex-end;
 	z-index: 10;
-	top: 50px;
-	right: 50px;
+	top: 40px;
+	right: 40px;
 	opacity: 1;
 	transition-property: opacity;
 	transition-duration: 500ms;

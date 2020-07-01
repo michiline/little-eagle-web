@@ -16,6 +16,7 @@ const GlobalStyle = createGlobalStyle`
     height: 100%;
     min-height: 100%;
     ${props => props.showDrawer && css`
+      position: relative;
       overflow-y: hidden;
     `}
     scroll-behaviour: smooth;

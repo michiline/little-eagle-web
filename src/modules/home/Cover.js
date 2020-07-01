@@ -96,6 +96,12 @@ const RootContainer = styled.div`
   ${props => props.showDrawer && css`
     background-position: -200px bottom;
   `}
+  @media only screen and (max-width: 750px) {
+    background: linear-gradient(0deg, rgba(64, 54, 54, 0.3), rgba(64, 54, 54, 0.3)), url(${props => props.urlWeb});
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+  }
 `
 
 const Content = styled.div`
