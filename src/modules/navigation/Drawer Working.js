@@ -68,16 +68,18 @@ const RootContainer = styled.div`
 `
 
 const RootWrapper = styled.div`
-	min-height: 600px;
 	width: 100%;
 	height: 100%;
+	min-height: 600px;
 	display: flex;
 	flex-direction: column;
-	align-items: space-between;
 	padding-left: 50px;
 	padding-right: 40px;
 	padding-top: 40px;
 	padding-bottom: 50px;
+	@media only screen and (max-width: 750px) {
+		min-height: 500px;
+	}
 `
 
 const FirstRow = styled.div`
@@ -97,6 +99,13 @@ const SecondRow = styled.div`
 	align-items: flex-start;
 	justify-content; flex-start;
 	margin-top: 10vh;
+	@media only screen and (max-width: 750px) {
+		margin-top: 5vh;
+	}
+	@media only screen and (max-width: 400px) {
+		margin-top: 2.5vh;
+	}
+	padding-bottom: 25px;
 `
 
 const SLink = styled.div`
@@ -123,6 +132,7 @@ const SLinkBold = styled(SLink)`
 `
 
 const TravelBlogLink = styled.div`
+	margin-top: 10vh;
 	width: 200px;
 	font-family: Raleway;
 	font-style: normal;
@@ -134,10 +144,10 @@ const TravelBlogLink = styled.div`
 	text-decoration: none;
 	cursor: pointer;
 	@media only screen and (max-width: 400px) {
+		margin-top: 5vh;
 		font-size: calc(24px / 1.3);
 		line-height: calc(32px / 1.3);
 	}
-	margin-top: 5vh;
 `
 
 
