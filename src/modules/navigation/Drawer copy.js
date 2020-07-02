@@ -8,27 +8,25 @@ import { externalLink, scrollIntoView } from '../../utils'
 const Drawer = ({ showDrawer, setShowDrawer, homeRef, aboutRef, servicesRef}) => {
 	return (
 		<RootContainer showDrawer={showDrawer}>
-			<RootWrapper>
-				<FirstRow>
-					<CloseButton onClick={() => setShowDrawer(false)}/>
-				</FirstRow>
-				<SecondRow>
-					<SLinkBold onClick={() => handleLinkClick({ ref: homeRef, setShowDrawer })}>Home</SLinkBold>
-					<SLink onClick={() => handleLinkClick({ ref: aboutRef, setShowDrawer })}>About me</SLink>
-					<SLink onClick={() => handleLinkClick({ ref: servicesRef, setShowDrawer })}>My services</SLink>
-					<SLink>Photo gallery</SLink>
-					<TravelBlogLink onClick={() => externalLink('https://www.leagleandmich.com')}>Travel blog by leagle & mich</TravelBlogLink>
-				</SecondRow>
-				<ContactSocial>
-					<Social>
-						<FacebookLightIcon/>
-						<InstagramLightIcon/>
-					</Social>
-					<Contact>
-						little.eagle.photo@pm.me
-					</Contact>
-				</ContactSocial>
-			</RootWrapper>
+			<FirstRow>
+				<CloseButton onClick={() => setShowDrawer(false)}/>
+			</FirstRow>
+			<SecondRow>
+				<SLinkBold onClick={() => handleLinkClick({ ref: homeRef, setShowDrawer })}>Home</SLinkBold>
+				<SLink onClick={() => handleLinkClick({ ref: aboutRef, setShowDrawer })}>About me</SLink>
+				<SLink onClick={() => handleLinkClick({ ref: servicesRef, setShowDrawer })}>My services</SLink>
+				<SLink>Photo gallery</SLink>
+				<TravelBlogLink onClick={() => externalLink('https://www.leagleandmich.com')}>Travel blog by leagle & mich</TravelBlogLink>
+			</SecondRow>
+			<ContactSocial>
+				<Social>
+					<FacebookLightIcon/>
+					<InstagramLightIcon/>
+				</Social>
+				<Contact>
+					little.eagle.photo@pm.me
+				</Contact>
+			</ContactSocial>
 		</RootContainer>
 	)
 }
@@ -44,12 +42,19 @@ const RootContainer = styled.div`
 	background-color: #FF4747;
 	position: fixed;
 	top: 0;
-	right: 0;
+	bottom: 0;
 	opacity: 0;
 	transition-property: opacity;
 	transition-duration: 500ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	z-index: -1;
+	display: flex;
+	flex-direction: column;
+	padding-left: 50px;
+	padding-right: 40px;
+	padding-top: 40px;
+	padding-bottom: 50px;
+	min-height: 600px;
 	z-index: 10;
 	overflow-y: scroll;
 	@media only screen and (max-width: 750px) {
@@ -65,18 +70,6 @@ const RootContainer = styled.div`
 			transform: translateY(0);
 		}
 	`}
-`
-
-const RootWrapper = styled.div`
-	width: 100%;
-	height: 100%;
-	min-height: 600px;
-	display: flex;
-	flex-direction: column;
-	padding-left: 50px;
-	padding-right: 40px;
-	padding-top: 40px;
-	padding-bottom: 50px;
 `
 
 const FirstRow = styled.div`

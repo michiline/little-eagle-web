@@ -94,7 +94,7 @@ const RootContainer = styled.div`
 	transition-duration: 500ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   ${props => props.showDrawer && css`
-    background-position: -200px bottom;
+    background-position: -400px bottom;
   `}
   @media only screen and (max-width: 750px) {
     background: linear-gradient(0deg, rgba(64, 54, 54, 0.3), rgba(64, 54, 54, 0.3)), url(${props => props.urlWeb});

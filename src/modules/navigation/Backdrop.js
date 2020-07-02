@@ -22,6 +22,9 @@ const RootContainer = styled.div`
 	${props => props.showDrawer && css`
 		opacity: 1;
 	`}
+	@media only screen and (max-width: 750px) {
+		display: none;
+	}
 `
 
 export default Backdrop
