@@ -2,7 +2,7 @@ import React from 'react'
 import { useHistory } from 'react-router-dom'
 import styled, { css } from 'styled-components'
 import { CloseButton } from '../../components'
-import { FacebookLightIcon, InstagramLightIcon } from '../../components'
+import { FacebookLightButton, InstagramLightButton } from '../../components'
 import { externalLink, scrollIntoView } from '../../utils'
 
 const Drawer = ({ showDrawer, setShowDrawer, homeRef, aboutRef, servicesRef}) => {
@@ -22,8 +22,8 @@ const Drawer = ({ showDrawer, setShowDrawer, homeRef, aboutRef, servicesRef}) =>
 				</SecondRow>
 				<ContactSocial>
 					<Social>
-						<FacebookLightIcon/>
-						<InstagramLightIcon/>
+						<FacebookLightButton onClick={() => externalLink('https://www.facebook.com/littleeaglephoto')}/>
+          				<InstagramLightButton onClick={() => externalLink('https://www.instagram.com/littleeaglephoto')}/>
 					</Social>
 					<Contact href={'mailto:little.eagle.photo@pm.me'}>
 						little.eagle.photo@pm.me
