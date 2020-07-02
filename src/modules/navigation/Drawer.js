@@ -1,11 +1,12 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import styled, { css } from 'styled-components'
 import { CloseButton } from '../../components'
 import { FacebookLightIcon, InstagramLightIcon } from '../../components'
 import { externalLink, scrollIntoView } from '../../utils'
 
 const Drawer = ({ showDrawer, setShowDrawer, homeRef, aboutRef, servicesRef}) => {
+	const history = useHistory()
 	return (
 		<RootContainer showDrawer={showDrawer}>
 			<RootWrapper>
@@ -13,10 +14,10 @@ const Drawer = ({ showDrawer, setShowDrawer, homeRef, aboutRef, servicesRef}) =>
 					<CloseButton onClick={() => setShowDrawer(false)}/>
 				</FirstRow>
 				<SecondRow>
-					<SLinkBold onClick={() => handleLinkClick({ ref: homeRef, setShowDrawer })}>Home</SLinkBold>
-					<SLink onClick={() => handleLinkClick({ ref: aboutRef, setShowDrawer })}>About me</SLink>
-					<SLink onClick={() => handleLinkClick({ ref: servicesRef, setShowDrawer })}>My services</SLink>
-					<SLink>Photo gallery</SLink>
+					<SLinkBold onClick={() => handleLinkClick({ ref: homeRef, url: '/', setShowDrawer, history })}>Home</SLinkBold>
+					<SLink onClick={() => handleLinkClick({ ref: aboutRef, url: '/', setShowDrawer, history })}>About me</SLink>
+					<SLink onClick={() => handleLinkClick({ ref: servicesRef, url: '/', setShowDrawer, history })}>My services</SLink>
+					<SLink onClick={() => handleLinkClick({ url: '/gallery', setShowDrawer, history })}>Photo gallery</SLink>
 					<TravelBlogLink onClick={() => externalLink('https://www.leagleandmich.com')}>Travel blog by leagle & mich</TravelBlogLink>
 				</SecondRow>
 				<ContactSocial>
@@ -24,7 +25,7 @@ const Drawer = ({ showDrawer, setShowDrawer, homeRef, aboutRef, servicesRef}) =>
 						<FacebookLightIcon/>
 						<InstagramLightIcon/>
 					</Social>
-					<Contact>
+					<Contact href={'mailto:little.eagle.photo@pm.me'}>
 						little.eagle.photo@pm.me
 					</Contact>
 				</ContactSocial>
@@ -33,8 +34,13 @@ const Drawer = ({ showDrawer, setShowDrawer, homeRef, aboutRef, servicesRef}) =>
 	)
 }
 
-const handleLinkClick = ({ ref, setShowDrawer }) => {
-	scrollIntoView(ref)
+const handleLinkClick = ({ ref, url, setShowDrawer, history }) => {
+	if (history.location.pathname !== url) {
+		history.push(url)
+	}
+	if (ref) {
+		scrollIntoView(ref)
+	}
 	setShowDrawer(false)
 }
 
@@ -46,21 +52,22 @@ const RootContainer = styled.div`
 	top: 0;
 	right: 0;
 	opacity: 0;
-	transition-property: opacity;
+	transition-property: visibility, opacity;
 	transition-duration: 500ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	z-index: -1;
+	visibility: hidden;
 	z-index: 10;
 	overflow-y: scroll;
 	@media only screen and (max-width: 750px) {
 		width: 100%;
 		transform: translateY(-100vh);
-		transition-property: opacity, transform;
+		transition-property: visibility, opacity, transform;
 		transition-duration: 500ms;
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	}
 	${props => props.showDrawer && css`
 		opacity: 1;
+		visibility: visible;
 		@media only screen and (max-width: 750px) {
 			transform: translateY(0);
 		}
@@ -163,7 +170,7 @@ const Social = styled.div`
 
 `
 
-const Contact = styled.div`
+const Contact = styled.a`
   margin-top: 20px;
   font-family: Raleway;
   font-style: normal;
@@ -178,7 +185,12 @@ const Contact = styled.div`
   @media only screen and (max-width: 400px) {
 	font-size: calc(24px / 1.3);
 	line-height: calc(28px / 1.3);
-}
+  }
+  text-decoration: none;
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
 `
 
 export default Drawer

@@ -54,7 +54,7 @@ const About = ({ aboutRef }) => {
 				I am constantly learning and improving my skills through various workshops and photography courses. 
 				With my style evolving, I am open to different ideas and projects. 
 				</Text>
-				<H2>If you have an idea, wish or a vision, feel free to get in touch.</H2>
+				<H2>If you have an idea, wish or a vision, feel free to <MailTo href={'mailto:little.eagle.photo@pm.me'}>get in touch.</MailTo></H2>
 			</TextContainer>
 		  </TextColumn>
 	  </RootContainer>
@@ -309,7 +309,36 @@ const H2 = styled.div`
 	@media only screen and (max-width: 750px) {
 		width: 100%;
 	}
-	
+`
+
+const MailTo = styled.a`
+	font-family: Raleway;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 27px;
+	line-height: 32px;
+	color: #C59D9A;
+	margin-top: 20px;
+	width: 550px;
+	max-width: 550px;
+	@media only screen and (max-width: 1350px) {
+		margin-top: calc(30px / 1.3);
+		font-size: calc(27px / 1.3);
+		line-height: calc(32px / 1.3);
+		max-width: calc(550px / 1.3);
+	}
+	@media only screen and (max-width: 1050px) {
+		margin-top: calc(30px / 1.6);
+		font-size: calc(27px / 1.6);
+		line-height: calc(32px / 1.6);
+		max-width: calc(550px / 1.6);
+	}
+	@media only screen and (max-width: 750px) {
+		width: 100%;
+	}
+	text-decoration: underline;
+	cursor: pointer;
+	display: inline;
 `
 
 export default About

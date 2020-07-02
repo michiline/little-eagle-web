@@ -1,10 +1,13 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
+import { useHistory } from 'react-router-dom'
 import { useWindow } from '../../hooks'
 import { cover, eagle2, photo } from '../../images'
-import { ArrowDownIcon, FacebookLightIcon, InstagramLightIcon } from '../../components'
+import { ArrowDownIcon, FacebookLightButton, InstagramLightButton } from '../../components'
+import { externalLink } from '../../utils'
 
 const Cover = ({ homeRef, showDrawer }) => {
+  const history = useHistory()
   const [windowWidth] = useWindow()
   let HeadersElem = (
     <>
@@ -47,7 +50,7 @@ const Cover = ({ homeRef, showDrawer }) => {
             <PhotoImg src={photo.white} />
           </Illustrations>
           {HeadersElem}
-          <GalleryButton>
+          <GalleryButton onClick={() => handleButtonClick({ url: '/gallery', history })}>
             View my work
           </GalleryButton>
         </Top>
@@ -60,15 +63,19 @@ const Cover = ({ homeRef, showDrawer }) => {
       </Content>
       <ContactSocial>
         <Social>
-          <FacebookLightIcon/>
-          <InstagramLightIcon/>
+          <FacebookLightButton onClick={() => externalLink('https://www.facebook.com/littleeaglephoto')}/>
+          <InstagramLightButton onClick={() => externalLink('https://www.instagram.com/littleeaglephoto')}/>
         </Social>
-        <Contact>
+        <Contact href={'mailto:little.eagle.photo@pm.me'}>
           little.eagle.photo@pm.me
         </Contact>
       </ContactSocial>
     </RootContainer>
   )
+}
+
+const handleButtonClick = ({ url, history }) => {
+	history.push(url)
 }
 
 const RootContainer = styled.div`
@@ -242,6 +249,14 @@ const GalleryButton = styled.button`
   &:active {
     transform: translateY(2px);
   }
+  @media only screen and (min-width: 750px) {
+    &:hover {
+      background: #FF4747;
+      opacity: 0.8;
+      border: none;
+    }
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  }
   @media only screen and (max-width: 1000px) {
     border: 4px solid #FFFBF7;
     width: calc(394px / 1.4);
@@ -258,6 +273,7 @@ const GalleryButton = styled.button`
     line-height: calc(28px / 2);
     margin-top: calc(20px / 2);
   }
+
 `
 
 const Bottom = styled.div`
@@ -326,7 +342,7 @@ const Social = styled.div`
   justify-content: space-between;
 `
 
-const Contact = styled.div`
+const Contact = styled.a`
   margin-top: 20px;
   font-family: Raleway;
   font-style: normal;
@@ -334,6 +350,11 @@ const Contact = styled.div`
   font-size: 24px;
   line-height: 28px;
   color: #FFFBF7;
+  text-decoration: none;
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
 `
 
 export default Cover

@@ -24,11 +24,9 @@ const App = () => {
               <Hamburger showDrawer={showDrawer} setShowDrawer={setShowDrawer}/>
               <Home homeRef={homeRef} aboutRef={aboutRef} servicesRef={servicesRef} showDrawer={showDrawer}/>
             </Route>
-            <>
-              <Route exact path='/gallery'>
-                <Gallery/>
-              </Route>
-            </>
+            <Route exact path='/gallery'>
+              <Gallery/>
+            </Route>
           </Switch>
         </Suspense>
         <Footer />

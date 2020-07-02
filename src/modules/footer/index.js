@@ -1,22 +1,26 @@
 import React from 'react'
 import styled from 'styled-components'
-import { FacebookLightIcon, InstagramLightIcon } from '../../components'
+import { FacebookLightButton, InstagramLightButton } from '../../components'
 import { useWindow } from '../../hooks'
+import { externalLink } from '../../utils'
 
 const Footer = () => {
 	const [windowWidth] = useWindow()
 	let ContentElem = (
 		<Center>
 			<LeftColumn> 
-				<Row>COPYRIGHT</Row>
-				<Row>LittleEagle Photography</Row>
-				<Row style={{ marginTop: '5%'}}>Ana Orlić</Row>
-				<Row>Zagreb, Croatia</Row>
+				<Row><Text>COPYRIGHT</Text></Row>
+				<Row><Text>LittleEagle Photography</Text></Row>
+				<Row style={{ marginTop: '5%'}}><Text>Ana Orlić</Text></Row>
+				<Row><Text>Zagreb, Croatia</Text></Row>
 			</LeftColumn>
 			<RightColumn>
-				<Row>CONTACT ME:</Row>
-				<Row style={{ width: '100px'}}><FacebookLightIcon/><InstagramLightIcon/></Row>
-				<Row>little.eagle.photo@pm.me</Row>
+				<Row><Text>CONTACT ME:</Text></Row>
+				<Row style={{ width: '100px'}}>
+					<FacebookLightButton onClick={() => externalLink('https://www.facebook.com/littleeaglephoto')}/>
+          			<InstagramLightButton onClick={() => externalLink('https://www.instagram.com/littleeaglephoto')}/>
+				</Row>
+				<Row><ContactMail href={'mailto:little.eagle.photo@pm.me'}>little.eagle.photo@pm.me</ContactMail></Row>
 			</RightColumn>
 		</Center>		
 	)
@@ -24,16 +28,19 @@ const Footer = () => {
 		ContentElem = (
 			<Center>
 			<RightColumn>
-				<Row>CONTACT ME:</Row>
-				<Row style={{ width: '100px'}}><FacebookLightIcon/><InstagramLightIcon/></Row>
-				<Row>little.eagle.photo@pm.me</Row>
+				<Row><Text>CONTACT ME:</Text></Row>
+				<Row style={{ width: '100px'}}>
+					<FacebookLightButton onClick={() => externalLink('https://www.facebook.com/littleeaglephoto')}/>
+          			<InstagramLightButton onClick={() => externalLink('https://www.instagram.com/littleeaglephoto')}/>
+				</Row>
+				<Row><ContactMail href={'mailto:little.eagle.photo@pm.me'}>little.eagle.photo@pm.me</ContactMail></Row>
 			</RightColumn>
 			<LeftColumn> 
-				<Row>COPYRIGHT</Row>
-				<Row>LittleEagle</Row>
-				<Row>Photography</Row>
-				<Row style={{ marginTop: '15%'}}>Ana Orlić</Row>
-				<Row>Zagreb, Croatia</Row>
+				<Row><Text>COPYRIGHT</Text></Row>
+				<Row><Text>LittleEagle</Text></Row>
+				<Row><Text>Photography</Text></Row>
+				<Row style={{ marginTop: '10%'}}><Text>Ana Orlić</Text></Row>
+				<Row><Text>Zagreb, Croatia</Text></Row>
 			</LeftColumn>
 		</Center>
 		)
@@ -88,6 +95,13 @@ const RightColumn = styled(Column)`
 `
 
 const Row = styled.div`
+	width: min-content;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+`
+
+const Text = styled.div`
 	width: max-content;
 	font-family: Raleway;
 	font-style: normal;
@@ -95,12 +109,29 @@ const Row = styled.div`
 	font-size: 25px;
 	line-height: 29px;
 	color: #FFFBF7;
-	display: flex;
-	flex-direction: row;
 	justify-content: space-between;
 	@media only screen and (max-width: 1050px) {
 		font-size: calc(25px / 1.3);
 		line-height: calc(29px / 1.3);
+	}
+`
+
+const ContactMail = styled.a`
+	font-family: Raleway;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 25px;
+	line-height: 29px;
+	color: #FFFBF7;
+	justify-content: space-between;
+	@media only screen and (max-width: 1050px) {
+		font-size: calc(25px / 1.3);
+		line-height: calc(29px / 1.3);
+	}
+	text-decoration: none;
+	&:hover {
+	  cursor: pointer;
+	  text-decoration: underline;
 	}
 `
 

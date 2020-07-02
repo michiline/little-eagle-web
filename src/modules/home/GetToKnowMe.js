@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { hi, facts1, facts2, facts3 } from '../../images'
+import { facts1, facts2, facts3 } from '../../images'
 import { useWindow } from '../../hooks'
 
 const GetToKnowMe = () => {
@@ -264,33 +264,5 @@ const Image3 = styled.img`
 		transform: rotate(0);
 	}
 `
-
-// const Image1 = styled.img`
-// 	display: block;
-// 	object-fit: cover;
-// 	width: 30%;
-// 	z-index: 2;
-// 	margin-top: -10%;
-// 	margin-right: 20%;
-// 	transform: rotate(2.95deg);
-// `
-// const Image2 = styled.img`
-// 	display: block;
-// 	object-fit: cover;
-// 	width: 30%;
-// 	z-index: 2;
-// 	margin-right: -10%;
-// 	margin-top: -10%;
-// 	transform: rotate(-8.19deg);
-// `
-// const Image3 = styled.img`
-// 	display: block;
-// 	object-fit: cover;
-// 	width: 30%;
-// 	z-index: 2;
-// 	margin-right: 30%;
-// 	margin-top: -20%;
-// 	transform: rotate(-0.85deg);
-// `
 
 export default GetToKnowMe

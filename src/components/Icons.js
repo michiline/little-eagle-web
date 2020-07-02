@@ -98,8 +98,8 @@ const CloseSvg = styled.svg`
 export const CloseIcon = memo(() => {
   return (
     <CloseSvg viewBox='0 0 49 46' fill='none' xmlns='http://www.w3.org/2000/svg'>
-      <path d="M2.95837 3.95312L46.4334 42.9531" stroke="#FFD8C1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M2.95837 42.9531L45.2584 3.34376" stroke="#FFD8C1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d='M2.95837 3.95312L46.4334 42.9531' stroke='#FFD8C1' strokeWidth='5' strokeLinecap='round' strokeLinejoin='round'/>
+      <path d='M2.95837 42.9531L45.2584 3.34376' stroke='#FFD8C1' strokeWidth='5' strokeLinecap='round' strokeLinejoin='round'/>
     </CloseSvg>
   )
 })

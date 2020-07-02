@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { reflector } from '../../images'
-import { FacebookDarkIcon, InstagramDarkIcon } from '../../components'
+import { FacebookDarkButton, InstagramDarkButton } from '../../components'
+import { externalLink } from '../../utils'
 
 const Services = ({ servicesRef }) => {
 	return (
@@ -19,10 +20,10 @@ const Services = ({ servicesRef }) => {
 				</ReachOutText>
 				<ReachOutBorder />
 				<SocialContainer>
-					<FacebookDarkIcon />
-					<InstagramDarkIcon />
+					<FacebookDarkButton onClick={() => externalLink('https://www.facebook.com/littleeaglephoto')}/>
+          			<InstagramDarkButton onClick={() => externalLink('https://www.instagram.com/littleeaglephoto')}/>
 				</SocialContainer>
-				<ContactMail>
+				<ContactMail href={'mailto:little.eagle.photo@pm.me'}>
 					little.eagle.photo@pm.me
 				</ContactMail>
 			</ReachOutContainer>
@@ -97,16 +98,12 @@ const ColoredText = styled.div`
 	color: #C59D9A;
 `
 
-const GalleryButton = styled.div`
-	width: max-content;
-	margin-top: 2vw;
-	padding-top: 2vw;
-	padding-bottom: 2vw;
-	padding-left: 4vw;
-	padding-right: 4vw;
+const GalleryButton = styled.button`
+	width: 30vw;
+	height: 6vw;
+	margin-top: 3vw;
 	background: #FFFFFF;
 	border: 5px solid #C59D9A;
-	box-sizing: border-box;
 	backdrop-filter: blur(4px);
 	font-family: Raleway;
 	font-style: normal;
@@ -116,18 +113,29 @@ const GalleryButton = styled.div`
 	text-transform: uppercase;
 	color: #C59D9A;
 	text-align: center;
+	cursor: pointer;
+	flex-shrink: 0;
+	&:active {
+		transform: translateY(2px);
+	  }
 	@media only screen and (max-width: 1050px) {
 		border: 4px solid #C59D9A;
 	}
 	@media only screen and (max-width: 750px) {
+		width: 50vw;
+		height: 10vw;
 		font-size: 3vw;
 		line-height: 3.5vw;
 		border: 3px solid #C59D9A;
-		padding-top: 4vw;
-		padding-bottom: 4vw;
-		padding-left: 8vw;
-		padding-right: 8vw;
 	}
+	@media only screen and (min-width: 750px) {
+		&:hover {
+		  background-color: #C59D9A;
+		  color: #FFFBF7;
+		  border: none;
+		}
+		transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+	  }
 `
 
 const ReachOutContainer = styled.div`
@@ -172,7 +180,7 @@ const SocialContainer = styled.div`
 	justify-content: space-between;
 `
 
-const ContactMail = styled.div`
+const ContactMail = styled.a`
 	font-family: Raleway;
 	font-style: normal;
 	font-weight: bold;
@@ -180,6 +188,11 @@ const ContactMail = styled.div`
 	line-height: 1.75vw;
 	color: #D3B1AF;
 	margin-top: 2vw;
+	text-decoration: none;
+	&:hover {
+	  cursor: pointer;
+	  text-decoration: underline;
+	}
 `
 
 export default Services

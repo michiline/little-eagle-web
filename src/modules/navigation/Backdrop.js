@@ -15,12 +15,15 @@ const RootContainer = styled.div`
 	left: 0;
 	opacity: 0;
 	backdrop-filter: blur(10px); 
-	transition-property: opacity;
+	transition-property: opacity, visibility;
 	transition-duration: 500ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	z-index: 10;
+	visibility: hidden;
 	${props => props.showDrawer && css`
 		opacity: 1;
+		visibility: visible;
+		background-color: rgba(33,33,33,0.5);
 	`}
 	@media only screen and (max-width: 750px) {
 		display: none;
