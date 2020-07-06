@@ -6,6 +6,7 @@ import { FacebookLightButton, InstagramLightButton } from '../../components'
 import { externalLink, scrollIntoView } from '../../utils'
 
 const Drawer = ({ showDrawer, setShowDrawer, homeRef, aboutRef, servicesRef}) => {
+	const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth
 	const history = useHistory()
 	return (
 		<RootContainer showDrawer={showDrawer}>
@@ -15,8 +16,8 @@ const Drawer = ({ showDrawer, setShowDrawer, homeRef, aboutRef, servicesRef}) =>
 				</FirstRow>
 				<SecondRow>
 					<SLinkBold onClick={() => handleLinkClick({ ref: homeRef, url: '/', setShowDrawer, history })}>Home</SLinkBold>
-					<SLink onClick={() => handleLinkClick({ ref: aboutRef, url: '/', setShowDrawer, history })}>About me</SLink>
-					<SLink onClick={() => handleLinkClick({ ref: servicesRef, url: '/', setShowDrawer, history })}>My services</SLink>
+					<SLink onClick={() => handleLinkClick({ ref: aboutRef, url: '/#about', setShowDrawer, history })}>About me</SLink>
+					<SLink onClick={() => handleLinkClick({ ref: servicesRef, url: '/#services', setShowDrawer, history })}>My services</SLink>
 					<SLink onClick={() => handleLinkClick({ url: '/gallery', setShowDrawer, history })}>Photo gallery</SLink>
 					<TravelBlogLink onClick={() => externalLink('https://www.leagleandmich.com')}>Travel blog by leagle & mich</TravelBlogLink>
 				</SecondRow>
@@ -38,14 +39,19 @@ const handleLinkClick = ({ ref, url, setShowDrawer, history }) => {
 	if (history.location.pathname !== url) {
 		history.push(url)
 	}
-	if (ref) {
+	if (ref && ref.current) {
 		scrollIntoView(ref)
+	} else {
+		window.scrollTo({
+			top: 0,
+			left: 0
+		  });
 	}
 	setShowDrawer(false)
 }
 
 const RootContainer = styled.div`
-	width: 400px;
+	width: 415px;
 	height: 100vh;
 	background-color: #FF4747;
 	position: fixed;
@@ -65,11 +71,20 @@ const RootContainer = styled.div`
 		transition-duration: 500ms;
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	}
+	@media only screen and (min-width: 750px) {
+		transform: translateX(400px);
+		transition-property: visibility, opacity, transform;
+		transition-duration: 500ms;
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	}
 	${props => props.showDrawer && css`
 		opacity: 1;
 		visibility: visible;
 		@media only screen and (max-width: 750px) {
 			transform: translateY(0);
+		}
+		@media only screen and (min-width: 750px) {
+			transform: translateX(0);
 		}
 	`}
 `

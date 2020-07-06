@@ -8,7 +8,7 @@ const Backdrop = ({ showDrawer, setShowDrawer}) => {
 }
 
 const RootContainer = styled.div`
-	width: calc(100% - 400px);
+	width: 100%;
 	height: 100%;
 	position: fixed;
 	top: 0;
@@ -18,7 +18,7 @@ const RootContainer = styled.div`
 	transition-property: opacity, visibility;
 	transition-duration: 500ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	z-index: 10;
+	z-index: 9;
 	visibility: hidden;
 	${props => props.showDrawer && css`
 		opacity: 1;

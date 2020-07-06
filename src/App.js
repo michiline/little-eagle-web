@@ -2,7 +2,7 @@ import React, { useState, lazy, Suspense, useRef } from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
 import { GlobalStyle, theme } from './style'
-import { Backdrop, Hamburger, Drawer, Footer } from './modules'
+import { Backdrop, Hamburger, Drawer, Footer, Navbar } from './modules'
 
 const Home = lazy(() => import ('./modules/home'))
 const Gallery = lazy(() => import ('./modules/gallery'))
@@ -12,6 +12,7 @@ const App = () => {
   const homeRef = useRef(null)
   const aboutRef = useRef(null)
   const servicesRef = useRef(null)
+  console.log(homeRef)
   return (
     <BrowserRouter>
       <ThemeProvider theme={theme}>
@@ -24,7 +25,8 @@ const App = () => {
               <Hamburger showDrawer={showDrawer} setShowDrawer={setShowDrawer}/>
               <Home homeRef={homeRef} aboutRef={aboutRef} servicesRef={servicesRef} showDrawer={showDrawer}/>
             </Route>
-            <Route exact path='/gallery'>
+            <Route path='/gallery'>
+              <Navbar showDrawer={showDrawer} setShowDrawer={setShowDrawer} />
               <Gallery/>
             </Route>
           </Switch>
