@@ -50,7 +50,7 @@ const Cover = ({ homeRef, showDrawer }) => {
             <PhotoImg src={photo.white} />
           </Illustrations>
           {HeadersElem}
-          <GalleryButton onClick={() => handleButtonClick({ url: '/gallery', history })}>
+          <GalleryButton onClick={() => history.push('/gallery')}>
             View my work
           </GalleryButton>
         </Top>
@@ -72,10 +72,6 @@ const Cover = ({ homeRef, showDrawer }) => {
       </ContactSocial>
     </RootContainer>
   )
-}
-
-const handleButtonClick = ({ url, history }) => {
-	history.push(url)
 }
 
 const RootContainer = styled.div`

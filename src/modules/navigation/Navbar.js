@@ -2,7 +2,6 @@ import React from 'react'
 import { useHistory } from 'react-router-dom'
 import styled, { css } from 'styled-components'
 import { HamburgerButton } from '../../components'
-import { scrollIntoView } from '../../utils'
 import { useWindow } from '../../hooks'
 
 const Navbar = ({ showDrawer, setShowDrawer }) => {
@@ -26,7 +25,7 @@ const Navbar = ({ showDrawer, setShowDrawer }) => {
   }
   return (
     <NavbarContainer>
-      <BackButton onClick={() => goBack(history)}>Back</BackButton>
+      <BackButton onClick={() =>history.goBack()}>Back</BackButton>
       <LogoTextContainer onClick={() => window.scrollTo({ top: 0, behaviour: 'smooth'})}>
         {LogoTextElem}
       </LogoTextContainer>
@@ -35,14 +34,6 @@ const Navbar = ({ showDrawer, setShowDrawer }) => {
       </HamburgerWrapper>
     </NavbarContainer>
   )
-}
-
-const goBack = (history) => {
-  history.goBack()
-  window.scrollTo({
-    top: 0,
-    behaviour: 'smooth'
-  })
 }
 
 const NavbarContainer = styled.div`
@@ -107,6 +98,7 @@ const LogoTextContainer = styled.div`
   &:active {
     transform: translateY(2px);
   }
+  align-items: center;
 `
 
 const LogoText = styled.div`

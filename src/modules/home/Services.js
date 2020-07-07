@@ -3,16 +3,18 @@ import styled from 'styled-components'
 import { reflector } from '../../images'
 import { FacebookDarkButton, InstagramDarkButton } from '../../components'
 import { externalLink } from '../../utils'
+import { useHistory } from 'react-router-dom'
 
 const Services = ({ servicesRef }) => {
+	const history = useHistory()
 	return (
 		<RootContainer ref={servicesRef}>
 			<TextContainer>
-				<ColoredText>I can help you capture </ColoredText>
+				<ColoredText>I can help you capture: </ColoredText>
 				<Text>special moments, portraits and events. 
 					You can contact me for shots in my home studio or on some beautiful outdoor location.
 				</Text>
-				<GalleryButton>Visit my full galery</GalleryButton>
+				<GalleryButton onClick={() => history.push('/gallery')}>Visit my full gallery</GalleryButton>
 			</TextContainer>
 			<ReachOutContainer>
 				<ReachOutText>
@@ -81,7 +83,7 @@ const Text = styled.div`
 		font-size: 5vw;
 		line-height: calc(5vw * 1.35);
 	}
-	color: #FFD8C1;
+	color: #C59D9A;
 	white-space: initial;
 `
 
@@ -95,7 +97,8 @@ const ColoredText = styled.div`
 		font-size: 5vw;
 		line-height: calc(5vw * 1.35);
 	}
-	color: #C59D9A;
+
+	color: #605454;
 `
 
 const GalleryButton = styled.button`

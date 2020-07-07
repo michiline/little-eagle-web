@@ -3,11 +3,13 @@ import { Switch, Route, useRouteMatch } from 'react-router-dom'
 import styled from 'styled-components'
 import GalleryList from './GalleryList'
 import ProjectsList from './ProjectsList'
+import { ScrollToTop } from '../../hooks'
 
 const Gallery = () => {
   let { path } = useRouteMatch()
   return (
     <RootContainer>
+      <ScrollToTop />
       <Switch>
         <Route exact path={path}>
           <GalleryList />

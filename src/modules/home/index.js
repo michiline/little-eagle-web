@@ -4,12 +4,12 @@ import Cover from './Cover'
 import About from './About'
 import GetToKnowMe from './GetToKnowMe'
 import Services from './Services'
-import { useLocation, useHistory } from 'react-router-dom'
-import { scrollIntoView } from '../../utils' 
+import { ScrollToTop } from '../../hooks'
 
 const Home = ({ showDrawer, homeRef, aboutRef, servicesRef }) => {
   return (
     <RootContainer>
+      <ScrollToTop />
       <Cover showDrawer={showDrawer} homeRef={homeRef} />
       <About aboutRef={aboutRef}/>
       <GetToKnowMe />

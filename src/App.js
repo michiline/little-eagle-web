@@ -12,7 +12,6 @@ const App = () => {
   const homeRef = useRef(null)
   const aboutRef = useRef(null)
   const servicesRef = useRef(null)
-  console.log(homeRef)
   return (
     <BrowserRouter>
       <ThemeProvider theme={theme}>

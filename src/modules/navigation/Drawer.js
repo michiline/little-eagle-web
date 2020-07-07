@@ -6,7 +6,6 @@ import { FacebookLightButton, InstagramLightButton } from '../../components'
 import { externalLink, scrollIntoView } from '../../utils'
 
 const Drawer = ({ showDrawer, setShowDrawer, homeRef, aboutRef, servicesRef}) => {
-	const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth
 	const history = useHistory()
 	return (
 		<RootContainer showDrawer={showDrawer}>
@@ -41,11 +40,6 @@ const handleLinkClick = ({ ref, url, setShowDrawer, history }) => {
 	}
 	if (ref && ref.current) {
 		scrollIntoView(ref)
-	} else {
-		window.scrollTo({
-			top: 0,
-			left: 0
-		  });
 	}
 	setShowDrawer(false)
 }

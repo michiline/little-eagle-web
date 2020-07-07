@@ -3,7 +3,6 @@ import { useHistory } from 'react-router-dom'
 import styled from 'styled-components'
 import { useWindow } from '../../hooks'
 import { galleryBox } from '../../images'
-import { to } from '../../utils'
 
 const GalleryList = () => {
   const history = useHistory()
@@ -11,24 +10,24 @@ const GalleryList = () => {
   let GalleryRowElem = (
 	  <>
 		<GalleryRow>
-			<GalleryBox onClick={() => to({ url: '/gallery/people', history})}>
+			<GalleryBox onClick={() => history.push('/gallery/people')}>
 				<GalleryBoxOverlay />
 				<GalleryBoxImage src={galleryBox.people}/>
 				<GalleryBoxText>People</GalleryBoxText>
 			</GalleryBox>
-			<GalleryBox onClick={() => to({ url: '/gallery/travels', history})}>
+			<GalleryBox onClick={() => history.push('/gallery/travels')}>
 				<GalleryBoxOverlay />
 				<GalleryBoxImage src={galleryBox.travels}/>
 				<GalleryBoxText>Travels</GalleryBoxText>
 			</GalleryBox>
 		</GalleryRow>
 		<GalleryRow>
-			<GalleryBox onClick={() => to({ url: '/gallery/details', history})}>
+			<GalleryBox onClick={() => history.push('/gallery/details')}>
 				<GalleryBoxOverlay />
 				<GalleryBoxImage src={galleryBox.details}/>
 				<GalleryBoxText>Details</GalleryBoxText>
 			</GalleryBox>
-			<GalleryBox onClick={() => to({ url: '/gallery/projects', history})}>
+				<GalleryBox onClick={() => history.push('/gallery/projects')}>
 				<GalleryBoxOverlay />
 				<GalleryBoxImage src={galleryBox.projects}/>
 				<GalleryBoxText>Projects</GalleryBoxText>
@@ -39,22 +38,22 @@ const GalleryList = () => {
   if (windowWidth < 750) {
 		GalleryRowElem = (
 			<>
-				<GalleryBox onClick={() => to({ url: '/gallery/people', history})}>
+				<GalleryBox onClick={() => history.push('/gallery/people')}>
 					<GalleryBoxOverlay />
 					<GalleryBoxImage src={galleryBox.people}/>
 					<GalleryBoxText>People</GalleryBoxText>
 				</GalleryBox>
-				<GalleryBox onClick={() => to({ url: '/gallery/travels', history})}>
+				<GalleryBox onClick={() => history.push('/gallery/travels')}>
 					<GalleryBoxOverlay />
 					<GalleryBoxImage src={galleryBox.travels}/>
 					<GalleryBoxText>Travels</GalleryBoxText>
 				</GalleryBox>
-				<GalleryBox onClick={() => to({ url: '/gallery/details', history})}>
+				<GalleryBox onClick={() => history.push('/gallery/details')}>
 					<GalleryBoxOverlay />	
 					<GalleryBoxImage src={galleryBox.details}/>
 					<GalleryBoxText>Details</GalleryBoxText>
 				</GalleryBox>
-				<GalleryBox onClick={() => to({ url: '/gallery/projects', history})}>
+				<GalleryBox onClick={() => history.push('/gallery/projects')}>
 					<GalleryBoxOverlay />
 					<GalleryBoxImage src={galleryBox.projects}/>
 					<GalleryBoxText>Projects</GalleryBoxText>
