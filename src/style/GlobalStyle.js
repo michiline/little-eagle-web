@@ -15,7 +15,8 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     height: 100%;
     min-height: 100%;
-    ${props => props.showDrawer && css`
+    overflow-y: scroll;
+    ${props => props.hideScroll && css`
       position: relative;
       overflow-y: hidden;
     `}

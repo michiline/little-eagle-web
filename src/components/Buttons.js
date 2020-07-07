@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
 import styled, { css } from 'styled-components'
-import { HamburgerIcon, CloseIcon, FacebookLightIcon, FacebookDarkIcon, InstagramLightIcon, InstagramDarkIcon } from './Icons'
+import { HamburgerIcon, CloseIcon, FacebookLightIcon, FacebookDarkIcon, InstagramLightIcon, InstagramDarkIcon, PreviousIcon, NextIcon, CloseSwipeIcon } from './Icons'
 
 export const HamburgerButton = memo(({ onClick }) => {
   return (
@@ -50,6 +50,30 @@ export const InstagramDarkButton = memo(({ onClick }) => {
   )
 })
 
+export const PreviousButton = memo(({ handleClick }) => {
+  return (
+    <PreviousButtonContainer onClick={handleClick}>
+      <PreviousIcon />
+    </PreviousButtonContainer>
+  )
+})
+
+export const NextButton = memo(({ handleClick }) => {
+  return (
+    <NextButtonContainer onClick={handleClick}>
+      <NextIcon />
+    </NextButtonContainer>
+  )
+})
+
+export const CloseSwipeButton = memo(({ handleClick }) => {
+  return (
+    <CloseSwipeButtonContainer onClick={handleClick}>
+      <CloseSwipeIcon />
+    </CloseSwipeButtonContainer>
+  )
+})
+
 export const IconButton = styled.button`
   border: none;
   cursor: pointer;
@@ -57,4 +81,74 @@ export const IconButton = styled.button`
   &:active {
     transform: translateY(2px);
   }
+`
+
+
+export const PreviousButtonContainer = styled.div`
+  position: absolute;
+  bottom: calc(50% - 25px);
+  left: 2%;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  user-select: none;
+  z-index: 8;
+  opacity: 0.6;
+  transition: opacity 0.2s ease-in-out;
+  &:hover {
+    opacity: 1;
+  }
+  &:active {
+    transform: translateY(2px);
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
+const NextButtonContainer = styled.div`
+  position: absolute;
+  bottom: calc(50% - 25px);
+  right: 2%;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  user-select: none;
+  z-index: 8;
+  opacity: 0.6;
+  transition: opacity 0.2s ease-in-out;
+  &:hover {
+    opacity: 1;
+  }
+  &:active {
+    transform: translateY(2px);
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
+const CloseSwipeButtonContainer = styled.div`
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  user-select: none;
+  z-index: 8;
+  opacity: 0.6;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    opacity: 1;
+  }
+  &:active {
+    transform: translateY(2px);
+  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `

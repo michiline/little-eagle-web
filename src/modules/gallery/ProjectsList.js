@@ -22,7 +22,7 @@ const GalleryList = () => {
 			</GalleryBox>
 		</GalleryRow>
 		<GalleryRow>
-		<GalleryBox onClick={() => history.push('/gallery/projects/wedding-r&m')}>
+		<GalleryBox onClick={() => history.push('/gallery/projects/wedding-rm')}>
 				<GalleryBoxOverlay />
 				<GalleryBoxImage src={galleryBox.weddingRnM}/>
 				<GalleryBoxText>Wedding R & M</GalleryBoxText>
@@ -43,7 +43,7 @@ const GalleryList = () => {
 					<GalleryBoxImage src={galleryBox.budjenjeBoginje}/>
 					<GalleryBoxText>Buđenje Boginje</GalleryBoxText>
 				</GalleryBox>
-				<GalleryBox onClick={() => history.push('/gallery/projects/wedding-r&m')}>
+				<GalleryBox onClick={() => history.push('/gallery/projects/wedding-rm')}>
 					<GalleryBoxOverlay />	
 					<GalleryBoxImage src={galleryBox.weddingRnM}/>
 					<GalleryBoxText>Wedding R & M</GalleryBoxText>

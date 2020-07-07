@@ -15,8 +15,8 @@ const Drawer = ({ showDrawer, setShowDrawer, homeRef, aboutRef, servicesRef}) =>
 				</FirstRow>
 				<SecondRow>
 					<SLinkBold onClick={() => handleLinkClick({ ref: homeRef, url: '/', setShowDrawer, history })}>Home</SLinkBold>
-					<SLink onClick={() => handleLinkClick({ ref: aboutRef, url: '/#about', setShowDrawer, history })}>About me</SLink>
-					<SLink onClick={() => handleLinkClick({ ref: servicesRef, url: '/#services', setShowDrawer, history })}>My services</SLink>
+					<SLink onClick={() => handleLinkClick({ ref: aboutRef, url: '/', setShowDrawer, history })}>About me</SLink>
+					<SLink onClick={() => handleLinkClick({ ref: servicesRef, url: '/', setShowDrawer, history })}>My services</SLink>
 					<SLink onClick={() => handleLinkClick({ url: '/gallery', setShowDrawer, history })}>Photo gallery</SLink>
 					<TravelBlogLink onClick={() => externalLink('https://www.leagleandmich.com')}>Travel blog by leagle & mich</TravelBlogLink>
 				</SecondRow>

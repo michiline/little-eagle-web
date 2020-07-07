@@ -25,7 +25,7 @@ const Navbar = ({ showDrawer, setShowDrawer }) => {
   }
   return (
     <NavbarContainer>
-      <BackButton onClick={() =>history.goBack()}>Back</BackButton>
+      <BackButton onClick={() => goBack(history)}>Back</BackButton>
       <LogoTextContainer onClick={() => window.scrollTo({ top: 0, behaviour: 'smooth'})}>
         {LogoTextElem}
       </LogoTextContainer>
@@ -34,6 +34,14 @@ const Navbar = ({ showDrawer, setShowDrawer }) => {
       </HamburgerWrapper>
     </NavbarContainer>
   )
+}
+
+const goBack = (history) => {
+  if (history.location.pathname === '/gallery/projects') {
+    history.pushState('/gallery')
+  } else {
+    history.push('/')
+  }
 }
 
 const NavbarContainer = styled.div`

@@ -9,13 +9,17 @@ const Gallery = lazy(() => import ('./modules/gallery'))
 
 const App = () => {
   const [showDrawer, setShowDrawer] = useState(false)
+  const [showSwipe, setShowSwipe] = useState(false)
   const homeRef = useRef(null)
   const aboutRef = useRef(null)
   const servicesRef = useRef(null)
+  // const people = bindRatiosToUrls({ baseUrl: process.env.REACT_APP_IMG_URL, dir: 'gallery/low/people', length: 110, ratios: ratios.people})
+  // console.log(people)
+  
   return (
     <BrowserRouter>
       <ThemeProvider theme={theme}>
-        <GlobalStyle showDrawer={showDrawer}/>
+        <GlobalStyle hideScroll={showDrawer}/>
         <Drawer showDrawer={showDrawer} setShowDrawer={setShowDrawer} homeRef={homeRef} aboutRef={aboutRef} servicesRef={servicesRef}/>
         <Backdrop showDrawer={showDrawer} />
         <Suspense fallback={<div>Loading...</div>}>
@@ -26,7 +30,7 @@ const App = () => {
             </Route>
             <Route path='/gallery'>
               <Navbar showDrawer={showDrawer} setShowDrawer={setShowDrawer} />
-              <Gallery/>
+              <Gallery setShowSwipe={setShowSwipe} />
             </Route>
           </Switch>
         </Suspense>

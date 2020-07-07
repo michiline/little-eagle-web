@@ -3,9 +3,10 @@ import { Switch, Route, useRouteMatch } from 'react-router-dom'
 import styled from 'styled-components'
 import GalleryList from './GalleryList'
 import ProjectsList from './ProjectsList'
+import JustifySwipe from './justify-swipe'
 import { ScrollToTop } from '../../hooks'
 
-const Gallery = () => {
+const Gallery = ({ setShowSwipe }) => {
   let { path } = useRouteMatch()
   return (
     <RootContainer>
@@ -14,17 +15,26 @@ const Gallery = () => {
         <Route exact path={path}>
           <GalleryList />
         </Route>
-        <Route exact path={`${path}/people`}>
-          People
+        <Route exact path={`${path}/people/:activeImg?`}>
+          <JustifySwipe galleryName={'people'} setShowSwipe={setShowSwipe} />
         </Route>
-        <Route exact path={`${path}/travels`}>
-          Travels
+        <Route exact path={`${path}/travels/:activeImg?`}>
+          <JustifySwipe galleryName={'travels'} setShowSwipe={setShowSwipe}/>
         </Route>
-        <Route exact path={`${path}/details`}>
-          details
+        <Route exact path={`${path}/details/:activeImg?`}>
+          <JustifySwipe galleryName={'details'} setShowSwipe={setShowSwipe}/>
         </Route>
         <Route exact path={`${path}/projects`}>
           <ProjectsList />
+        </Route>
+        <Route exact path={`${path}/projects/chill-vibez/:activeImg?`}>
+          <JustifySwipe galleryName={'chill-vibez'} setShowSwipe={setShowSwipe}/>
+        </Route>
+        <Route exact path={`${path}/projects/budjenje-boginje/:activeImg?`}>
+          <JustifySwipe galleryName={'budjenje-boginje'} setShowSwipe={setShowSwipe}/>
+        </Route>
+        <Route exact path={`${path}/projects/wedding-rm/:activeImg?`}>
+          <JustifySwipe galleryName={'wedding-rm'} setShowSwipe={setShowSwipe}/>
         </Route>
       </Switch>
 
