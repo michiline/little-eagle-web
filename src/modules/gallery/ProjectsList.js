@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom'
 import styled from 'styled-components'
 import { useWindow } from '../../hooks'
 import { galleryBox } from '../../images'
+import { to } from '../../utils'
 
 const GalleryList = () => {
   const history = useHistory()
@@ -10,19 +11,19 @@ const GalleryList = () => {
   let GalleryRowElem = (
 	  <>
 		<GalleryRow>
-			<GalleryBox onClick={() => history.push('/gallery/projects/chill-vibez')}>
+			<GalleryBox onClick={() => to({ url: '/gallery/projects/chill-vibez', history})}>
 				<GalleryBoxOverlay />
 				<GalleryBoxImage src={galleryBox.chillVibez}/>
 				<GalleryBoxText>Chill Vibez</GalleryBoxText>
 			</GalleryBox>
-			<GalleryBox onClick={() => history.push('/gallery/projects/budjenje-boginje')}>
+			<GalleryBox onClick={() => to({ url: '/gallery/projects/budjenje-boginje', history})}>
 				<GalleryBoxOverlay />
 				<GalleryBoxImage src={galleryBox.budjenjeBoginje}/>
 				<GalleryBoxText>Buđenje Boginje</GalleryBoxText>
 			</GalleryBox>
 		</GalleryRow>
 		<GalleryRow>
-			<GalleryBox onClick={() => history.push('/gallery/projects/wedding-r&m')}>
+			<GalleryBox onClick={() => to({ url: '/gallery/projects/wedding-r&m', history})}>
 				<GalleryBoxOverlay />
 				<GalleryBoxImage src={galleryBox.weddingRnM}/>
 				<GalleryBoxText>Wedding R & M</GalleryBoxText>
@@ -33,17 +34,17 @@ const GalleryList = () => {
   if (windowWidth < 750) {
 		GalleryRowElem = (
 			<>
-				<GalleryBox onClick={() => history.push('/gallery/projects/chill-vibez')}>
+				<GalleryBox onClick={() => to({ url: '/gallery/projects/chill-vibez', history})}>
 					<GalleryBoxOverlay />
 					<GalleryBoxImage src={galleryBox.chillVibez}/>
 					<GalleryBoxText>Chill Vibez</GalleryBoxText>
 				</GalleryBox>
-				<GalleryBox onClick={() => history.push('/gallery/projects/budjenje-boginje')}>
+				<GalleryBox onClick={() => to({ url: '/gallery/projects/budjenje-boginje', history})}>>
 					<GalleryBoxOverlay />
 					<GalleryBoxImage src={galleryBox.budjenjeBoginje}/>
 					<GalleryBoxText>Buđenje Boginje</GalleryBoxText>
 				</GalleryBox>
-				<GalleryBox onClick={() => history.push('/gallery/projects/wedding-r&m')}>
+				<GalleryBox onClick={() => to({ url: '/gallery/projects/wedding-r&m', history})}>
 					<GalleryBoxOverlay />	
 					<GalleryBoxImage src={galleryBox.weddingRnM}/>
 					<GalleryBoxText>Wedding R & M</GalleryBoxText>
