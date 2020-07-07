@@ -32,3 +32,13 @@ export const facts3 = `${baseUrl}/facts-3.jpg`
 export const hi = `${baseUrl}/hi-3-3-2.jpg`
 
 export const reflector = `${baseUrl}/reflector.png`
+
+export const galleryBox = {
+	people: `${baseUrl}/gallery/people.jpg`,
+	travels: `${baseUrl}/gallery/travels.jpg`,
+	details: `${baseUrl}/gallery/details.jpg`,
+	projects: `${baseUrl}/gallery/projects.jpg`,
+	chillVibez: `${baseUrl}/gallery/chill-vibez.jpg`,
+	budjenjeBoginje: `${baseUrl}/gallery/budjenje-boginje.jpg`,
+	weddingRnM: `${baseUrl}/gallery/wedding-r&m.jpg`
+}

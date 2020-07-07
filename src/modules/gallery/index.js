@@ -2,6 +2,7 @@ import React from 'react'
 import { Switch, Route, useRouteMatch } from 'react-router-dom'
 import styled from 'styled-components'
 import GalleryList from './GalleryList'
+import ProjectsList from './ProjectsList'
 
 const Gallery = () => {
   let { path } = useRouteMatch()
@@ -21,7 +22,7 @@ const Gallery = () => {
           details
         </Route>
         <Route exact path={`${path}/projects`}>
-          projects
+          <ProjectsList />
         </Route>
       </Switch>
 

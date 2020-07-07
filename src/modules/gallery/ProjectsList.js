@@ -1,37 +1,31 @@
 import React from 'react'
-import { useHistory, useRouteMatch } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import styled from 'styled-components'
 import { useWindow } from '../../hooks'
 import { galleryBox } from '../../images'
 
 const GalleryList = () => {
-  let { path, url } = useRouteMatch()
   const history = useHistory()
   const [windowWidth] = useWindow()
   let GalleryRowElem = (
 	  <>
 		<GalleryRow>
-			<GalleryBox onClick={() => history.push('/gallery/people')}>
+			<GalleryBox onClick={() => history.push('/gallery/projects/chill-vibez')}>
 				<GalleryBoxOverlay />
-				<GalleryBoxImage src={galleryBox.people}/>
-				<GalleryBoxText>People</GalleryBoxText>
+				<GalleryBoxImage src={galleryBox.chillVibez}/>
+				<GalleryBoxText>Chill Vibez</GalleryBoxText>
 			</GalleryBox>
-			<GalleryBox onClick={() => history.push('/gallery/travels')}>
+			<GalleryBox onClick={() => history.push('/gallery/projects/budjenje-boginje')}>
 				<GalleryBoxOverlay />
-				<GalleryBoxImage src={galleryBox.travels}/>
-				<GalleryBoxText>Travels</GalleryBoxText>
+				<GalleryBoxImage src={galleryBox.budjenjeBoginje}/>
+				<GalleryBoxText>Buđenje Boginje</GalleryBoxText>
 			</GalleryBox>
 		</GalleryRow>
 		<GalleryRow>
-			<GalleryBox onClick={() => history.push('/gallery/details')}>
+			<GalleryBox onClick={() => history.push('/gallery/projects/wedding-r&m')}>
 				<GalleryBoxOverlay />
-				<GalleryBoxImage src={galleryBox.details}/>
-				<GalleryBoxText>Details</GalleryBoxText>
-			</GalleryBox>
-			<GalleryBox onClick={() => history.push('/gallery/projects')}>
-				<GalleryBoxOverlay />
-				<GalleryBoxImage src={galleryBox.projects}/>
-				<GalleryBoxText>Projects</GalleryBoxText>
+				<GalleryBoxImage src={galleryBox.weddingRnM}/>
+				<GalleryBoxText>Wedding R & M</GalleryBoxText>
 			</GalleryBox>
 		</GalleryRow>
 	  </>
@@ -39,25 +33,20 @@ const GalleryList = () => {
   if (windowWidth < 750) {
 		GalleryRowElem = (
 			<>
-				<GalleryBox onClick={() => history.push('/gallery/people')}>
+				<GalleryBox onClick={() => history.push('/gallery/projects/chill-vibez')}>
 					<GalleryBoxOverlay />
-					<GalleryBoxImage src={galleryBox.people}/>
-					<GalleryBoxText>People</GalleryBoxText>
+					<GalleryBoxImage src={galleryBox.chillVibez}/>
+					<GalleryBoxText>Chill Vibez</GalleryBoxText>
 				</GalleryBox>
-				<GalleryBox onClick={() => history.push('/gallery/travels')}>
+				<GalleryBox onClick={() => history.push('/gallery/projects/budjenje-boginje')}>
 					<GalleryBoxOverlay />
-					<GalleryBoxImage src={galleryBox.travels}/>
-					<GalleryBoxText>Travels</GalleryBoxText>
+					<GalleryBoxImage src={galleryBox.budjenjeBoginje}/>
+					<GalleryBoxText>Buđenje Boginje</GalleryBoxText>
 				</GalleryBox>
-				<GalleryBox onClick={() => history.push('/gallery/details')}>
+				<GalleryBox onClick={() => history.push('/gallery/projects/wedding-r&m')}>
 					<GalleryBoxOverlay />	
-					<GalleryBoxImage src={galleryBox.details}/>
-					<GalleryBoxText>Details</GalleryBoxText>
-				</GalleryBox>
-				<GalleryBox onClick={() => history.push('/gallery/projects')}>
-					<GalleryBoxOverlay />
-					<GalleryBoxImage src={galleryBox.projects}/>
-					<GalleryBoxText>Projects</GalleryBoxText>
+					<GalleryBoxImage src={galleryBox.weddingRnM}/>
+					<GalleryBoxText>Wedding R & M</GalleryBoxText>
 				</GalleryBox>
 			</>
 		)
@@ -145,6 +134,7 @@ const GalleryBoxOverlay = styled.div`
 
 const GalleryBoxText = styled.div`
 	font-family: Abril Fatface;
+	width: min-content;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 48px;
