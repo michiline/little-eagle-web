@@ -7,7 +7,7 @@ const SwipeImage = memo(({ image }) => {
   useEffect(() => {
     const observerOptions = {
       root: null,
-      rootMargin: '0px 200px 0px 0px',
+      rootMargin: '0px 200px 0px 200px',
       threshold: 0
     }
     const intersectionCallback = (entries) => {

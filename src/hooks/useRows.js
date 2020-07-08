@@ -59,7 +59,6 @@ const buildRows = ({ images, maxWidth, minRatio }) => {
     }, 0)
     return currentRow
   })
-  console.log(rowsSizes)
   if (rowsSizes.length !== 0 && !rowsSizes[rowsSizes.length - 1].width) {
     rowsSizes.pop()
   }
