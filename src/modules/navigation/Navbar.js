@@ -49,7 +49,7 @@ const goBack = (history) => {
 const NavbarContainer = styled.div`
   position: fixed;
   top: 0;
-  height: min-content;
+  height: 105px;
   width: 100%;
   display: flex;
   flex-direction: row;
