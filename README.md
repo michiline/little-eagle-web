@@ -5,7 +5,7 @@ Features custom made justified paginated swipeable gallery.
 
 ### Live Preview
 
-www.littleeaglephoto.com
+www.littleeaglephoto.com <br>
 www.leagle2.mislav.host
 
 ### Config

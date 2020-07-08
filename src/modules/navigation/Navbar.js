@@ -64,7 +64,7 @@ const NavbarContainer = styled.div`
     padding-right: 20px;
   }
   z-index: 7;
-  background-color: #FFFFFFE1;
+  background-color: #FFFFFF;
 `
 
 const BackButton = styled.div`
