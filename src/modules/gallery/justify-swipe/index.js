@@ -5,11 +5,12 @@ import { paginate } from '../../../utils'
 import Justify from './justify'
 import Swipe from './swipe'
 
-const JustifySwipe = ({ galleryName, setShowSwipe }) => {
+const JustifySwipe = ({ subdir, galleryName, setShowSwipe }) => {
 	const history = useHistory()
 	const match = useRouteMatch()
-	let lowRes = paginate({ images: JSON.parse(JSON.stringify(gallery[galleryName].low)), nPerPage: 20 })
-	let highRes = JSON.parse(JSON.stringify(gallery[galleryName].high))
+	let galleryImages = subdir ? gallery[subdir][galleryName] : gallery[galleryName]
+	let lowRes = paginate({ images: JSON.parse(JSON.stringify(galleryImages.low)), nPerPage: 20 })
+	let highRes = JSON.parse(JSON.stringify(galleryImages.high))
 	const close = () => {
 		const idIndex = history.location.pathname.lastIndexOf('/')
 		const newUrl = history.location.pathname.substr(0, idIndex)

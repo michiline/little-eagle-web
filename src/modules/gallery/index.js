@@ -28,13 +28,13 @@ const Gallery = ({ setShowSwipe }) => {
           <ProjectsList />
         </Route>
         <Route exact path={`${path}/projects/chill-vibez/:activeImg?`}>
-          <JustifySwipe galleryName={'chill-vibez'} setShowSwipe={setShowSwipe}/>
+          <JustifySwipe subdir={'projects'} galleryName={'chill-vibez'} setShowSwipe={setShowSwipe}/>
         </Route>
         <Route exact path={`${path}/projects/budjenje-boginje/:activeImg?`}>
-          <JustifySwipe galleryName={'budjenje-boginje'} setShowSwipe={setShowSwipe}/>
+          <JustifySwipe subdir={'projects'} galleryName={'budjenje-boginje'} setShowSwipe={setShowSwipe}/>
         </Route>
         <Route exact path={`${path}/projects/wedding-rm/:activeImg?`}>
-          <JustifySwipe galleryName={'wedding-rm'} setShowSwipe={setShowSwipe}/>
+          <JustifySwipe subdir={'projects'} galleryName={'wedding-rm'} setShowSwipe={setShowSwipe}/>
         </Route>
       </Switch>
 

@@ -3,6 +3,8 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
 import { GlobalStyle, theme } from './style'
 import { Backdrop, Hamburger, Drawer, Footer, Navbar } from './modules'
+import { bindRatiosToUrls } from './utils'
+import ratios from './ratios'
 
 const Home = lazy(() => import ('./modules/home'))
 const Gallery = lazy(() => import ('./modules/gallery'))
@@ -13,9 +15,8 @@ const App = () => {
   const homeRef = useRef(null)
   const aboutRef = useRef(null)
   const servicesRef = useRef(null)
-  // const people = bindRatiosToUrls({ baseUrl: process.env.REACT_APP_IMG_URL, dir: 'gallery/low/people', length: 110, ratios: ratios.people})
-  // console.log(people)
-  
+  const chill = bindRatiosToUrls({ baseUrl: process.env.REACT_APP_IMG_URL, dir: 'gallery/low/projects/wedding-rm', length: 69, ratios: ratios.projects["wedding-rm"]})
+
   return (
     <BrowserRouter>
       <ThemeProvider theme={theme}>
