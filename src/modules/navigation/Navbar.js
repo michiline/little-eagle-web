@@ -47,6 +47,8 @@ const goBack = (history) => {
 }
 
 const NavbarContainer = styled.div`
+  position: fixed;
+  top: 0;
   height: min-content;
   width: 100%;
   display: flex;
@@ -61,6 +63,8 @@ const NavbarContainer = styled.div`
     padding-left: 20px;
     padding-right: 20px;
   }
+  z-index: 7;
+  background-color: #FFFBF7E1;
 `
 
 const BackButton = styled.div`

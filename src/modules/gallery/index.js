@@ -45,6 +45,7 @@ const Gallery = ({ setShowSwipe }) => {
 const RootContainer = styled.div`
 	width: 100%;
   height: min-content;
+  margin-top: 105px;
 `
 
 export default Gallery
