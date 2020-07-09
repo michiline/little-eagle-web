@@ -12,15 +12,15 @@ const Gallery = ({ setShowSwipe }) => {
   return (
     <RootContainer>
         <Helmet>
-          <title>Gallery - Little Eagle Photography - Event & People Photographer</title>
-          <meta property="og:site_name" content="Little Eagle Photography - Event & People Photographer"/>
+          <title>Gallery - Little Eagle Photography</title>
+          <meta property="og:site_name" content="Little Eagle Photography"/>
           <meta property="og:type" content="website" />
-          <meta property="og:title" content="Gallery - Little Eagle Photography - Event & People Photographer"/>
+          <meta property="og:title" content="Gallery - Little Eagle Photography"/>
           <meta property="og:url" content="https://www.littleeaglephoto.com/gallery"/>
           <meta property="og:image" content="https://littleeagle.s3.eu-central-1.amazonaws.com/gallery/low/people/img152.jpg" />
-          <meta property="og:image:width" content="320" />
-          <meta property="og:image:height" content="213" />
-          <meta property="og:description" content="Ana's photo gallery: People, Travels, Details, Projects." />
+          <meta property="og:image:width" content="640" />
+          <meta property="og:image:height" content="427" />
+          <meta property="og:description" content="Little Eagle's photo gallery with people, travels, projects and details and more." />
         </Helmet>
       <ScrollToTop />
       <Switch>
