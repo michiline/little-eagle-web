@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import { Switch, Route, useRouteMatch } from 'react-router-dom'
 import styled from 'styled-components'
 import GalleryList from './GalleryList'
@@ -10,6 +11,16 @@ const Gallery = ({ setShowSwipe }) => {
   let { path } = useRouteMatch()
   return (
     <RootContainer>
+        <Helmet>
+          <title>Gallery - Little Eagle Photography - Event & People Photographer</title>
+          <meta name="og:type" content="website" />
+          <meta name="og:title" content="Gallery - Little Eagle Photography - Event & People Photographer"/>
+          <meta name="og:url" content="https://www.littleeaglephoto.com/gallery"/>
+          <meta name="og:image" content="https://littleeagle.s3.eu-central-1.amazonaws.com/gallery/low/people/img70.jpg" />
+          <meta name="og:image:width" content="320" />
+          <meta name="og:image:height" content="213" />
+          <meta name="og:description" content="Ana's photo gallery: People, Travels, Details, Projects." />
+        </Helmet>
       <ScrollToTop />
       <Switch>
         <Route exact path={path}>
