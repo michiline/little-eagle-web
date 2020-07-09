@@ -12,14 +12,14 @@ const Home = ({ showDrawer, homeRef, aboutRef, servicesRef }) => {
     <RootContainer>
       <Helmet>
         <title>Little Eagle Photography</title>
-        <meta property='og:site_name' content='Little Eagle Photography - Professional Portrait and Event Photographer'/>
+        <meta property='og:site_name' content='Little Eagle Photography - Event & Portrait Photographer'/>
         <meta property='og title' content='Little Eagle Photography'/>
         <meta property='og:type' content='website' />
         <meta property='og:url' content='https://www.littleeaglephoto.com'/>
         <meta property='og:image' content='https://littleeagle.s3.eu-central-1.amazonaws.com/gallery/low/people/img70.jpg' />
         <meta property="og:image:width" content="320" />
         <meta property="og:image:height" content="213" />
-        <meta property="og:description" content='Ana Orlic is a people and event photographer from Zagreb, Croatia. Available Europe and worldwide.' />
+        <meta property="og:description" content='Professional Event and portrait photographer from Zagreb, Croatia. Available Europe and worldwide.' />
         
       </Helmet>
       <ScrollToTop />
