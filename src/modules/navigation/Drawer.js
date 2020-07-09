@@ -17,8 +17,8 @@ const Drawer = ({ showDrawer, setShowDrawer, homeRef, aboutRef, servicesRef}) =>
 					<SLinkBold onClick={() => handleLinkClick({ ref: homeRef, url: '/', setShowDrawer, history })}>Home</SLinkBold>
 					<SLink onClick={() => handleLinkClick({ ref: aboutRef, url: '/', setShowDrawer, history })}>About me</SLink>
 					<SLink onClick={() => handleLinkClick({ ref: servicesRef, url: '/', setShowDrawer, history })}>My services</SLink>
-					<SLink onClick={() => handleLinkClick({ url: '/gallery', setShowDrawer, history })}>Photo gallery</SLink>
-					<TravelBlogLink onClick={() => externalLink('https://www.leagleandmich.com')}>Travel blog by leagle & mich</TravelBlogLink>
+					<SLink href={'/gallery'}>Photo gallery</SLink>
+					<TravelBlogLink href={'https://www.leagleandmich.com'}>Travel blog by leagle & mich</TravelBlogLink>
 				</SecondRow>
 				<ContactSocial>
 					<Social>
@@ -115,7 +115,7 @@ const SecondRow = styled.div`
 	margin-top: 10vh;
 `
 
-const SLink = styled.div`
+const SLink = styled.a`
 	font-family: Raleway;
 	font-style: normal;
 	font-weight: 700;
@@ -138,7 +138,7 @@ const SLinkBold = styled(SLink)`
 	font-weight: 900;
 `
 
-const TravelBlogLink = styled.div`
+const TravelBlogLink = styled.a`
 	width: 200px;
 	font-family: Raleway;
 	font-style: normal;
