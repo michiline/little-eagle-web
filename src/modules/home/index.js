@@ -12,14 +12,15 @@ const Home = ({ showDrawer, homeRef, aboutRef, servicesRef }) => {
     <RootContainer>
       <Helmet>
         <title>Little Eagle Photography</title>
-        <meta property="og:site_name" content="Little Eagle Photography"/>
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Little Eagle Photography"/>
-        <meta property="og:url" content="https://www.littleeaglephoto.com"/>
-        <meta property="og:image" content="https://littleeagle.s3.eu-central-1.amazonaws.com/gallery/low/people/img70.jpg" />
-        <meta property="og:image:width" content="320" />
-        <meta property="og:image:height" content="213" />
-        <meta property="og:description" content="Ana Orlic is event and people photographer from Zagreb, Croatia. Available worldwide." />
+        <meta name="og:site_name" content="Little Eagle Photography"/>
+        <meta name="og:type" content="website" />
+        <meta name="og:title" content="Little Eagle Photography"/>
+        <meta name="og:url" content="https://www.littleeaglephoto.com"/>
+        <meta name="og:image" content="https://littleeagle.s3.eu-central-1.amazonaws.com/gallery/low/people/img70.jpg" />
+        <meta name="og:image:width" content="320" />
+        <meta name="og:image:height" content="213" />
+        <meta name="og:image:alt" content="Red high heels" />
+        <meta name="og:description" content="Ana Orlic is event and people photographer from Zagreb, Croatia. Available worldwide." />
       </Helmet>
       <ScrollToTop />
       <Cover showDrawer={showDrawer} homeRef={homeRef} />
