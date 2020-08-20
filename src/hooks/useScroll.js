@@ -5,7 +5,6 @@ const useScroll = (history) => {
 		const scrollListener = (e) => {
 			history.push("", document.title, window.location.pathname
 			+ window.location.search)
-			console.log('hello')
 		  }
 		  window.addEventListener('scroll', scrollListener)
 		return () => window.removeEventListener('scroll', scrollListener)
