@@ -50,17 +50,17 @@ export const InstagramDarkButton = memo(({ onClick }) => {
   )
 })
 
-export const PreviousButton = memo(({ handleClick }) => {
+export const PreviousButton = memo(({ handleClick, hide }) => {
   return (
-    <PreviousButtonContainer onClick={handleClick}>
+    <PreviousButtonContainer onClick={handleClick} hide={hide}>
       <PreviousIcon />
     </PreviousButtonContainer>
   )
 })
 
-export const NextButton = memo(({ handleClick }) => {
+export const NextButton = memo(({ handleClick, hide }) => {
   return (
-    <NextButtonContainer onClick={handleClick}>
+    <NextButtonContainer onClick={handleClick} hide={hide}>
       <NextIcon />
     </NextButtonContainer>
   )
@@ -105,6 +105,9 @@ export const PreviousButtonContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  ${props => props.hide && css`
+    display: none;
+  `}
 `
 
 const NextButtonContainer = styled.div`
@@ -128,6 +131,9 @@ const NextButtonContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  ${props => props.hide && css`
+    display: none;
+  `}
 `
 
 const CloseSwipeButtonContainer = styled.div`

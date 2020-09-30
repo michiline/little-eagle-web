@@ -22,12 +22,18 @@ const GalleryList = () => {
 			</GalleryBox>
 		</GalleryRow>
 		<GalleryRow>
-		<GalleryBox onClick={() => history.push('/gallery/projects/wedding-rm')}>
+			<GalleryBox onClick={() => history.push('/gallery/projects/wedding-rm')}>
 				<GalleryBoxOverlay />
 				<GalleryBoxImage src={galleryBox.weddingRnM}/>
 				<GalleryBoxText>Wedding R & M</GalleryBoxText>
 			</GalleryBox>
+			<GalleryBox onClick={() => history.push('/gallery/projects/bovany-design')}>
+				<GalleryBoxOverlay />
+				<GalleryBoxImage src={galleryBox.bovanyDesign}/>
+				<GalleryBoxText>Bovany Design Website</GalleryBoxText>
+			</GalleryBox>
 		</GalleryRow>
+		
 	  </>
   )
   if (windowWidth < 750) {
@@ -47,6 +53,11 @@ const GalleryList = () => {
 					<GalleryBoxOverlay />	
 					<GalleryBoxImage src={galleryBox.weddingRnM}/>
 					<GalleryBoxText>Wedding R & M</GalleryBoxText>
+				</GalleryBox>
+				<GalleryBox onClick={() => history.push('/gallery/projects/bovany-design')}>
+					<GalleryBoxOverlay />
+					<GalleryBoxImage src={galleryBox.bovanyDesign}/>
+					<GalleryBoxText>Bovany Design Website</GalleryBoxText>
 				</GalleryBox>
 			</>
 		)

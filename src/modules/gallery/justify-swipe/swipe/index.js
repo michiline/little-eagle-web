@@ -13,14 +13,16 @@ const Swipe = ({ images, close, changeUrl, setShowSwipe }) => {
   useEffect(() => {
     document.querySelector('#swipeCarousel').style.setProperty('--i', parseInt(match.params.activeImg))
   })
+  console.log(match.params.activeImg)
+  console.log(parseInt(match.params.activeImg) === (images.length - 1))
   return (
     <SwipeGalleryContainer>
-      <PreviousButton handleClick={previous}/>
+      <PreviousButton handleClick={previous} hide={parseInt(match.params.activeImg) === 0}/>
       <SwipeCarousel id={'swipeCarousel'}>
         {renderImages({ images: swipeImages })}
       </SwipeCarousel>
-      <NextButton handleClick={next}/>
-      <CloseSwipeButton handleClick={close}/>
+      <NextButton handleClick={next} hide={parseInt(match.params.activeImg) === (images.length - 1)}/>
+      <CloseSwipeButton handleClick={close} />
     </SwipeGalleryContainer>
   )
 }
