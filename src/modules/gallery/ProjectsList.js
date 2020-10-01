@@ -27,10 +27,10 @@ const GalleryList = () => {
 				<GalleryBoxImage src={galleryBox.weddingRnM}/>
 				<GalleryBoxText>Wedding R & M</GalleryBoxText>
 			</GalleryBox>
-			<GalleryBox onClick={() => history.push('/gallery/projects/bovany-design')}>
+			<GalleryBox onClick={() => history.push('/gallery/projects/bovani-design')}>
 				<GalleryBoxOverlay />
-				<GalleryBoxImage src={galleryBox.bovanyDesign}/>
-				<GalleryBoxText>Bovany Design Website</GalleryBoxText>
+				<GalleryBoxImage src={galleryBox.bovaniDesign}/>
+				<GalleryBoxText>Bovani Design Website</GalleryBoxText>
 			</GalleryBox>
 		</GalleryRow>
 		
@@ -54,10 +54,10 @@ const GalleryList = () => {
 					<GalleryBoxImage src={galleryBox.weddingRnM}/>
 					<GalleryBoxText>Wedding R & M</GalleryBoxText>
 				</GalleryBox>
-				<GalleryBox onClick={() => history.push('/gallery/projects/bovany-design')}>
+				<GalleryBox onClick={() => history.push('/gallery/projects/bovani-design')}>
 					<GalleryBoxOverlay />
-					<GalleryBoxImage src={galleryBox.bovanyDesign}/>
-					<GalleryBoxText>Bovany Design Website</GalleryBoxText>
+					<GalleryBoxImage src={galleryBox.bovaniDesign}/>
+					<GalleryBoxText>Bovani Design Website</GalleryBoxText>
 				</GalleryBox>
 			</>
 		)
