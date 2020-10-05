@@ -26,7 +26,7 @@ const getRows = ({ images }) => {
 }
 
 const buildRows = ({ images, maxWidth, minRatio }) => {
-  if (images.length < 2) {
+  if (!images || images.length < 2) {
     return []
   }
   const firstImage = images[0]
