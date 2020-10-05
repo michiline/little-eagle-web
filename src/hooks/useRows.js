@@ -26,7 +26,9 @@ const getRows = ({ images }) => {
 }
 
 const buildRows = ({ images, maxWidth, minRatio }) => {
-  console.log(images)
+  if (images.length < 2) {
+    return []
+  }
   const firstImage = images[0]
   const imagesCopy = images.slice(1)
   const rowsRatios = imagesCopy.reduce((acc, image) => {
