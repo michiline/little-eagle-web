@@ -22,15 +22,10 @@ const getRows = ({ images }) => {
   const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth
   const maxWidth = window.innerWidth - scrollbarWidth - 1
   const minRatio = maxWidth / 250
-  return buildRows({ images: images, maxWidth, minRatio })
+  return buildRows({ images, maxWidth, minRatio })
 }
 
 const buildRows = ({ images, maxWidth, minRatio }) => {
-  console.log(images)
-  if (!images || images.length < 2) {
-    console.log('here')
-    return []
-  }
   const firstImage = images[0]
   const imagesCopy = images.slice(1)
   const rowsRatios = imagesCopy.reduce((acc, image) => {
