@@ -1,14 +1,17 @@
 import { useCallback, useState, useEffect } from 'react'
+import { Router } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 const useRows = ({ images }) => {
   const [rows, setRows] = useState([])
+  const history = useHistory()
   console.log(images)
   const appendRows = useCallback(({ images }) => {
-    const newRows = getRows({ images })
+    const newRows = getRows({ images, history })
     setRows([...rows, ...newRows])
   }, [rows])
   const resetRows = useCallback(({ images }) => {
-    const newRows = getRows({ images })
+    const newRows = getRows({ images, history })
     setRows([...newRows])
   }, [])
   useEffect(() => {
@@ -19,16 +22,18 @@ const useRows = ({ images }) => {
   return [rows, appendRows, resetRows]
 }
 
-const getRows = ({ images }) => {
+const getRows = ({ history, images }) => {
   const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth
   const maxWidth = window.innerWidth - scrollbarWidth - 1
   const minRatio = maxWidth / 250
   console.log(images)
-  return buildRows({ images, maxWidth, minRatio })
+  return buildRows({ history, images, maxWidth, minRatio })
 }
 
-const buildRows = ({ images, maxWidth, minRatio }) => {
-  console.log(images)
+const buildRows = ({ history, images, maxWidth, minRatio }) => {
+  if (!images) {
+    history.go(0)
+  }
   const firstImage = images[0]
   const imagesCopy = images.slice(1)
   const rowsRatios = imagesCopy.reduce((acc, image) => {
