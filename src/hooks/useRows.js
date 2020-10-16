@@ -2,6 +2,7 @@ import { useCallback, useState, useEffect } from 'react'
 
 const useRows = ({ images }) => {
   const [rows, setRows] = useState([])
+  console.log(images)
   const appendRows = useCallback(({ images }) => {
     const newRows = getRows({ images })
     setRows([...rows, ...newRows])
