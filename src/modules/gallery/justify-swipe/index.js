@@ -10,6 +10,7 @@ const JustifySwipe = ({ subdir, galleryName, setShowSwipe }) => {
 	const match = useRouteMatch()
 	let galleryImages = subdir ? gallery[subdir][galleryName] : gallery[galleryName]
 	let lowRes = paginate({ images: JSON.parse(JSON.stringify(galleryImages.low)), nPerPage: 20 })
+	console.log(lowRes)
 	let highRes = JSON.parse(JSON.stringify(galleryImages.high))
 	const close = () => {
 		const idIndex = history.location.pathname.lastIndexOf('/')
