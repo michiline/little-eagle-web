@@ -3,6 +3,7 @@ import useRows from './useRows'
 import debounce from 'lodash.debounce'
 
 const useScrollLoad = ({ images }) => {
+  console.log(images)
   const page = useRef(0)
   const galleryRef = useRef(null)
   const [rows, appendRows, resetRows] = useRows({ images: images[page.current] })
