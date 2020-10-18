@@ -15,7 +15,7 @@ const App = () => {
   const homeRef = useRef(null)
   const aboutRef = useRef(null)
   const servicesRef = useRef(null)
-  const chill = bindRatiosToUrls({ baseUrl: process.env.REACT_APP_IMG_URL, dir: 'gallery/low/projects/wedding-rm', length: 69, ratios: ratios.projects["wedding-rm"]})
+  // const chill = bindRatiosToUrls({ baseUrl: process.env.REACT_APP_IMG_URL, dir: 'gallery/low/projects/wedding-rm', length: 69, ratios: ratios.projects["wedding-rm"]})
 
   return (
     <BrowserRouter>
