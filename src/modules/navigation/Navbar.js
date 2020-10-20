@@ -37,8 +37,8 @@ const Navbar = ({ showDrawer, setShowDrawer }) => {
 }
 
 const goBack = (history) => {
-  if (history.location.pathname.startsWith('/gallery/projects/')) {
-    history.push('/gallery/projects')
+  if (history.location.pathname.startsWith('/gallery/sessions/')) {
+    history.push('/gallery/sessions')
   } else if (history.location.pathname.startsWith('/gallery/')) {
     history.push('/gallery')
   } else {

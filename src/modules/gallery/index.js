@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet'
 import { Switch, Route, useRouteMatch } from 'react-router-dom'
 import styled from 'styled-components'
 import GalleryList from './GalleryList'
-import ProjectsList from './ProjectsList'
+import SessionsList from './SessionsList'
 import JustifySwipe from './justify-swipe'
 import { ScrollToTop } from '../../hooks'
 
@@ -21,7 +21,7 @@ const Gallery = ({ setShowSwipe }) => {
           <meta name="og:image:width" content="640" />
           <meta name="og:image:height" content="427" />
           <meta name="og:image:alt" content="Lonjsko polje - bike" />
-          <meta name="og:description" content="Little Eagle's photo gallery with people, travels, projects and details and more." />
+          <meta name="og:description" content="Little Eagle's photo gallery with people, travels, sessions and details and more." />
         </Helmet>
       <ScrollToTop />
       <Switch>
@@ -37,20 +37,20 @@ const Gallery = ({ setShowSwipe }) => {
         <Route exact path={`${path}/details/:activeImg?`}>
           <JustifySwipe galleryName={'details'} setShowSwipe={setShowSwipe}/>
         </Route>
-        <Route exact path={`${path}/projects`}>
-          <ProjectsList />
+        <Route exact path={`${path}/sessions`}>
+          <SessionsList />
         </Route>
-        <Route exact path={`${path}/projects/chill-vibez/:activeImg?`}>
-          <JustifySwipe subdir={'projects'} galleryName={'chill-vibez'} setShowSwipe={setShowSwipe}/>
+        <Route exact path={`${path}/sessions/chill-vibez/:activeImg?`}>
+          <JustifySwipe subdir={'sessions'} galleryName={'chill-vibez'} setShowSwipe={setShowSwipe}/>
         </Route>
-        <Route exact path={`${path}/projects/budjenje-boginje/:activeImg?`}>
-          <JustifySwipe subdir={'projects'} galleryName={'budjenje-boginje'} setShowSwipe={setShowSwipe}/>
+        <Route exact path={`${path}/sessions/budjenje-boginje/:activeImg?`}>
+          <JustifySwipe subdir={'sessions'} galleryName={'budjenje-boginje'} setShowSwipe={setShowSwipe}/>
         </Route>
-        <Route exact path={`${path}/projects/wedding-rm/:activeImg?`}>
-          <JustifySwipe subdir={'projects'} galleryName={'wedding-rm'} setShowSwipe={setShowSwipe}/>
+        <Route exact path={`${path}/sessions/wedding-rm/:activeImg?`}>
+          <JustifySwipe subdir={'sessions'} galleryName={'wedding-rm'} setShowSwipe={setShowSwipe}/>
         </Route>
-        <Route exact path={`${path}/projects/bovani-design/:activeImg?`}>
-          <JustifySwipe subdir={'projects'} galleryName={'bovani-design'} setShowSwipe={setShowSwipe}/>
+        <Route exact path={`${path}/sessions/bovani-design/:activeImg?`}>
+          <JustifySwipe subdir={'sessions'} galleryName={'bovani-design'} setShowSwipe={setShowSwipe}/>
         </Route>
       </Switch>
 

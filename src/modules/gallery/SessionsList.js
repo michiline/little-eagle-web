@@ -4,30 +4,30 @@ import styled from 'styled-components'
 import { useWindow, ScrollToTop } from '../../hooks'
 import { galleryBox } from '../../images'
 
-const GalleryList = () => {
+const SessionsList = () => {
   const history = useHistory()
   const [windowWidth] = useWindow()
   let GalleryRowElem = (
 	  <>
 		<GalleryRow>
-			<GalleryBox onClick={() => history.push('/gallery/projects/chill-vibez')}>
+			<GalleryBox onClick={() => history.push('/gallery/sessions/chill-vibez')}>
 				<GalleryBoxOverlay />
 				<GalleryBoxImage src={galleryBox.chillVibez}/>
 				<GalleryBoxText>Chill Vibez</GalleryBoxText>
 			</GalleryBox>
-			<GalleryBox onClick={() => history.push('/gallery/projects/budjenje-boginje')}>
+			<GalleryBox onClick={() => history.push('/gallery/sessions/budjenje-boginje')}>
 				<GalleryBoxOverlay />
 				<GalleryBoxImage src={galleryBox.budjenjeBoginje}/>
 				<GalleryBoxText>Buđenje Boginje</GalleryBoxText>
 			</GalleryBox>
 		</GalleryRow>
 		<GalleryRow>
-			<GalleryBox onClick={() => history.push('/gallery/projects/wedding-rm')}>
+			<GalleryBox onClick={() => history.push('/gallery/sessions/wedding-rm')}>
 				<GalleryBoxOverlay />
 				<GalleryBoxImage src={galleryBox.weddingRnM}/>
 				<GalleryBoxText>Wedding R & M</GalleryBoxText>
 			</GalleryBox>
-			<GalleryBox onClick={() => history.push('/gallery/projects/bovani-design')}>
+			<GalleryBox onClick={() => history.push('/gallery/sessions/bovani-design')}>
 				<GalleryBoxOverlay />
 				<GalleryBoxImage src={galleryBox.bovaniDesign}/>
 				<GalleryBoxText>Bovani Design Website</GalleryBoxText>
@@ -39,22 +39,22 @@ const GalleryList = () => {
   if (windowWidth < 750) {
 		GalleryRowElem = (
 			<>
-				<GalleryBox onClick={() => history.push('/gallery/projects/chill-vibez')}>
+				<GalleryBox onClick={() => history.push('/gallery/sessions/chill-vibez')}>
 					<GalleryBoxOverlay />
 					<GalleryBoxImage src={galleryBox.chillVibez}/>
 					<GalleryBoxText>Chill Vibez</GalleryBoxText>
 				</GalleryBox>
-				<GalleryBox onClick={() => history.push('/gallery/projects/budjenje-boginje')}>
+				<GalleryBox onClick={() => history.push('/gallery/sessions/budjenje-boginje')}>
 					<GalleryBoxOverlay />
 					<GalleryBoxImage src={galleryBox.budjenjeBoginje}/>
 					<GalleryBoxText>Buđenje Boginje</GalleryBoxText>
 				</GalleryBox>
-				<GalleryBox onClick={() => history.push('/gallery/projects/wedding-rm')}>
+				<GalleryBox onClick={() => history.push('/gallery/sessions/wedding-rm')}>
 					<GalleryBoxOverlay />	
 					<GalleryBoxImage src={galleryBox.weddingRnM}/>
 					<GalleryBoxText>Wedding R & M</GalleryBoxText>
 				</GalleryBox>
-				<GalleryBox onClick={() => history.push('/gallery/projects/bovani-design')}>
+				<GalleryBox onClick={() => history.push('/gallery/sessions/bovani-design')}>
 					<GalleryBoxOverlay />
 					<GalleryBoxImage src={galleryBox.bovaniDesign}/>
 					<GalleryBoxText>Bovani Design Website</GalleryBoxText>
@@ -160,13 +160,13 @@ const GalleryBoxText = styled.div`
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	z-index: 4;
 	${GalleryBox}:hover & {
-		font-size: 94px;
-		line-height: 128px;
+		font-size: 70px;
+		line-height: 95px;
 	}
 	@media only screen and (max-width: 1050px) {
 		${GalleryBox}:hover & {
-			font-size: calc(94px / 1.4);
-			line-height: calc(128px / 1.4);
+			font-size: calc(70px / 1.4);
+			line-height: calc(95px / 1.4);
 		}
 	}
 
@@ -174,4 +174,4 @@ const GalleryBoxText = styled.div`
 
 
 
-export default GalleryList
+export default SessionsList

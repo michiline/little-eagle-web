@@ -24,7 +24,6 @@ const getRows = ({ images }) => {
   const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth
   const maxWidth = window.innerWidth - scrollbarWidth - 1
   const minRatio = maxWidth / 250
-  console.log(images)
   return buildRows({ images, maxWidth, minRatio })
 }
 

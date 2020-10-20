@@ -10,7 +10,7 @@ const Home = ({ showDrawer, homeRef, aboutRef, servicesRef }) => {
   return (
     <RootContainer>
       <ScrollToTop />
-      <Cover showDrawer={showDrawer} homeRef={homeRef} />
+      <Cover showDrawer={showDrawer} homeRef={homeRef} aboutRef={aboutRef}/>
       <About aboutRef={aboutRef}/>
       <GetToKnowMe />
       <Services servicesRef={servicesRef} />

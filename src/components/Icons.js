@@ -27,11 +27,14 @@ const ArrowDownSvg = styled.svg`
     width: calc(79px / 1.4);
     height: calc(34px / 1.4);
   }
+  &:hover {
+    cursor: pointer;
+  }
 `
 
-export const ArrowDownIcon = memo(() => {
+export const ArrowDownIcon = memo(({ handleClick }) => {
   return (
-    <ArrowDownSvg viewBox='0 0 79 34' fill='none' xmlns='http://www.w3.org/2000/svg'>
+    <ArrowDownSvg onClick={handleClick} viewBox='0 0 79 34' fill='none' xmlns='http://www.w3.org/2000/svg'>
       <path fill='#FFFBF6' fillRule='evenodd' clipRule='evenodd' d='M77.308 3.77456C78.3854 2.91107 78.3854 1.51109 77.308 0.647611C76.2307 -0.21587 74.4839 -0.21587 73.4065 0.647611L39.058 28.1765L4.70961 0.647611C3.63222 -0.21587 1.88543 -0.21587 0.808041 0.647611C-0.269347 1.51109 -0.269347 2.91107 0.808041 3.77456L36.3203 32.2361C36.4547 32.5142 36.662 32.7749 36.942 32.9993C38.0194 33.8628 39.7662 33.8628 40.8436 32.9993L77.308 3.77456Z'/>
     </ArrowDownSvg>
   )

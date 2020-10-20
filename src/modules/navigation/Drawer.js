@@ -14,7 +14,7 @@ const Drawer = ({ showDrawer, setShowDrawer, homeRef, aboutRef, servicesRef}) =>
 					<CloseButton onClick={() => setShowDrawer(false)}/>
 				</FirstRow>
 				<SecondRow>
-					<SLinkBold onClick={() => handleLinkClick({ ref: homeRef, url: '/', setShowDrawer, history })}>Home</SLinkBold>
+					<SLink onClick={() => handleLinkClick({ ref: homeRef, url: '/', setShowDrawer, history })}>Home</SLink>
 					<SLink onClick={() => handleLinkClick({ ref: aboutRef, url: '/', setShowDrawer, history })}>About me</SLink>
 					<SLink onClick={() => handleLinkClick({ ref: servicesRef, url: '/', setShowDrawer, history })}>My services</SLink>
 					<SLink href={'/gallery'}>Photo gallery</SLink>

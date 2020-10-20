@@ -4,9 +4,9 @@ import { useHistory } from 'react-router-dom'
 import { useWindow } from '../../hooks'
 import { cover, eagle2, photo } from '../../images'
 import { ArrowDownIcon, FacebookLightButton, InstagramLightButton } from '../../components'
-import { externalLink } from '../../utils'
+import { externalLink, scrollIntoView } from '../../utils'
 
-const Cover = ({ homeRef, showDrawer }) => {
+const Cover = ({ homeRef, aboutRef, showDrawer }) => {
   const history = useHistory()
   const [windowWidth] = useWindow()
   let HeadersElem = (
@@ -57,7 +57,7 @@ const Cover = ({ homeRef, showDrawer }) => {
         <Bottom>
           <ReadMore>
             <H3>Read more about me</H3>
-            <ArrowDownIcon />
+            <ArrowDownIcon handleClick={() => scrollIntoView(aboutRef)}/>
           </ReadMore>
         </Bottom>
       </Content>
@@ -73,6 +73,7 @@ const Cover = ({ homeRef, showDrawer }) => {
     </RootContainer>
   )
 }
+
 
 const RootContainer = styled.div`
   width: 100%;

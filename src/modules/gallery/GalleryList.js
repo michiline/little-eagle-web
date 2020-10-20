@@ -27,10 +27,10 @@ const GalleryList = () => {
 				<GalleryBoxImage src={galleryBox.details}/>
 				<GalleryBoxText>Details</GalleryBoxText>
 			</GalleryBox>
-				<GalleryBox onClick={() => history.push('/gallery/projects')}>
+				<GalleryBox onClick={() => history.push('/gallery/sessions')}>
 				<GalleryBoxOverlay />
-				<GalleryBoxImage src={galleryBox.projects}/>
-				<GalleryBoxText>Projects</GalleryBoxText>
+				<GalleryBoxImage src={galleryBox.sessions}/>
+				<GalleryBoxText>Sessions</GalleryBoxText>
 			</GalleryBox>
 		</GalleryRow>
 	  </>
@@ -53,10 +53,10 @@ const GalleryList = () => {
 					<GalleryBoxImage src={galleryBox.details}/>
 					<GalleryBoxText>Details</GalleryBoxText>
 				</GalleryBox>
-				<GalleryBox onClick={() => history.push('/gallery/projects')}>
+				<GalleryBox onClick={() => history.push('/gallery/sessions')}>
 					<GalleryBoxOverlay />
-					<GalleryBoxImage src={galleryBox.projects}/>
-					<GalleryBoxText>Projects</GalleryBoxText>
+					<GalleryBoxImage src={galleryBox.sessions}/>
+					<GalleryBoxText>Sessions</GalleryBoxText>
 				</GalleryBox>
 			</>
 		)
@@ -157,13 +157,13 @@ const GalleryBoxText = styled.div`
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	z-index: 4;
 	${GalleryBox}:hover & {
-		font-size: 94px;
-		line-height: 128px;
+		font-size: 70px;
+		line-height: 95px;
 	}
 	@media only screen and (max-width: 1050px) {
 		${GalleryBox}:hover & {
-			font-size: calc(94px / 1.4);
-			line-height: calc(128px / 1.4);
+			font-size: calc(70px / 1.4);
+			line-height: calc(95px / 1.4);
 		}
 	}
 
