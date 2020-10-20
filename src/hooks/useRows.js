@@ -46,9 +46,7 @@ const buildRows = ({ images, maxWidth, minRatio }) => {
   }, [{
     ratio: firstImage.ratio, images: [firstImage]
   }])
-  if (rowsRatios[rowsRatios.length - 1].ratio < minRatio) {
-    rowsRatios.pop()
-  }
+
   const rowsSizes= rowsRatios.map((currentRow) => {
     currentRow.images = currentRow.images.map(curr => {
       curr.width = currentRow.height * curr.ratio - 2

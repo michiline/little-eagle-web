@@ -39,6 +39,11 @@ const SessionsList = () => {
 				<GalleryBoxImage src={galleryBox.engagementJK}/>
 				<GalleryBoxText>Engagement J & K</GalleryBoxText>
 			</GalleryBox>
+			<GalleryBox onClick={() => history.push('/gallery/sessions/family-iaa')}>
+				<GalleryBoxOverlay />
+				<GalleryBoxImage src={galleryBox.familyIAA}/>
+				<GalleryBoxText>Family I & A & A</GalleryBoxText>
+			</GalleryBox>
 		</GalleryRow>
 		
 	  </>
@@ -70,6 +75,11 @@ const SessionsList = () => {
 					<GalleryBoxOverlay />
 					<GalleryBoxImage src={galleryBox.engagementJK}/>
 					<GalleryBoxText>Engagement J & K</GalleryBoxText>
+				</GalleryBox>
+				<GalleryBox onClick={() => history.push('/gallery/sessions/family-iaa')}>
+					<GalleryBoxOverlay />
+					<GalleryBoxImage src={galleryBox.familyIAA}/>
+					<GalleryBoxText>Family I & A & A</GalleryBoxText>
 				</GalleryBox>
 			</>
 		)

@@ -6,6 +6,7 @@ import chillVibez from './chill-vibez'
 import weddingRM from './wedding-rm'
 import bovaniDesign from './bovani-design'
 import engagementJK from './engagement-jk'
+import familyIAA from './family-iaa'
 
 const baseUrl = process.env.REACT_APP_IMG_URL
 
@@ -54,6 +55,7 @@ export const galleryBox = {
 	weddingRM: `${baseUrl}/gallery/cover/wedding-rm.jpg`,
 	bovaniDesign: `${baseUrl}/gallery/cover/bovani-design.jpg`,
 	engagementJK: `${baseUrl}/gallery/cover/engagement-jk.jpg`,
+	familyIAA: `${baseUrl}/gallery/cover/family-iaa.jpg`,
 }
 
 export const gallery = {
@@ -65,6 +67,7 @@ export const gallery = {
 		'chill-vibez': chillVibez,
 		'wedding-rm': weddingRM,
 		'bovani-design': bovaniDesign,
-		'engagement-jk': engagementJK
+		'engagement-jk': engagementJK,
+		'family-iaa': familyIAA
 	}
 }
