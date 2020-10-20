@@ -3,12 +3,14 @@ import { Router } from 'react-router-dom'
 
 const useRows = ({ images }) => {
   const [rows, setRows] = useState([])
-  console.log(images)
   const appendRows = useCallback(({ images }) => {
-    const newRows = getRows({ images })
-    setRows([...rows, ...newRows])
+    if (images) {
+      const newRows = getRows({ images })
+      setRows([...rows, ...newRows])
+    }
   }, [rows])
   const resetRows = useCallback(({ images }) => {
+    console.log(images)
     const newRows = getRows({ images })
     setRows([...newRows])
   }, [])
@@ -46,7 +48,9 @@ const buildRows = ({ images, maxWidth, minRatio }) => {
   }, [{
     ratio: firstImage.ratio, images: [firstImage]
   }])
-
+  if (rowsRatios[rowsRatios.length - 1].ratio < minRatio) {
+    rowsRatios.pop()
+  }
   const rowsSizes= rowsRatios.map((currentRow) => {
     currentRow.images = currentRow.images.map(curr => {
       curr.width = currentRow.height * curr.ratio - 2
