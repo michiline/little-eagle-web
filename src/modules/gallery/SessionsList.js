@@ -24,13 +24,20 @@ const SessionsList = () => {
 		<GalleryRow>
 			<GalleryBox onClick={() => history.push('/gallery/sessions/wedding-rm')}>
 				<GalleryBoxOverlay />
-				<GalleryBoxImage src={galleryBox.weddingRnM}/>
+				<GalleryBoxImage src={galleryBox.weddingRM}/>
 				<GalleryBoxText>Wedding R & M</GalleryBoxText>
 			</GalleryBox>
 			<GalleryBox onClick={() => history.push('/gallery/sessions/bovani-design')}>
 				<GalleryBoxOverlay />
 				<GalleryBoxImage src={galleryBox.bovaniDesign}/>
 				<GalleryBoxText>Bovani Design Website</GalleryBoxText>
+			</GalleryBox>
+		</GalleryRow>
+		<GalleryRow>
+			<GalleryBox onClick={() => history.push('/gallery/sessions/engagement-jk')}>
+				<GalleryBoxOverlay />
+				<GalleryBoxImage src={galleryBox.engagementJK}/>
+				<GalleryBoxText>Engagement J & K</GalleryBoxText>
 			</GalleryBox>
 		</GalleryRow>
 		
@@ -51,13 +58,18 @@ const SessionsList = () => {
 				</GalleryBox>
 				<GalleryBox onClick={() => history.push('/gallery/sessions/wedding-rm')}>
 					<GalleryBoxOverlay />	
-					<GalleryBoxImage src={galleryBox.weddingRnM}/>
+					<GalleryBoxImage src={galleryBox.weddingRM}/>
 					<GalleryBoxText>Wedding R & M</GalleryBoxText>
 				</GalleryBox>
 				<GalleryBox onClick={() => history.push('/gallery/sessions/bovani-design')}>
 					<GalleryBoxOverlay />
 					<GalleryBoxImage src={galleryBox.bovaniDesign}/>
 					<GalleryBoxText>Bovani Design Website</GalleryBoxText>
+				</GalleryBox>
+				<GalleryBox onClick={() => history.push('/gallery/sessions/engagement-jk')}>
+					<GalleryBoxOverlay />
+					<GalleryBoxImage src={galleryBox.engagementJK}/>
+					<GalleryBoxText>Engagement J & K</GalleryBoxText>
 				</GalleryBox>
 			</>
 		)
@@ -87,8 +99,12 @@ const GalleryRow = styled.div`
 	justify-content: space-between;
 	width: calc(460px * 2 + 25px);
 	&:first-of-type {
+		margin-top: 0;
+	}
+	&:last-of-type {
 		margin-bottom: 25px;
 	}
+	margin-top: 25px;
 	@media only screen and (max-width: 1050px) {
 		width: calc(460px / 1.4 * 2 + 25px);
 	}

@@ -10,34 +10,40 @@ const GalleryList = () => {
   let GalleryRowElem = (
 	  <>
 		<GalleryRow>
+			<GalleryBox onClick={() => history.push('/gallery/sessions')}>
+				<GalleryBoxOverlay />
+				<GalleryBoxImage src={galleryBox.sessions}/>
+				<GalleryBoxText>Sessions</GalleryBoxText>
+			</GalleryBox>
 			<GalleryBox onClick={() => history.push('/gallery/people')}>
 				<GalleryBoxOverlay />
 				<GalleryBoxImage src={galleryBox.people}/>
 				<GalleryBoxText>People</GalleryBoxText>
 			</GalleryBox>
+		</GalleryRow>
+		<GalleryRow>
 			<GalleryBox onClick={() => history.push('/gallery/travels')}>
 				<GalleryBoxOverlay />
 				<GalleryBoxImage src={galleryBox.travels}/>
 				<GalleryBoxText>Travels</GalleryBoxText>
 			</GalleryBox>
-		</GalleryRow>
-		<GalleryRow>
 			<GalleryBox onClick={() => history.push('/gallery/details')}>
 				<GalleryBoxOverlay />
 				<GalleryBoxImage src={galleryBox.details}/>
 				<GalleryBoxText>Details</GalleryBoxText>
 			</GalleryBox>
-				<GalleryBox onClick={() => history.push('/gallery/sessions')}>
-				<GalleryBoxOverlay />
-				<GalleryBoxImage src={galleryBox.sessions}/>
-				<GalleryBoxText>Sessions</GalleryBoxText>
-			</GalleryBox>
+
 		</GalleryRow>
 	  </>
   )
   if (windowWidth < 750) {
 		GalleryRowElem = (
 			<>
+				<GalleryBox onClick={() => history.push('/gallery/sessions')}>
+					<GalleryBoxOverlay />
+					<GalleryBoxImage src={galleryBox.sessions}/>
+					<GalleryBoxText>Sessions</GalleryBoxText>
+				</GalleryBox>
 				<GalleryBox onClick={() => history.push('/gallery/people')}>
 					<GalleryBoxOverlay />
 					<GalleryBoxImage src={galleryBox.people}/>
@@ -53,11 +59,7 @@ const GalleryList = () => {
 					<GalleryBoxImage src={galleryBox.details}/>
 					<GalleryBoxText>Details</GalleryBoxText>
 				</GalleryBox>
-				<GalleryBox onClick={() => history.push('/gallery/sessions')}>
-					<GalleryBoxOverlay />
-					<GalleryBoxImage src={galleryBox.sessions}/>
-					<GalleryBoxText>Sessions</GalleryBoxText>
-				</GalleryBox>
+
 			</>
 		)
 	}

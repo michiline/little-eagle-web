@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { useRouteMatch, useHistory } from 'react-router-dom'
 import { gallery } from '../../../images'
 import { paginate } from '../../../utils'
