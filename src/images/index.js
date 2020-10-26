@@ -7,6 +7,7 @@ import weddingRM from './wedding-rm'
 import bovaniDesign from './bovani-design'
 import engagementJK from './engagement-jk'
 import familyIAA from './family-iaa'
+import maternitySara from './maternity-sara'
 
 const baseUrl = process.env.REACT_APP_IMG_URL
 
@@ -56,6 +57,7 @@ export const galleryBox = {
 	bovaniDesign: `${baseUrl}/gallery/cover/bovani-design.jpg`,
 	engagementJK: `${baseUrl}/gallery/cover/engagement-jk.jpg`,
 	familyIAA: `${baseUrl}/gallery/cover/family-iaa.jpg`,
+	maternitySara: `${baseUrl}/gallery/cover/maternity-sara.jpg`,
 }
 
 export const gallery = {
@@ -68,6 +70,7 @@ export const gallery = {
 		'wedding-rm': weddingRM,
 		'bovani-design': bovaniDesign,
 		'engagement-jk': engagementJK,
-		'family-iaa': familyIAA
+		'family-iaa': familyIAA,
+		'maternity-sara': maternitySara
 	}
 }
