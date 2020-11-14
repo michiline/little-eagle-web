@@ -8,6 +8,8 @@ import bovaniDesign from './bovani-design'
 import engagementJK from './engagement-jk'
 import familyIAA from './family-iaa'
 import maternitySara from './maternity-sara'
+import blogledalo from './blogledalo'
+import yoni from './yoni'
 
 const baseUrl = process.env.REACT_APP_IMG_URL
 
@@ -58,6 +60,8 @@ export const galleryBox = {
 	engagementJK: `${baseUrl}/gallery/cover/engagement-jk.jpg`,
 	familyIAA: `${baseUrl}/gallery/cover/family-iaa.jpg`,
 	maternitySara: `${baseUrl}/gallery/cover/maternity-sara.jpg`,
+	blogledalo: `${baseUrl}/gallery/cover/blogledalo.jpg`,
+	yoni: `${baseUrl}/gallery/cover/yoni.jpg`,
 }
 
 export const gallery = {
@@ -71,6 +75,8 @@ export const gallery = {
 		'bovani-design': bovaniDesign,
 		'engagement-jk': engagementJK,
 		'family-iaa': familyIAA,
-		'maternity-sara': maternitySara
+		'maternity-sara': maternitySara,
+		'blogledalo': blogledalo,
+		'yoni': yoni
 	}
 }
