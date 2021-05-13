@@ -62,6 +62,7 @@ export const galleryBox = {
 	maternitySara: `${baseUrl}/gallery/cover/maternity-sara.jpg`,
 	blogledalo: `${baseUrl}/gallery/cover/blogledalo.jpg`,
 	yoni: `${baseUrl}/gallery/cover/yoni.jpg`,
+	baptismKarla: `${baseUrl}/gallery/cover/baptism-karla.jpg`,
 }
 
 export const gallery = {
@@ -77,6 +78,7 @@ export const gallery = {
 		'family-iaa': familyIAA,
 		'maternity-sara': maternitySara,
 		'blogledalo': blogledalo,
-		'yoni': yoni
+		'yoni': yoni,
+		'baptism-karla': baptismKarla
 	}
 }
