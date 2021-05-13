@@ -10,6 +10,8 @@ import familyIAA from './family-iaa'
 import maternitySara from './maternity-sara'
 import blogledalo from './blogledalo'
 import yoni from './yoni'
+import baptismKarla from './baptism-karla'
+
 
 const baseUrl = process.env.REACT_APP_IMG_URL
 
