@@ -12,6 +12,7 @@ import blogledalo from './blogledalo'
 import yoni from './yoni'
 import baptismKarla from './baptism-karla'
 import weddingMP from './wedding-mp'
+import studioZimat from './studio-zimat'
 
 
 const baseUrl = process.env.REACT_APP_IMG_URL
@@ -67,6 +68,7 @@ export const galleryBox = {
 	yoni: `${baseUrl}/gallery/cover/yoni.jpg`,
 	baptismKarla: `${baseUrl}/gallery/cover/baptism-karla.jpg`,
 	weddingMP: `${baseUrl}/gallery/cover/wedding-mp.jpg`,
+	studioZimat: `${baseUrl}/gallery/cover/studio-zimat.jpg`,
 }
 
 export const gallery = {
@@ -85,5 +87,6 @@ export const gallery = {
 		'yoni': yoni,
 		'baptism-karla': baptismKarla,
 		'wedding-mp': weddingMP,
+		'studio-zimat': studioZimat
 	}
 }

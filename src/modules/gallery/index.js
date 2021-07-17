@@ -17,11 +17,11 @@ const Gallery = ({ setShowSwipe }) => {
           <meta name="og:type" content="website" />
           <meta name="og:title" content="Gallery - Little Eagle Photography"/>
           <meta name="og:url" content="https://www.littleeaglephoto.com/gallery"/>
-          <meta name="og:image" content="https://littleeagle.s3.eu-central-1.amazonaws.com/gallery/low/people/img152.jpg" />
-          <meta name="og:image:width" content="640" />
-          <meta name="og:image:height" content="427" />
-          <meta name="og:image:alt" content="Lonjsko polje - bike" />
-          <meta name="og:description" content="Little Eagle's photo gallery with people, travels, sessions and details and more." />
+          <meta name="og:image" content="https://littleeagle.s3.eu-central-1.amazonaws.com/og-photo.jpg" />
+          <meta name="og:image:width" content="320" />
+          <meta name="og:image:height" content="274" />
+          <meta name="og:image:alt" content="Wedding couple love kiss" />
+          <meta name="og:description" content="Little Eagle's photo gallery with people, travels, sessions, details and more." />
         </Helmet>
       <ScrollToTop />
       <Switch>
@@ -72,6 +72,9 @@ const Gallery = ({ setShowSwipe }) => {
         </Route>
         <Route exact path={`${path}/sessions/wedding-mp/:activeImg?`}>
           <JustifySwipe subdir={'sessions'} galleryName={'wedding-mp'} setShowSwipe={setShowSwipe}/>
+        </Route>
+        <Route exact path={`${path}/sessions/studio-zimat/:activeImg?`}>
+          <JustifySwipe subdir={'sessions'} galleryName={'studio-zimat'} setShowSwipe={setShowSwipe}/>
         </Route>
       </Switch>
 
