@@ -1,5 +1,4 @@
 import { useCallback, useState, useEffect } from 'react'
-import { Router } from 'react-router-dom'
 
 const useRows = ({ images }) => {
   const [rows, setRows] = useState([])

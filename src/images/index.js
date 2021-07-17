@@ -11,6 +11,7 @@ import maternitySara from './maternity-sara'
 import blogledalo from './blogledalo'
 import yoni from './yoni'
 import baptismKarla from './baptism-karla'
+import weddingMP from './wedding-mp'
 
 
 const baseUrl = process.env.REACT_APP_IMG_URL
@@ -65,6 +66,7 @@ export const galleryBox = {
 	blogledalo: `${baseUrl}/gallery/cover/blogledalo.jpg`,
 	yoni: `${baseUrl}/gallery/cover/yoni.jpg`,
 	baptismKarla: `${baseUrl}/gallery/cover/baptism-karla.jpg`,
+	weddingMP: `${baseUrl}/gallery/cover/wedding-mp.jpg`,
 }
 
 export const gallery = {
@@ -81,6 +83,7 @@ export const gallery = {
 		'maternity-sara': maternitySara,
 		'blogledalo': blogledalo,
 		'yoni': yoni,
-		'baptism-karla': baptismKarla
+		'baptism-karla': baptismKarla,
+		'wedding-mp': weddingMP,
 	}
 }

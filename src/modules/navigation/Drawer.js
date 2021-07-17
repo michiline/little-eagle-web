@@ -134,10 +134,6 @@ const SLink = styled.a`
 	}
 `
 
-const SLinkBold = styled(SLink)`
-	font-weight: 900;
-`
-
 const TravelBlogLink = styled.a`
 	width: 200px;
 	font-family: Raleway;
