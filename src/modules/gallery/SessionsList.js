@@ -86,15 +86,15 @@ const SessionsList = () => {
   if (windowWidth < 750) {
 		GalleryRowElem = (
 			<>
-				<GalleryBox onClick={() => history.push('/gallery/sessions/studio-zimat')}>
-					<GalleryBoxOverlay />	
-					<GalleryBoxImage src={galleryBox.studioZimat}/>
-					<GalleryBoxText>Studio Zimat</GalleryBoxText>
-				</GalleryBox>
 				<GalleryBox onClick={() => history.push('/gallery/sessions/wedding-mp')}>
 					<GalleryBoxOverlay />	
 					<GalleryBoxImage src={galleryBox.weddingMP}/>
 					<GalleryBoxText>Wedding M & P</GalleryBoxText>
+				</GalleryBox>
+				<GalleryBox onClick={() => history.push('/gallery/sessions/studio-zimat')}>
+					<GalleryBoxOverlay />	
+					<GalleryBoxImage src={galleryBox.studioZimat}/>
+					<GalleryBoxText>Studio Zimat</GalleryBoxText>
 				</GalleryBox>
 				<GalleryBox onClick={() => history.push('/gallery/sessions/baptism-karla')}>
 					<GalleryBoxOverlay />
