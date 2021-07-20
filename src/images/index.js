@@ -13,7 +13,7 @@ import yoni from './yoni'
 import baptismKarla from './baptism-karla'
 import weddingMP from './wedding-mp'
 import studioZimat from './studio-zimat'
-
+import lifestyleIstria from './lifestyle-istria'
 
 const baseUrl = process.env.REACT_APP_IMG_URL
 
@@ -29,17 +29,17 @@ export const about3Mobile = `${baseUrl}/mobile/about3.jpg`
 
 export const cover = {
 	mobile: `${baseUrl}/cover-mobile-3-2.jpg`,
-	web: `${baseUrl}/cover-web-3-2.jpg`
+	web: `${baseUrl}/cover-web-3-2.jpg`,
 }
 
 export const eagle1 = `${baseUrl}/eagle-1.png`
 
 export const eagle2 = {
-	white: `${baseUrl}/eagle-2-white.png`
+	white: `${baseUrl}/eagle-2-white.png`,
 }
 
 export const photo = {
-	white: `${baseUrl}/photo-white.png`
+	white: `${baseUrl}/photo-white.png`,
 }
 
 export const facts1 = `${baseUrl}/facts-1.jpg`
@@ -69,6 +69,7 @@ export const galleryBox = {
 	baptismKarla: `${baseUrl}/gallery/cover/baptism-karla.jpg`,
 	weddingMP: `${baseUrl}/gallery/cover/wedding-mp.jpg`,
 	studioZimat: `${baseUrl}/gallery/cover/studio-zimat.jpg`,
+	lifestyleIstria: `${baseUrl}/gallery/cover/lifestyle-istria.jpg`,
 }
 
 export const gallery = {
@@ -83,10 +84,11 @@ export const gallery = {
 		'engagement-jk': engagementJK,
 		'family-iaa': familyIAA,
 		'maternity-sara': maternitySara,
-		'blogledalo': blogledalo,
-		'yoni': yoni,
+		blogledalo: blogledalo,
+		yoni: yoni,
 		'baptism-karla': baptismKarla,
 		'wedding-mp': weddingMP,
-		'studio-zimat': studioZimat
-	}
+		'studio-zimat': studioZimat,
+		'lifestyle-istria': lifestyleIstria,
+	},
 }

@@ -17,54 +17,56 @@ const GetToKnowMe = () => {
 					</HeaderWrapper>
 					<TextWrapper>
 						<Text>
-							I’m a true fan of traveling. If a weekend is free, I’m on the road. 
+							I’m a true fan of traveling. If a weekend is free,
+							I’m on the road.
 						</Text>
 						<Text>
-							Camping is my new found passion. The goal is to increase my days spent in nature every year.
+							Camping is my new found passion. The goal is to
+							increase my days spent in nature every year.
+						</Text>
+						<Text>I can eat a lot of ice-cream.</Text>
+						<Text>And watermelon.</Text>
+						<Text>
+							I'm an introvert. Talking about myself is hard so
+							imagine how much time it takes me to write this.
 						</Text>
 						<Text>
-							I can eat a lot of ice-cream. 
+							I don’t think anyone likes summer and sea more than
+							me.
 						</Text>
 						<Text>
-							And watermelon. 
+							I do yoga and have recently started including
+							meditation in my everyday life.
 						</Text>
 						<Text>
-							I'm an introvert. Talking about myself is hard so imagine how much time it takes me to write this.
-						</Text>
-						<Text>
-							I don’t think anyone likes summer and sea more than me. 
-						</Text>
-						<Text>
-							My boyfriend and I have our travel blog. Check it out: <Link onClick={() => externalLink('https://www.leagleandmich.com')}>Leagle & Mich</Link>
-						</Text>
-						<Text>
-							I do yoga and have recently started including meditation in my everyday life.
-						</Text>
-						<Text>
-							Little Eagle is my nickname because my surname in Croatian means just that!
+							Little Eagle is my nickname because my surname in
+							Croatian means just that!
 						</Text>
 					</TextWrapper>
-					{
-				windowWidth <= 750 && 
-					<ImageColumn>
-						<Image1 src={facts2} />
-						<Image2 src={facts3} />
-						<Image3 src={facts1} />
-					</ImageColumn>
-			}
+					{windowWidth <= 750 && (
+						<ImageColumn>
+							<Image1 src={facts2} />
+							<Image2 src={facts3} />
+							<Image3 src={facts1} />
+						</ImageColumn>
+					)}
 				</TextContainer>
 			</TextColumn>
-			{
-				windowWidth > 750 && 
-					<ImageColumn>
-						<Image1 src={facts2} />
-						<Image2 src={facts3} />
-						<Image3 src={facts1} />
-					</ImageColumn>
-			}
-
+			{windowWidth > 750 && (
+				<ImageColumn>
+					<Image1 src={facts2} />
+					<Image2 src={facts3} />
+					<Image3 src={facts1} />
+				</ImageColumn>
+			)}
 		</RootContainer>
 	)
+}
+
+{
+	/* <Text>
+My boyfriend and I have our travel blog. Check it out: <Link onClick={() => externalLink('https://www.leagleandmich.com')}>Leagle & Mich</Link>
+</Text> */
 }
 
 const RootContainer = styled.div`
@@ -116,7 +118,7 @@ const ImageColumn = styled.div`
 const TextContainer = styled.div`
 	width: 90%;
 	height: 90%;
-	background-color: #FFEFEF;
+	background-color: #ffefef;
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -132,7 +134,7 @@ const TextFrame = styled.div`
 	position: absolute;
 	top: -25px;
 	left: -5px;
-	border: 5px solid #D3B1AF;
+	border: 5px solid #d3b1af;
 	z-index: -1;
 `
 
@@ -157,7 +159,7 @@ const H1 = styled.div`
 	font-weight: normal;
 	font-size: 61px;
 	line-height: 65px;
-	color: #C59D9A;
+	color: #c59d9a;
 	display: flex;
 	flex-direction: row;
 	@media only screen and (max-width: 1050px) {
@@ -193,7 +195,7 @@ const Text = styled.div`
 	font-weight: 500;
 	font-size: 25px;
 	line-height: 29px;
-	color: #C59D9A;
+	color: #c59d9a;
 	margin-top: 15px;
 	@media only screen and (max-width: 1050px) {
 		font-size: calc(25px / 1.3);

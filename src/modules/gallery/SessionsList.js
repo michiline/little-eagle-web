@@ -5,156 +5,252 @@ import { useWindow, ScrollToTop } from '../../hooks'
 import { galleryBox } from '../../images'
 
 const SessionsList = () => {
-  const history = useHistory()
-  const [windowWidth] = useWindow()
-  let GalleryRowElem = (
-	  <>
-	  	<GalleryRow>
-		  <GalleryBox onClick={() => history.push('/gallery/sessions/wedding-mp')}>
-				<GalleryBoxOverlay />	
-				<GalleryBoxImage src={galleryBox.weddingMP}/>
-				<GalleryBoxText>Wedding M & P</GalleryBoxText>
-		  </GalleryBox>
-		  <GalleryBox onClick={() => history.push('/gallery/sessions/studio-zimat')}>
-				<GalleryBoxOverlay />	
-				<GalleryBoxImage src={galleryBox.studioZimat}/>
-				<GalleryBoxText>Studio Zimat</GalleryBoxText>
-		  </GalleryBox>
-		</GalleryRow>
-	  	<GalleryRow>
-		  <GalleryBox onClick={() => history.push('/gallery/sessions/baptism-karla')}>
-				<GalleryBoxOverlay />
-				<GalleryBoxImage src={galleryBox.baptismKarla}/>
-				<GalleryBoxText>Baptism Karla</GalleryBoxText>
-			</GalleryBox>
-		  <GalleryBox onClick={() => history.push('/gallery/sessions/yoni')}>
-				<GalleryBoxOverlay />
-				<GalleryBoxImage src={galleryBox.yoni}/>
-				<GalleryBoxText>YONI</GalleryBoxText>
-			</GalleryBox>
-		</GalleryRow>
-	  	<GalleryRow>
-		  <GalleryBox onClick={() => history.push('/gallery/sessions/blogledalo')}>
-				<GalleryBoxOverlay />
-				<GalleryBoxImage src={galleryBox.blogledalo}/>
-				<GalleryBoxText>Blogledalo</GalleryBoxText>
-			</GalleryBox>
-		  <GalleryBox onClick={() => history.push('/gallery/sessions/maternity-sara')}>
-				<GalleryBoxOverlay />
-				<GalleryBoxImage src={galleryBox.maternitySara}/>
-				<GalleryBoxText>Maternity Sara</GalleryBoxText>
-			</GalleryBox>
-		</GalleryRow>
-		<GalleryRow>
-		<GalleryBox onClick={() => history.push('/gallery/sessions/family-iaa')}>
-				<GalleryBoxOverlay />
-				<GalleryBoxImage src={galleryBox.familyIAA}/>
-				<GalleryBoxText>Family I & A & A</GalleryBoxText>
-			</GalleryBox>
-			<GalleryBox onClick={() => history.push('/gallery/sessions/engagement-jk')}>
-				<GalleryBoxOverlay />
-				<GalleryBoxImage src={galleryBox.engagementJK}/>
-				<GalleryBoxText>Engagement J & K</GalleryBoxText>
-			</GalleryBox>
-		</GalleryRow>
-		<GalleryRow>
-		<GalleryBox onClick={() => history.push('/gallery/sessions/bovani-design')}>
-				<GalleryBoxOverlay />
-				<GalleryBoxImage src={galleryBox.bovaniDesign}/>
-				<GalleryBoxText>Bovani Design Website</GalleryBoxText>
-			</GalleryBox>
-			<GalleryBox onClick={() => history.push('/gallery/sessions/wedding-rm')}>
-				<GalleryBoxOverlay />	
-				<GalleryBoxImage src={galleryBox.weddingRM}/>
-				<GalleryBoxText>Wedding R & M</GalleryBoxText>
-			</GalleryBox>
-		</GalleryRow>
-		<GalleryRow>
-		<GalleryBox onClick={() => history.push('/gallery/sessions/budjenje-boginje')}>
-				<GalleryBoxOverlay />
-				<GalleryBoxImage src={galleryBox.budjenjeBoginje}/>
-				<GalleryBoxText>Buđenje Boginje</GalleryBoxText>
-			</GalleryBox>
-			<GalleryBox onClick={() => history.push('/gallery/sessions/chill-vibez')}>
-				<GalleryBoxOverlay />
-				<GalleryBoxImage src={galleryBox.chillVibez}/>
-				<GalleryBoxText>Chill Vibez</GalleryBoxText>
-			</GalleryBox>
-		</GalleryRow>
-	  </>
-  )
-  if (windowWidth < 750) {
-		GalleryRowElem = (
-			<>
-				<GalleryBox onClick={() => history.push('/gallery/sessions/wedding-mp')}>
-					<GalleryBoxOverlay />	
-					<GalleryBoxImage src={galleryBox.weddingMP}/>
+	const history = useHistory()
+	const [windowWidth] = useWindow()
+	let GalleryRowElem = (
+		<>
+			<GalleryRow>
+				<GalleryBox
+					onClick={() =>
+						history.push('/gallery/sessions/lifestyle-istria')
+					}
+				>
+					<GalleryBoxOverlay />
+					<GalleryBoxImage src={galleryBox.lifestyleIstria} />
+					<GalleryBoxText>Lifestyle Istria</GalleryBoxText>
+				</GalleryBox>
+				<GalleryBox
+					onClick={() => history.push('/gallery/sessions/wedding-mp')}
+				>
+					<GalleryBoxOverlay />
+					<GalleryBoxImage src={galleryBox.weddingMP} />
 					<GalleryBoxText>Wedding M & P</GalleryBoxText>
 				</GalleryBox>
-				<GalleryBox onClick={() => history.push('/gallery/sessions/studio-zimat')}>
-					<GalleryBoxOverlay />	
-					<GalleryBoxImage src={galleryBox.studioZimat}/>
+			</GalleryRow>
+			<GalleryRow>
+				<GalleryBox
+					onClick={() =>
+						history.push('/gallery/sessions/studio-zimat')
+					}
+				>
+					<GalleryBoxOverlay />
+					<GalleryBoxImage src={galleryBox.studioZimat} />
 					<GalleryBoxText>Studio Zimat</GalleryBoxText>
 				</GalleryBox>
-				<GalleryBox onClick={() => history.push('/gallery/sessions/baptism-karla')}>
+				<GalleryBox
+					onClick={() =>
+						history.push('/gallery/sessions/baptism-karla')
+					}
+				>
 					<GalleryBoxOverlay />
-					<GalleryBoxImage src={galleryBox.baptismKarla}/>
+					<GalleryBoxImage src={galleryBox.baptismKarla} />
 					<GalleryBoxText>Baptism Karla</GalleryBoxText>
 				</GalleryBox>
-				<GalleryBox onClick={() => history.push('/gallery/sessions/yoni')}>
+			</GalleryRow>
+			<GalleryRow>
+				<GalleryBox
+					onClick={() => history.push('/gallery/sessions/yoni')}
+				>
 					<GalleryBoxOverlay />
-					<GalleryBoxImage src={galleryBox.yoni}/>
+					<GalleryBoxImage src={galleryBox.yoni} />
 					<GalleryBoxText>YONI</GalleryBoxText>
 				</GalleryBox>
-				<GalleryBox onClick={() => history.push('/gallery/sessions/blogledalo')}>
+				<GalleryBox
+					onClick={() => history.push('/gallery/sessions/blogledalo')}
+				>
 					<GalleryBoxOverlay />
-					<GalleryBoxImage src={galleryBox.blogledalo}/>
+					<GalleryBoxImage src={galleryBox.blogledalo} />
 					<GalleryBoxText>Blogledalo</GalleryBoxText>
 				</GalleryBox>
-				<GalleryBox onClick={() => history.push('/gallery/sessions/maternity-sara')}>
+			</GalleryRow>
+			<GalleryRow>
+				<GalleryBox
+					onClick={() =>
+						history.push('/gallery/sessions/maternity-sara')
+					}
+				>
 					<GalleryBoxOverlay />
-					<GalleryBoxImage src={galleryBox.maternitySara}/>
+					<GalleryBoxImage src={galleryBox.maternitySara} />
 					<GalleryBoxText>Maternity Sara</GalleryBoxText>
 				</GalleryBox>
-				<GalleryBox onClick={() => history.push('/gallery/sessions/family-iaa')}>
+				<GalleryBox
+					onClick={() => history.push('/gallery/sessions/family-iaa')}
+				>
 					<GalleryBoxOverlay />
-					<GalleryBoxImage src={galleryBox.familyIAA}/>
+					<GalleryBoxImage src={galleryBox.familyIAA} />
 					<GalleryBoxText>Family I & A & A</GalleryBoxText>
 				</GalleryBox>
-				<GalleryBox onClick={() => history.push('/gallery/sessions/engagement-jk')}>
+			</GalleryRow>
+			<GalleryRow>
+				<GalleryBox
+					onClick={() =>
+						history.push('/gallery/sessions/engagement-jk')
+					}
+				>
 					<GalleryBoxOverlay />
-					<GalleryBoxImage src={galleryBox.engagementJK}/>
+					<GalleryBoxImage src={galleryBox.engagementJK} />
 					<GalleryBoxText>Engagement J & K</GalleryBoxText>
 				</GalleryBox>
-				<GalleryBox onClick={() => history.push('/gallery/sessions/bovani-design')}>
+				<GalleryBox
+					onClick={() =>
+						history.push('/gallery/sessions/bovani-design')
+					}
+				>
 					<GalleryBoxOverlay />
-					<GalleryBoxImage src={galleryBox.bovaniDesign}/>
+					<GalleryBoxImage src={galleryBox.bovaniDesign} />
 					<GalleryBoxText>Bovani Design Website</GalleryBoxText>
 				</GalleryBox>
-				<GalleryBox onClick={() => history.push('/gallery/sessions/wedding-rm')}>
-					<GalleryBoxOverlay />	
-					<GalleryBoxImage src={galleryBox.weddingRM}/>
+			</GalleryRow>
+			<GalleryRow>
+				<GalleryBox
+					onClick={() => history.push('/gallery/sessions/wedding-rm')}
+				>
+					<GalleryBoxOverlay />
+					<GalleryBoxImage src={galleryBox.weddingRM} />
 					<GalleryBoxText>Wedding R & M</GalleryBoxText>
 				</GalleryBox>
-				<GalleryBox onClick={() => history.push('/gallery/sessions/budjenje-boginje')}>
+				<GalleryBox
+					onClick={() =>
+						history.push('/gallery/sessions/budjenje-boginje')
+					}
+				>
 					<GalleryBoxOverlay />
-					<GalleryBoxImage src={galleryBox.budjenjeBoginje}/>
+					<GalleryBoxImage src={galleryBox.budjenjeBoginje} />
 					<GalleryBoxText>Buđenje Boginje</GalleryBoxText>
 				</GalleryBox>
-				<GalleryBox onClick={() => history.push('/gallery/sessions/chill-vibez')}>
+			</GalleryRow>
+			<GalleryRow>
+				<GalleryBox
+					onClick={() =>
+						history.push('/gallery/sessions/chill-vibez')
+					}
+				>
 					<GalleryBoxOverlay />
-					<GalleryBoxImage src={galleryBox.chillVibez}/>
+					<GalleryBoxImage src={galleryBox.chillVibez} />
+					<GalleryBoxText>Chill Vibez</GalleryBoxText>
+				</GalleryBox>
+			</GalleryRow>
+		</>
+	)
+	if (windowWidth < 750) {
+		GalleryRowElem = (
+			<>
+				<GalleryBox
+					onClick={() =>
+						history.push('/gallery/sessions/lifestyle-istria')
+					}
+				>
+					<GalleryBoxOverlay />
+					<GalleryBoxImage src={galleryBox.lifestyleIstria} />
+					<GalleryBoxText>Lifestyle Istria</GalleryBoxText>
+				</GalleryBox>
+				<GalleryBox
+					onClick={() => history.push('/gallery/sessions/wedding-mp')}
+				>
+					<GalleryBoxOverlay />
+					<GalleryBoxImage src={galleryBox.weddingMP} />
+					<GalleryBoxText>Wedding M & P</GalleryBoxText>
+				</GalleryBox>
+				<GalleryBox
+					onClick={() =>
+						history.push('/gallery/sessions/studio-zimat')
+					}
+				>
+					<GalleryBoxOverlay />
+					<GalleryBoxImage src={galleryBox.studioZimat} />
+					<GalleryBoxText>Studio Zimat</GalleryBoxText>
+				</GalleryBox>
+				<GalleryBox
+					onClick={() =>
+						history.push('/gallery/sessions/baptism-karla')
+					}
+				>
+					<GalleryBoxOverlay />
+					<GalleryBoxImage src={galleryBox.baptismKarla} />
+					<GalleryBoxText>Baptism Karla</GalleryBoxText>
+				</GalleryBox>
+				<GalleryBox
+					onClick={() => history.push('/gallery/sessions/yoni')}
+				>
+					<GalleryBoxOverlay />
+					<GalleryBoxImage src={galleryBox.yoni} />
+					<GalleryBoxText>YONI</GalleryBoxText>
+				</GalleryBox>
+				<GalleryBox
+					onClick={() => history.push('/gallery/sessions/blogledalo')}
+				>
+					<GalleryBoxOverlay />
+					<GalleryBoxImage src={galleryBox.blogledalo} />
+					<GalleryBoxText>Blogledalo</GalleryBoxText>
+				</GalleryBox>
+				<GalleryBox
+					onClick={() =>
+						history.push('/gallery/sessions/maternity-sara')
+					}
+				>
+					<GalleryBoxOverlay />
+					<GalleryBoxImage src={galleryBox.maternitySara} />
+					<GalleryBoxText>Maternity Sara</GalleryBoxText>
+				</GalleryBox>
+				<GalleryBox
+					onClick={() => history.push('/gallery/sessions/family-iaa')}
+				>
+					<GalleryBoxOverlay />
+					<GalleryBoxImage src={galleryBox.familyIAA} />
+					<GalleryBoxText>Family I & A & A</GalleryBoxText>
+				</GalleryBox>
+				<GalleryBox
+					onClick={() =>
+						history.push('/gallery/sessions/engagement-jk')
+					}
+				>
+					<GalleryBoxOverlay />
+					<GalleryBoxImage src={galleryBox.engagementJK} />
+					<GalleryBoxText>Engagement J & K</GalleryBoxText>
+				</GalleryBox>
+				<GalleryBox
+					onClick={() =>
+						history.push('/gallery/sessions/bovani-design')
+					}
+				>
+					<GalleryBoxOverlay />
+					<GalleryBoxImage src={galleryBox.bovaniDesign} />
+					<GalleryBoxText>Bovani Design Website</GalleryBoxText>
+				</GalleryBox>
+				<GalleryBox
+					onClick={() => history.push('/gallery/sessions/wedding-rm')}
+				>
+					<GalleryBoxOverlay />
+					<GalleryBoxImage src={galleryBox.weddingRM} />
+					<GalleryBoxText>Wedding R & M</GalleryBoxText>
+				</GalleryBox>
+				<GalleryBox
+					onClick={() =>
+						history.push('/gallery/sessions/budjenje-boginje')
+					}
+				>
+					<GalleryBoxOverlay />
+					<GalleryBoxImage src={galleryBox.budjenjeBoginje} />
+					<GalleryBoxText>Buđenje Boginje</GalleryBoxText>
+				</GalleryBox>
+				<GalleryBox
+					onClick={() =>
+						history.push('/gallery/sessions/chill-vibez')
+					}
+				>
+					<GalleryBoxOverlay />
+					<GalleryBoxImage src={galleryBox.chillVibez} />
 					<GalleryBoxText>Chill Vibez</GalleryBoxText>
 				</GalleryBox>
 			</>
 		)
 	}
-  return (
-    <RootContainer>
-		<ScrollToTop />
-		{GalleryRowElem}
-    </RootContainer>
-  )
+	return (
+		<RootContainer>
+			<ScrollToTop />
+			{GalleryRowElem}
+		</RootContainer>
+	)
 }
 
 const RootContainer = styled.div`
@@ -222,13 +318,17 @@ const GalleryBoxOverlay = styled.div`
 	position: absolute;
 	top: 0;
 	left: 0;
-	background: linear-gradient(0deg, rgba(255, 216, 193, 0.7), rgba(255, 216, 193, 0.7));
+	background: linear-gradient(
+		0deg,
+		rgba(255, 216, 193, 0.7),
+		rgba(255, 216, 193, 0.7)
+	);
 	visibility: hidden;
 	opacity: 0;
 	transition-property: visibility, opacity;
 	transition-duration: 500ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	${GalleryBox}:hover &{
+	${GalleryBox}:hover & {
 		visibility: visible;
 		opacity: 1;
 	}
@@ -242,7 +342,7 @@ const GalleryBoxText = styled.div`
 	font-weight: normal;
 	font-size: 48px;
 	line-height: 65px;
-	color: #FFFBF7;
+	color: #fffbf7;
 	text-shadow: 5px 10px 10px rgba(121, 117, 117, 0.15);
 	margin-left: 25px;
 	margin-bottom: 25px;
@@ -260,9 +360,6 @@ const GalleryBoxText = styled.div`
 			line-height: calc(95px / 1.4);
 		}
 	}
-
 `
-
-
 
 export default SessionsList
