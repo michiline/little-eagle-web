@@ -12,6 +12,15 @@ const SessionsList = () => {
 			<GalleryRow>
 				<GalleryBox
 					onClick={() =>
+						history.push('/gallery/sessions/wedding-istria')
+					}
+				>
+					<GalleryBoxOverlay />
+					<GalleryBoxImage src={galleryBox.weddingIstria} />
+					<GalleryBoxText>Wedding Istria</GalleryBoxText>
+				</GalleryBox>
+				<GalleryBox
+					onClick={() =>
 						history.push('/gallery/sessions/lifestyle-istria')
 					}
 				>
@@ -19,6 +28,8 @@ const SessionsList = () => {
 					<GalleryBoxImage src={galleryBox.lifestyleIstria} />
 					<GalleryBoxText>Lifestyle Istria</GalleryBoxText>
 				</GalleryBox>
+			</GalleryRow>
+			<GalleryRow>
 				<GalleryBox
 					onClick={() => history.push('/gallery/sessions/wedding-mp')}
 				>
@@ -26,8 +37,6 @@ const SessionsList = () => {
 					<GalleryBoxImage src={galleryBox.weddingMP} />
 					<GalleryBoxText>Wedding M & P</GalleryBoxText>
 				</GalleryBox>
-			</GalleryRow>
-			<GalleryRow>
 				<GalleryBox
 					onClick={() =>
 						history.push('/gallery/sessions/studio-zimat')
@@ -37,6 +46,8 @@ const SessionsList = () => {
 					<GalleryBoxImage src={galleryBox.studioZimat} />
 					<GalleryBoxText>Studio Zimat</GalleryBoxText>
 				</GalleryBox>
+			</GalleryRow>
+			<GalleryRow>
 				<GalleryBox
 					onClick={() =>
 						history.push('/gallery/sessions/baptism-karla')
@@ -46,8 +57,6 @@ const SessionsList = () => {
 					<GalleryBoxImage src={galleryBox.baptismKarla} />
 					<GalleryBoxText>Baptism Karla</GalleryBoxText>
 				</GalleryBox>
-			</GalleryRow>
-			<GalleryRow>
 				<GalleryBox
 					onClick={() => history.push('/gallery/sessions/yoni')}
 				>
@@ -55,6 +64,8 @@ const SessionsList = () => {
 					<GalleryBoxImage src={galleryBox.yoni} />
 					<GalleryBoxText>YONI</GalleryBoxText>
 				</GalleryBox>
+			</GalleryRow>
+			<GalleryRow>
 				<GalleryBox
 					onClick={() => history.push('/gallery/sessions/blogledalo')}
 				>
@@ -62,8 +73,6 @@ const SessionsList = () => {
 					<GalleryBoxImage src={galleryBox.blogledalo} />
 					<GalleryBoxText>Blogledalo</GalleryBoxText>
 				</GalleryBox>
-			</GalleryRow>
-			<GalleryRow>
 				<GalleryBox
 					onClick={() =>
 						history.push('/gallery/sessions/maternity-sara')
@@ -73,6 +82,8 @@ const SessionsList = () => {
 					<GalleryBoxImage src={galleryBox.maternitySara} />
 					<GalleryBoxText>Maternity Sara</GalleryBoxText>
 				</GalleryBox>
+			</GalleryRow>
+			<GalleryRow>
 				<GalleryBox
 					onClick={() => history.push('/gallery/sessions/family-iaa')}
 				>
@@ -80,8 +91,6 @@ const SessionsList = () => {
 					<GalleryBoxImage src={galleryBox.familyIAA} />
 					<GalleryBoxText>Family I & A & A</GalleryBoxText>
 				</GalleryBox>
-			</GalleryRow>
-			<GalleryRow>
 				<GalleryBox
 					onClick={() =>
 						history.push('/gallery/sessions/engagement-jk')
@@ -91,6 +100,8 @@ const SessionsList = () => {
 					<GalleryBoxImage src={galleryBox.engagementJK} />
 					<GalleryBoxText>Engagement J & K</GalleryBoxText>
 				</GalleryBox>
+			</GalleryRow>
+			<GalleryRow>
 				<GalleryBox
 					onClick={() =>
 						history.push('/gallery/sessions/bovani-design')
@@ -100,8 +111,6 @@ const SessionsList = () => {
 					<GalleryBoxImage src={galleryBox.bovaniDesign} />
 					<GalleryBoxText>Bovani Design Website</GalleryBoxText>
 				</GalleryBox>
-			</GalleryRow>
-			<GalleryRow>
 				<GalleryBox
 					onClick={() => history.push('/gallery/sessions/wedding-rm')}
 				>
@@ -109,6 +118,8 @@ const SessionsList = () => {
 					<GalleryBoxImage src={galleryBox.weddingRM} />
 					<GalleryBoxText>Wedding R & M</GalleryBoxText>
 				</GalleryBox>
+			</GalleryRow>
+			<GalleryRow>
 				<GalleryBox
 					onClick={() =>
 						history.push('/gallery/sessions/budjenje-boginje')
@@ -118,8 +129,6 @@ const SessionsList = () => {
 					<GalleryBoxImage src={galleryBox.budjenjeBoginje} />
 					<GalleryBoxText>Buđenje Boginje</GalleryBoxText>
 				</GalleryBox>
-			</GalleryRow>
-			<GalleryRow>
 				<GalleryBox
 					onClick={() =>
 						history.push('/gallery/sessions/chill-vibez')
@@ -135,6 +144,15 @@ const SessionsList = () => {
 	if (windowWidth < 750) {
 		GalleryRowElem = (
 			<>
+				<GalleryBox
+					onClick={() =>
+						history.push('/gallery/sessions/wedding-istria')
+					}
+				>
+					<GalleryBoxOverlay />
+					<GalleryBoxImage src={galleryBox.lifestyleIstria} />
+					<GalleryBoxText>Wedding Istria</GalleryBoxText>
+				</GalleryBox>
 				<GalleryBox
 					onClick={() =>
 						history.push('/gallery/sessions/lifestyle-istria')
