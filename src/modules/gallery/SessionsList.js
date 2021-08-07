@@ -150,7 +150,7 @@ const SessionsList = () => {
 					}
 				>
 					<GalleryBoxOverlay />
-					<GalleryBoxImage src={galleryBox.lifestyleIstria} />
+					<GalleryBoxImage src={galleryBox.weddingIstria} />
 					<GalleryBoxText>Wedding Istria</GalleryBoxText>
 				</GalleryBox>
 				<GalleryBox
