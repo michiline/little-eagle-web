@@ -15,6 +15,7 @@ import weddingMP from './wedding-mp'
 import studioZimat from './studio-zimat'
 import lifestyleIstria from './lifestyle-istria'
 import weddingIstria from './wedding-istria'
+import weddingMT from './wedding-mt'
 
 const baseUrl = process.env.REACT_APP_IMG_URL
 
@@ -72,6 +73,7 @@ export const galleryBox = {
 	studioZimat: `${baseUrl}/gallery/cover/studio-zimat.jpg`,
 	lifestyleIstria: `${baseUrl}/gallery/cover/lifestyle-istria.jpg`,
 	weddingIstria: `${baseUrl}/gallery/cover/wedding-istria.jpg`,
+	weddingMT: `${baseUrl}/gallery/cover/wedding-mt.jpg`,
 }
 
 export const gallery = {
@@ -93,5 +95,6 @@ export const gallery = {
 		'studio-zimat': studioZimat,
 		'lifestyle-istria': lifestyleIstria,
 		'wedding-istria': weddingIstria,
+		'wedding-mt': weddingMT,
 	},
 }

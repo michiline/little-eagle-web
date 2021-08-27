@@ -180,6 +180,13 @@ const Gallery = ({ setShowSwipe }) => {
 						setShowSwipe={setShowSwipe}
 					/>
 				</Route>
+				<Route exact path={`${path}/sessions/wedding-mt/:activeImg?`}>
+					<JustifySwipe
+						subdir={'sessions'}
+						galleryName={'wedding-mt'}
+						setShowSwipe={setShowSwipe}
+					/>
+				</Route>
 			</Switch>
 		</RootContainer>
 	)
