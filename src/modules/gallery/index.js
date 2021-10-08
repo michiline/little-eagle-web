@@ -187,6 +187,40 @@ const Gallery = ({ setShowSwipe }) => {
 						setShowSwipe={setShowSwipe}
 					/>
 				</Route>
+				<Route
+					exact
+					path={`${path}/sessions/crikvenica-2021/:activeImg?`}
+				>
+					<JustifySwipe
+						subdir={'sessions'}
+						galleryName={'crikvenica-2021'}
+						setShowSwipe={setShowSwipe}
+					/>
+				</Route>
+				<Route
+					exact
+					path={`${path}/sessions/josipa-session/:activeImg?`}
+				>
+					<JustifySwipe
+						subdir={'sessions'}
+						galleryName={'josipa-session'}
+						setShowSwipe={setShowSwipe}
+					/>
+				</Route>
+				<Route exact path={`${path}/sessions/khl/:activeImg?`}>
+					<JustifySwipe
+						subdir={'sessions'}
+						galleryName={'khl'}
+						setShowSwipe={setShowSwipe}
+					/>
+				</Route>
+				<Route exact path={`${path}/sessions/aal/:activeImg?`}>
+					<JustifySwipe
+						subdir={'sessions'}
+						galleryName={'aal'}
+						setShowSwipe={setShowSwipe}
+					/>
+				</Route>
 			</Switch>
 		</RootContainer>
 	)

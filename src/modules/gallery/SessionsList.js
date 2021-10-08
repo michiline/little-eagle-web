@@ -11,6 +11,42 @@ const SessionsList = () => {
 		<>
 			<GalleryRow>
 				<GalleryBox
+					onClick={() => history.push('/gallery/sessions/aal')}
+				>
+					<GalleryBoxOverlay />
+					<GalleryBoxImage src={galleryBox.aal} />
+					<GalleryBoxText>A, A & L</GalleryBoxText>
+				</GalleryBox>
+				<GalleryBox
+					onClick={() => history.push('/gallery/sessions/khl')}
+				>
+					<GalleryBoxOverlay />
+					<GalleryBoxImage src={galleryBox.khl} />
+					<GalleryBoxText>K, H & L</GalleryBoxText>
+				</GalleryBox>
+			</GalleryRow>
+			<GalleryRow>
+				<GalleryBox
+					onClick={() =>
+						history.push('/gallery/sessions/josipa-session')
+					}
+				>
+					<GalleryBoxOverlay />
+					<GalleryBoxImage src={galleryBox.josipaSession} />
+					<GalleryBoxText>Josipa Session</GalleryBoxText>
+				</GalleryBox>
+				<GalleryBox
+					onClick={() =>
+						history.push('/gallery/sessions/crikvenica-2021')
+					}
+				>
+					<GalleryBoxOverlay />
+					<GalleryBoxImage src={galleryBox.crikvenica2021} />
+					<GalleryBoxText>Dan grada Crikvenice 2021</GalleryBoxText>
+				</GalleryBox>
+			</GalleryRow>
+			<GalleryRow>
+				<GalleryBox
 					onClick={() => history.push('/gallery/sessions/wedding-mt')}
 				>
 					<GalleryBoxOverlay />
@@ -153,6 +189,38 @@ const SessionsList = () => {
 	if (windowWidth < 750) {
 		GalleryRowElem = (
 			<>
+				<GalleryBox
+					onClick={() => history.push('/gallery/sessions/aal')}
+				>
+					<GalleryBoxOverlay />
+					<GalleryBoxImage src={galleryBox.aal} />
+					<GalleryBoxText>AA&L</GalleryBoxText>
+				</GalleryBox>
+				<GalleryBox
+					onClick={() => history.push('/gallery/sessions/khl')}
+				>
+					<GalleryBoxOverlay />
+					<GalleryBoxImage src={galleryBox.khl} />
+					<GalleryBoxText>KH&L</GalleryBoxText>
+				</GalleryBox>
+				<GalleryBox
+					onClick={() =>
+						history.push('/gallery/sessions/josipa-session')
+					}
+				>
+					<GalleryBoxOverlay />
+					<GalleryBoxImage src={galleryBox.josipaSession} />
+					<GalleryBoxText>Josipa Session</GalleryBoxText>
+				</GalleryBox>
+				<GalleryBox
+					onClick={() =>
+						history.push('/gallery/sessions/crikvenica-2021')
+					}
+				>
+					<GalleryBoxOverlay />
+					<GalleryBoxImage src={galleryBox.crikvenica2021} />
+					<GalleryBoxText>Dan grada Crikvenice 2021</GalleryBoxText>
+				</GalleryBox>
 				<GalleryBox
 					onClick={() => history.push('/gallery/sessions/wedding-mt')}
 				>

@@ -16,6 +16,10 @@ import studioZimat from './studio-zimat'
 import lifestyleIstria from './lifestyle-istria'
 import weddingIstria from './wedding-istria'
 import weddingMT from './wedding-mt'
+import crikvenica2021 from './crikvenica-2021'
+import josipaSession from './josipa-session'
+import khl from './khl'
+import aal from './aal'
 
 const baseUrl = process.env.REACT_APP_IMG_URL
 
@@ -74,6 +78,10 @@ export const galleryBox = {
 	lifestyleIstria: `${baseUrl}/gallery/cover/lifestyle-istria.jpg`,
 	weddingIstria: `${baseUrl}/gallery/cover/wedding-istria.jpg`,
 	weddingMT: `${baseUrl}/gallery/cover/wedding-mt.jpg`,
+	crikvenica2021: `${baseUrl}/gallery/cover/crikvenica-2021.jpg`,
+	josipaSession: `${baseUrl}/gallery/cover/josipa-session.jpg`,
+	khl: `${baseUrl}/gallery/cover/khl.jpg`,
+	aal: `${baseUrl}/gallery/cover/aal.jpg`,
 }
 
 export const gallery = {
@@ -96,5 +104,9 @@ export const gallery = {
 		'lifestyle-istria': lifestyleIstria,
 		'wedding-istria': weddingIstria,
 		'wedding-mt': weddingMT,
+		'crikvenica-2021': crikvenica2021,
+		'josipa-session': josipaSession,
+		khl: khl,
+		aal: aal,
 	},
 }

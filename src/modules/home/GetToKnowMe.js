@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import { facts1, facts2, facts3 } from '../../images'
 import { useWindow } from '../../hooks'
-import { externalLink } from '../../utils'
 
 const GetToKnowMe = () => {
 	const [windowWidth] = useWindow()
@@ -61,12 +60,6 @@ const GetToKnowMe = () => {
 			)}
 		</RootContainer>
 	)
-}
-
-{
-	/* <Text>
-My boyfriend and I have our travel blog. Check it out: <Link onClick={() => externalLink('https://www.leagleandmich.com')}>Leagle & Mich</Link>
-</Text> */
 }
 
 const RootContainer = styled.div`
@@ -205,12 +198,6 @@ const Text = styled.div`
 		font-size: calc(25px / 1.6);
 		line-height: calc(29px / 1.6);
 	}
-`
-
-const Link = styled(Text)`
-	text-decoration: underline;
-	cursor: pointer;
-	display: inline;
 `
 
 const Image1 = styled.img`
