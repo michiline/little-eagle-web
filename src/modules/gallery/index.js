@@ -221,6 +221,13 @@ const Gallery = ({ setShowSwipe }) => {
 						setShowSwipe={setShowSwipe}
 					/>
 				</Route>
+				<Route exact path={`${path}/sessions/lillian/:activeImg?`}>
+					<JustifySwipe
+						subdir={'sessions'}
+						galleryName={'lillian'}
+						setShowSwipe={setShowSwipe}
+					/>
+				</Route>
 			</Switch>
 		</RootContainer>
 	)
