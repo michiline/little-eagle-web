@@ -197,11 +197,11 @@ const SessionsList = () => {
 		GalleryRowElem = (
 			<>
 				<GalleryBox
-					onClick={() => history.push('/gallery/sessions/lillian')}
+					onClick={() => history.push('/gallery/sessions/lilium')}
 				>
 					<GalleryBoxOverlay />
-					<GalleryBoxImage src={galleryBox.lillian} />
-					<GalleryBoxText>Lillian</GalleryBoxText>
+					<GalleryBoxImage src={galleryBox.lilium} />
+					<GalleryBoxText>Lilium</GalleryBoxText>
 				</GalleryBox>
 				<GalleryBox
 					onClick={() => history.push('/gallery/sessions/aal')}

@@ -83,7 +83,7 @@ export const galleryBox = {
 	josipaSession: `${baseUrl}/gallery/cover/josipa-session.jpg`,
 	khl: `${baseUrl}/gallery/cover/khl.jpg`,
 	aal: `${baseUrl}/gallery/cover/aal.jpg`,
-	lillian: `${baseUrl}/gallery/cover/lillian.jpg`,
+	lilium: `${baseUrl}/gallery/cover/lilium.jpg`,
 }
 
 export const gallery = {
