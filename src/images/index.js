@@ -20,7 +20,7 @@ import crikvenica2021 from './crikvenica-2021'
 import josipaSession from './josipa-session'
 import khl from './khl'
 import aal from './aal'
-import lillian from './lillian'
+import lilium from './lilium'
 
 const baseUrl = process.env.REACT_APP_IMG_URL
 
@@ -110,6 +110,6 @@ export const gallery = {
 		'josipa-session': josipaSession,
 		khl: khl,
 		aal: aal,
-		lillian: lillian,
+		lilium: lilium,
 	},
 }
